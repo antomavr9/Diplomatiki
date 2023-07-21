@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
 using Modbus.Net;
 using Modbus.Net.Modbus;
-// Antonis Branch
+// Pantelis Branch
 class Program
 {
     static async Task Main()
