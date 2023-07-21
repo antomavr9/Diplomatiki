@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\MODBUS_APP.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\MODBUS_APP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\MODBUS_APP.csproj",
+        "projectName": "MODBUS_APP",
+        "projectPath": "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\MODBUS_APP.csproj",
+        "packagesPath": "C:\\Users\\stilk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\stilk\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Modbus.Net": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
+            "Modbus.Net.Modbus": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
+            "NModbus": {
+              "target": "Package",
+              "version": "[3.0.78, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
