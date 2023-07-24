@@ -17,19 +17,12 @@ namespace ModbusMachineExtended
     public class ModbusMachineExtended<TKey, TUnitKey> : ModbusMachine<TKey, TUnitKey> where TKey : IEquatable<TKey>
     where TUnitKey : IEquatable<TUnitKey>
     {
-        
-        private readonly ModbusType _connectionType;
-        private readonly string _connectionString;
-
         // Constructor 1
         public ModbusMachineExtended(TKey id, ModbusType connectionType, string connectionString,
             IEnumerable<AddressUnit<TUnitKey>> getAddresses, bool keepConnect, byte slaveAddress, byte masterAddress,
             Endian endian = Endian.BigEndianLsb)
             : base(id, connectionType, connectionString, getAddresses, keepConnect, slaveAddress, masterAddress, endian)
         {
-            // Store the values in class-level fields
-            _connectionType = connectionType;
-            _connectionString = connectionString;
         }
 
         // Constructor 2
@@ -41,21 +34,17 @@ namespace ModbusMachineExtended
         }
 
         // Mask Function
-        public async Task<ReturnStruct<byte[]>> GetDatasByCommunicationTag(List<AddressUnit> addressUnits, string communicationTag)
+        public async Task<ReturnStruct<byte[]>> GetDatasByCommunicationTag(string communicationTag)
         {
             try
             {
-                // var machine = new ModbusMachine<string, string>("1", ModbusType.Tcp, "127.0.0.1:502", addressUnits, 1, 0);
-                var machine = new ModbusMachine<TKey, TUnitKey>(base.Id, _connectionType, _connectionString, base.GetAddresses, base.SlaveAddress, base.MasterAddress);
-                // var ans = new Dictionary<string, ReturnUnit<double>>();
-
                 //Detect and connect devices
-                if (!machine.IsConnected)
+                if (!BaseUtility.IsConnected)
                 {
-                    await machine.ConnectAsync();
+                    await BaseUtility.ConnectAsync();
                 }
                 //Terminate if unable to connect
-                if (!machine.IsConnected)
+                if (!BaseUtility.IsConnected)
                 {
                     return new ReturnStruct<byte[]>()
                     {
@@ -66,23 +55,23 @@ namespace ModbusMachineExtended
                     };
                 }
                 
-                foreach (AddressUnit addressUnit in addressUnits)
+                foreach (AddressUnit<TUnitKey> addressUnit in GetAddresses)
                 {
                     if (addressUnit.CommunicationTag == communicationTag)
                     {
-                        var returnGetObject = await machine.BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync(addressUnit.Area+" "+addressUnit.Address, Marshal.SizeOf(addressUnit.DataType)); //sizeof(addressUnit.DataType)||
+                        var returnGetObject = await BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync(addressUnit.Area+" "+addressUnit.Address, Marshal.SizeOf(addressUnit.DataType)); //sizeof(addressUnit.DataType)||
                         // machine.Disconnect();
 
                         return returnGetObject;
                     }
                 }  
                 return new ReturnStruct<byte[]>()
-                        {
-                            Datas = new byte[0],
-                            IsSuccess = false,
-                            ErrorCode = -500,
-                            ErrorMsg = "No such CommunicationTag in AddressUnit List"
-                        };                       
+                {
+                    Datas = new byte[0],
+                    IsSuccess = false,
+                    ErrorCode = -500,
+                    ErrorMsg = "No such CommunicationTag in AddressUnit List"
+                };                       
             }
             catch (Exception e)
             {
@@ -96,5 +85,62 @@ namespace ModbusMachineExtended
                 };            
             }
         }
+
+        public async Task<ReturnStruct<bool>> SetDatasByCommunicationTag(string communicationTag, double dataValue)
+        {
+            try
+            {
+                //Detect and connect devices
+                if (!BaseUtility.IsConnected)
+                {
+                    await BaseUtility.ConnectAsync();
+                }
+                //Terminate if unable to connect
+                if (!BaseUtility.IsConnected)
+                {
+                    return new ReturnStruct<bool>()
+                    {
+                        Datas = false,
+                        IsSuccess = false,
+                        ErrorCode = -1,
+                        ErrorMsg = "Connection Error"
+                    };
+                }
+                foreach (AddressUnit<TUnitKey> addressUnit in GetAddresses)
+                {
+                    if (addressUnit.CommunicationTag == communicationTag)
+                    {
+                        double Add1 = dataValue;
+                        var setDict = new Dictionary<string, double> {{communicationTag, (double) Add1}};
+                        var returnSetObject = await SetDatasAsync(MachineDataType.CommunicationTag, setDict); // MachineDataType.CommunicationTag, setDict
+                        // var returnGetObject = await BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().SetDatasAsync(addressUnit.Area+" "+addressUnit.Address, Marshal.SizeOf(addressUnit.DataType));
+                        // machine.Disconnect();
+
+                        return returnSetObject;
+                    }
+                }  
+                return new ReturnStruct<bool>()
+                {
+                    Datas = false,
+                    IsSuccess = false,
+                    ErrorCode = -500,
+                    ErrorMsg = "No such CommunicationTag in AddressUnit List"
+                };   
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                return new ReturnStruct<bool>()
+                {
+                    Datas = false,
+                    IsSuccess = false,
+                    ErrorCode = -100,
+                    ErrorMsg = "Unknown Exception"
+                };    
+            }
+        }
+
+
+
     }
 }

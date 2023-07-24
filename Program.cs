@@ -23,7 +23,7 @@ class Program
         // Console.WriteLine("IsConnected:" + utility.IsConnected);
         // int t_sec = 1000; // 1 second = 1000 milliseconds
         // Console.WriteLine("Timer Started!");
-        // await Task.Delay(t_sec*65);
+        // await Task.Delay(t_sec*10);
         // Console.WriteLine("IsConnected:" + utility.IsConnected);
 
         // if (!connectionStatus) // Handle timeout
@@ -44,8 +44,7 @@ class Program
 
 
         //     // Set Datas
-        //     ReturnStruct<bool> returnSetObject = await utility!.SetDatasAsync("0X 1", new object[] {true});
-        //     //(ushort) 1, (ushort) 2, (ushort) 3
+        //     ReturnStruct<bool> returnSetObject = await utility!.SetDatasAsync("0X 1", new object[] {true}); //(ushort) 1, (ushort) 2, (ushort) 3
         //     // false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false
         //     //bool SetDatas = returnSetObject.Datas; // SetDatas and SetSuccessStatus are the same.
         //     int SetErrorCode = returnSetObject.ErrorCode;
@@ -92,18 +91,18 @@ class Program
         //     Console.WriteLine("Press anything to exit...");
         //     // Console.ReadKey();
 
-
-        //     // //Loop
-        //     //while (!exitKeyPressed)
-        //     //{
-        //     //   //Check if a key is pressed
-        //     //   if (Console.KeyAvailable)
-        //     //   {
-        //     //       ConsoleKeyInfo keyInfo = Console.ReadKey(intercept: true);
-        //     //       exitKeyPressed = true;
-        //     //   }
-        //     //   await Task.Delay(2000); // Delay for 2 seconds before executing again
-        //     //}
+        // }
+            // //Loop
+            //while (!exitKeyPressed)
+            //{
+            //   //Check if a key is pressed
+            //   if (Console.KeyAvailable)
+            //   {
+            //       ConsoleKeyInfo keyInfo = Console.ReadKey(intercept: true);
+            //       exitKeyPressed = true;
+            //   }
+            //   await Task.Delay(2000); // Delay for 2 seconds before executing again
+            //}
 
         #endregion
 
@@ -241,6 +240,8 @@ class Program
         #endregion
 
         #region Extended Machine
+
+
         // ---------------------------------- Extended Machine -------------------------------------------------
         List<AddressUnit> addressUnits = new()
         {
@@ -250,6 +251,7 @@ class Program
             new AddressUnit() {Id = "4", Area = "4X", Address = 4, CommunicationTag = "Add4", DataType = typeof (ushort)}
         };
         var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", addressUnits, 1, 0);
+        // var machine = new ModbusMachine<TKey, TUnitKey>(base.Id, _connectionType, _connectionString, base.GetAddresses, base.SlaveAddress, base.MasterAddress);
 
         // Connect to server through extendedMachine
         bool connectionStatusMachine = await extendedMachine.ConnectAsync();
@@ -262,11 +264,7 @@ class Program
             Console.WriteLine("Connection Successful!");
 
             // ---------------------------------- Set Data -------------------------------------------------
-            double Add1 = 11; 
-            double Add2 = 22;
-            double Add3 = 33;
-            var setDic = new Dictionary<string, double> { {"Add1", (double) Add1}, {"Add2", (double) Add2}, {"Add5", (double) Add3}}; // I can access each address one by one from here
-            var returnSetObject = await extendedMachine.SetDatasAsync(MachineDataType.CommunicationTag, setDic);
+            var returnSetObject = await extendedMachine.SetDatasByCommunicationTag("Add1", 33);
             // bool SetDatas = returnSetObject.Datas; // this parameter is not needed because SetDatas and the following parameter SetSuccessStatus are the same.
             int SetErrorCode = returnSetObject.ErrorCode;
             string SetErrorMsg = returnSetObject.ErrorMsg; 
@@ -280,7 +278,7 @@ class Program
             }
                 
             // ---------------------------------- Get Data ------------------------------------------------
-            var returnGetObject = await extendedMachine.GetDatasByCommunicationTag(addressUnits,"Add2");
+            var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Add5");
             // in the above line, instead of var we might use ReturnStruct<byte[]>
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
