@@ -124,7 +124,6 @@ class Program
         };
 
         
-
         // Connect to server through machine api
         var machine = new ModbusMachine<string, string>("1", ModbusType.Tcp, "127.0.0.1:502", addressUnits, 1, 0);
         var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", addressUnits, 1, 0);
@@ -132,14 +131,10 @@ class Program
 
 
         // bool connectionStatusMachine = await machine.ConnectAsync(); // we can also use machine.BaseUtility.ConnectAsync();
-        
         // Here the execution starts and returns a boolean flag which we can use later to check if it connected successfully.
-        
         // Using connectAsync here is not necessarily needed because machine.SetDatasAsync connects by itself.
-        
         // // Disconnect
         // bool disconnectflag = machine.Disconnect();
-
         // // Here we use the GetAddressUnitById function to get a single address unit.
         //AddressUnit<string> singleaddressunit = machine.GetAddressUnitById("1");
         //Console.WriteLine("Address Unit"+ singleaddressunit);

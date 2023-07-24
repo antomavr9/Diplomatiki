@@ -70,24 +70,9 @@ namespace ModbusMachineExtended
                     if (addressUnit.CommunicationTag == communicationTag)
                     {
                         var returnGetObject = await machine.BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync(addressUnit.Area+" "+addressUnit.Address, 2); //sizeof(addressUnit.DataType)||
+                        machine.Disconnect();
 
                         return returnGetObject;
-                        
-                        // byte[]? GetDatas = returnGetObject.Datas;
-                        // int GetErrorCode = returnGetObject.ErrorCode;
-                        // string GetErrorMsg = returnGetObject.ErrorMsg;
-                        // bool GetSuccessStatus = returnGetObject.IsSuccess;
-
-
-                        // machine.Disconnect();
-
-                        // return new ReturnStruct<Dictionary<string, ReturnUnit<double>>>
-                        // {
-                        //     Datas = ans,
-                        //     IsSuccess = true,
-                        //     ErrorCode = 0,
-                        //     ErrorMsg = ""
-                        // };
                     }
                 }  
                 return new ReturnStruct<byte[]>()
