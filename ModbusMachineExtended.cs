@@ -58,7 +58,7 @@ namespace ModbusMachineExtended
                 {
                     return new ReturnStruct<byte[]>()
                     {
-                        Datas = null!,
+                        Datas = new byte[0],
                         IsSuccess = false,
                         ErrorCode = -1,
                         ErrorMsg = "Connection Error"
@@ -70,17 +70,17 @@ namespace ModbusMachineExtended
                     if (addressUnit.CommunicationTag == communicationTag)
                     {
                         var returnGetObject = await machine.BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync(addressUnit.Area+" "+addressUnit.Address, 2); //sizeof(addressUnit.DataType)||
-                        machine.Disconnect();
+                        // machine.Disconnect();
 
                         return returnGetObject;
                     }
                 }  
                 return new ReturnStruct<byte[]>()
                         {
-                            Datas = null!,
+                            Datas = new byte[0],
                             IsSuccess = false,
                             ErrorCode = -500,
-                            ErrorMsg = "No CommunicationTag in AddressUnit List"
+                            ErrorMsg = "No such CommunicationTag in AddressUnit List"
                         };                       
             }
             catch (Exception e)
@@ -88,7 +88,7 @@ namespace ModbusMachineExtended
                 Console.WriteLine(e);
                 return new ReturnStruct<byte[]>()
                 {
-                    Datas = null!,
+                    Datas = new byte[0],
                     IsSuccess = false,
                     ErrorCode = -100,
                     ErrorMsg = "Unknown Exception"
