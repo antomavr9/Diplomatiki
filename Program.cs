@@ -265,7 +265,7 @@ class Program
             double Add1 = 11; 
             double Add2 = 22;
             double Add3 = 33;
-            var setDic = new Dictionary<string, double> { {"Add1", (double) Add1}, {"Add2", (double) Add2}, {"Add3", (double) Add3}}; // I can access each address one by one from here
+            var setDic = new Dictionary<string, double> { {"Add1", (double) Add1}, {"Add2", (double) Add2}, {"Add5", (double) Add3}}; // I can access each address one by one from here
             var returnSetObject = await extendedMachine.SetDatasAsync(MachineDataType.CommunicationTag, setDic);
             // bool SetDatas = returnSetObject.Datas; // this parameter is not needed because SetDatas and the following parameter SetSuccessStatus are the same.
             int SetErrorCode = returnSetObject.ErrorCode;
@@ -280,7 +280,7 @@ class Program
             }
                 
             // ---------------------------------- Get Data ------------------------------------------------
-            var returnGetObject = await extendedMachine.GetDatasByCommunicationTag(addressUnits,"Add5");
+            var returnGetObject = await extendedMachine.GetDatasByCommunicationTag(addressUnits,"Add2");
             // in the above line, instead of var we might use ReturnStruct<byte[]>
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;

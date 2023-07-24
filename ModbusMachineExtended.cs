@@ -2,6 +2,7 @@ using System;
 using System.Reflection.PortableExecutable;
 using Modbus.Net;
 using Modbus.Net.Modbus;
+using System.Runtime.InteropServices;
 
 //  List<AddressUnit> addressUnits = new List<AddressUnit>
 //         {
@@ -69,7 +70,7 @@ namespace ModbusMachineExtended
                 {
                     if (addressUnit.CommunicationTag == communicationTag)
                     {
-                        var returnGetObject = await machine.BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync(addressUnit.Area+" "+addressUnit.Address, 2); //sizeof(addressUnit.DataType)||
+                        var returnGetObject = await machine.BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync(addressUnit.Area+" "+addressUnit.Address, Marshal.SizeOf(addressUnit.DataType)); //sizeof(addressUnit.DataType)||
                         // machine.Disconnect();
 
                         return returnGetObject;
