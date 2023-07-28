@@ -55,16 +55,28 @@ namespace ModbusMachineExtended
                     };
                 }
                 
-                foreach (AddressUnit<TUnitKey> addressUnit in GetAddresses)
-                {
-                    if (addressUnit.CommunicationTag == communicationTag)
-                    {
-                        var returnGetObject = await BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync(addressUnit.Area+" "+addressUnit.Address, Marshal.SizeOf(addressUnit.DataType)); //sizeof(addressUnit.DataType)||
-                        // machine.Disconnect();
+                // foreach (AddressUnit<TUnitKey> addressUnit in GetAddresses)
+                // {
+                //     if (addressUnit.CommunicationTag == communicationTag)
+                //     {
+                //         var returnGetObject = await BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync(addressUnit.Area+" "+addressUnit.Address, Marshal.SizeOf(addressUnit.DataType)); //sizeof(addressUnit.DataType)||
+                //         // machine.Disconnect();
 
-                        return returnGetObject;
-                    }
-                }  
+                //         return returnGetObject;
+                //     }
+                // }  
+
+                var addressUnit = GetAddresses.FirstOrDefault(addressUnit => addressUnit.CommunicationTag == communicationTag);
+                if (addressUnit != null)
+                {
+                    var returnGetObject = await BaseUtility.GetUtilityMethods<IUtilityMethodDatas>()
+                        .GetDatasAsync(addressUnit.Area + " " + addressUnit.Address, Marshal.SizeOf(addressUnit.DataType));
+                    // machine.Disconnect();
+
+                    return returnGetObject;
+                }
+
+
                 return new ReturnStruct<byte[]>()
                 {
                     Datas = new byte[0],
@@ -106,19 +118,31 @@ namespace ModbusMachineExtended
                         ErrorMsg = "Connection Error"
                     };
                 }
-                foreach (AddressUnit<TUnitKey> addressUnit in GetAddresses)
-                {
-                    if (addressUnit.CommunicationTag == communicationTag)
-                    {
-                        double Add1 = dataValue;
-                        var setDict = new Dictionary<string, double> {{communicationTag, (double) Add1}};
-                        var returnSetObject = await SetDatasAsync(MachineDataType.CommunicationTag, setDict); // MachineDataType.CommunicationTag, setDict
-                        // var returnGetObject = await BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().SetDatasAsync(addressUnit.Area+" "+addressUnit.Address, Marshal.SizeOf(addressUnit.DataType));
-                        // machine.Disconnect();
+                // foreach (AddressUnit<TUnitKey> addressUnit in GetAddresses)
+                // {
+                //     if (addressUnit.CommunicationTag == communicationTag)
+                //     {
+                //         double Add1 = dataValue;
+                //         var setDict = new Dictionary<string, double> {{communicationTag, (double) Add1}};
+                //         var returnSetObject = await SetDatasAsync(MachineDataType.CommunicationTag, setDict); // MachineDataType.CommunicationTag, setDict
+                //         // var returnGetObject = await BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().SetDatasAsync(addressUnit.Area+" "+addressUnit.Address, Marshal.SizeOf(addressUnit.DataType));
+                //         // machine.Disconnect();
 
-                        return returnSetObject;
-                    }
-                }  
+                //         return returnSetObject;
+                //     }
+                // }  
+
+                var addressUnit = GetAddresses.FirstOrDefault(addressUnit => addressUnit.CommunicationTag == communicationTag);
+                if (addressUnit != null)
+                {
+                    double Add1 = dataValue;
+                    var setDict = new Dictionary<string, double> { { communicationTag, (double)Add1 } };
+                    var returnSetObject = await SetDatasAsync(MachineDataType.CommunicationTag, setDict);
+
+                    return returnSetObject;
+                }
+
+
                 return new ReturnStruct<bool>()
                 {
                     Datas = false,
