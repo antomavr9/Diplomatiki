@@ -1,0 +1,13 @@
+[
+    {
+      "SN": 1,
+      "Name": "Date & Time",
+      "Read/Write": "RW",
+      "Type": "U32",
+      "Unit": "N/A",
+      "Gain": 1,
+      "Address": 40000,
+      "Quantity": 2,
+      "Range": "Epoch seconds UTC"
+    }
+]

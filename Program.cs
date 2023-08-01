@@ -483,5 +483,20 @@ class Program
 
         #endregion
     
+
+        #region Json Handler
+
+        string jsonFilePath = "Huawei.json"; // Replace with your JSON file path
+
+        JsonHandler? jsonData = JsonHandler.LoadFromFile(jsonFilePath);
+
+        if (jsonData != null)
+        {
+            Console.WriteLine("JSON Data:");
+            Console.WriteLine(jsonData);
+        }
+
+        #endregion
+
     }
 }
