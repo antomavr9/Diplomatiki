@@ -69,13 +69,11 @@ namespace ModbusMachineExtended
                 var addressUnit = GetAddresses.FirstOrDefault(addressUnit => addressUnit.CommunicationTag == communicationTag);
                 if (addressUnit != null)
                 {
-                    var returnGetObject = await BaseUtility.GetUtilityMethods<IUtilityMethodDatas>()
-                        .GetDatasAsync(addressUnit.Area + " " + addressUnit.Address, Marshal.SizeOf(addressUnit.DataType));
+                    var returnGetObject = await BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync(addressUnit.Area + " " + addressUnit.Address, Marshal.SizeOf(addressUnit.DataType));
                     // machine.Disconnect();
 
                     return returnGetObject;
                 }
-
 
                 return new ReturnStruct<byte[]>()
                 {
