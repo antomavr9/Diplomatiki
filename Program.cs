@@ -15,9 +15,9 @@ class Program
     {
         #region Utility
 
-        // // Connect to server through utility api
-        // ModbusUtility utility = new ModbusUtility(ModbusType.Tcp, "127.0.0.1", 1, 0);
-        // bool connectionStatus = await utility.ConnectAsync(); // Here the execution starts
+        // Connect to server through utility api
+        ModbusUtility utility = new ModbusUtility(ModbusType.Tcp, "127.0.0.1", 1, 0);
+        bool connectionStatus = await utility.ConnectAsync(); // Here the execution starts
 
         
         // // ReturnStruct<ushort[]> result = await utility.GetMultipleRegister(0, 1, 0,new ushort[] {}); // , new ushort[] { 0 }
@@ -269,82 +269,81 @@ class Program
         #region Extended Machine
         
 
-        // ---------------------------------- Extended Machine -------------------------------------------------
-        List<AddressUnit> addressUnits = new()
-        {
-            new AddressUnit() {Id = "1", Area = "4X", Address = 1, CommunicationTag = "Add1", DataType = typeof (ushort)}, //Id is mandatory
-            new AddressUnit() {Id = "2", Area = "4X", Address = 2, CommunicationTag = "Add2", DataType = typeof (ushort)}, // each address unit has each own id
-            new AddressUnit() {Id = "3", Area = "4X", Address = 3, CommunicationTag = "Add3", DataType = typeof (ushort)},
-            new AddressUnit() {Id = "4", Area = "4X", Address = 4, CommunicationTag = "Add4", DataType = typeof (ushort)}
-        };
-        var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", addressUnits, false, 1, 0);
-        // var machine = new ModbusMachine<TKey, TUnitKey>(base.Id, _connectionType, _connectionString, base.GetAddresses, base.SlaveAddress, base.MasterAddress);
+        // // ---------------------------------- Extended Machine -------------------------------------------------
+        // List<AddressUnit> addressUnits = new()
+        // {
+        //     new AddressUnit() {Id = "1", Area = "4X", Address = 1, CommunicationTag = "Add1", DataType = typeof (ushort)}, //Id is mandatory
+        //     new AddressUnit() {Id = "2", Area = "4X", Address = 2, CommunicationTag = "Add2", DataType = typeof (ushort)}, // each address unit has each own id
+        //     new AddressUnit() {Id = "3", Area = "4X", Address = 3, CommunicationTag = "Add3", DataType = typeof (ushort)},
+        //     new AddressUnit() {Id = "4", Area = "4X", Address = 4, CommunicationTag = "Add4", DataType = typeof (ushort)}
+        // };
+        // var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", addressUnits, false, 1, 0);
+        // // var machine = new ModbusMachine<TKey, TUnitKey>(base.Id, _connectionType, _connectionString, base.GetAddresses, base.SlaveAddress, base.MasterAddress);
 
-        // Connect to server through extendedMachine
-        bool connectionStatusMachine = await extendedMachine.ConnectAsync();
-        if(!connectionStatusMachine)
-        {
-            Console.WriteLine("Connection Timed Out!");
-        }
-        else
-        {
-            Console.WriteLine("Connection Successful!");
+        // // Connect to server through extendedMachine
+        // bool connectionStatusMachine = await extendedMachine.ConnectAsync();
+        // if(!connectionStatusMachine)
+        // {
+        //     Console.WriteLine("Connection Timed Out!");
+        // }
+        // else
+        // {
+        //     Console.WriteLine("Connection Successful!");
 
-            // // TIMER
-            // int t_sec = 1000; // 1 second = 1000 milliseconds
-            // Console.WriteLine(extendedMachine.IsConnected);
-            // Console.WriteLine("Timer Started!");
-            // await Task.Delay(t_sec*15);
-            // Console.WriteLine("Timer Finished!");
-            // Console.WriteLine(extendedMachine.IsConnected);
+        //     // // TIMER
+        //     // int t_sec = 1000; // 1 second = 1000 milliseconds
+        //     // Console.WriteLine(extendedMachine.IsConnected);
+        //     // Console.WriteLine("Timer Started!");
+        //     // await Task.Delay(t_sec*15);
+        //     // Console.WriteLine("Timer Finished!");
+        //     // Console.WriteLine(extendedMachine.IsConnected);
 
 
-            // ---------------------------------- Set Data -------------------------------------------------
-            var returnSetObject = await extendedMachine.SetDatasByCommunicationTag("Add1", 33);
-            // bool SetDatas = returnSetObject.Datas; // this parameter is not needed because SetDatas and the following parameter SetSuccessStatus are the same.
-            int SetErrorCode = returnSetObject.ErrorCode;
-            string SetErrorMsg = returnSetObject.ErrorMsg; 
-            bool SetSuccessStatus = returnSetObject.IsSuccess;
-            // Check Set Data Success Status
-            if(SetSuccessStatus)
-                Console.WriteLine("Set Data Status: Data Set Succesfully!");
-            else
-            {
-                Console.WriteLine("Set Data Status: Error Code: " + SetErrorCode+ ". Error Message: " + SetErrorMsg + ".");
-            }
+        //     // ---------------------------------- Set Data -------------------------------------------------
+        //     var returnSetObject = await extendedMachine.SetDatasByCommunicationTag("Add1", 33);
+        //     // bool SetDatas = returnSetObject.Datas; // this parameter is not needed because SetDatas and the following parameter SetSuccessStatus are the same.
+        //     int SetErrorCode = returnSetObject.ErrorCode;
+        //     string SetErrorMsg = returnSetObject.ErrorMsg; 
+        //     bool SetSuccessStatus = returnSetObject.IsSuccess;
+        //     // Check Set Data Success Status
+        //     if(SetSuccessStatus)
+        //         Console.WriteLine("Set Data Status: Data Set Succesfully!");
+        //     else
+        //     {
+        //         Console.WriteLine("Set Data Status: Error Code: " + SetErrorCode+ ". Error Message: " + SetErrorMsg + ".");
+        //     }
                 
-            // ---------------------------------- Get Data ------------------------------------------------
-            var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Add2");
-            // in the above line, instead of var we might use ReturnStruct<byte[]>
-            byte[]? GetDatas = returnGetObject.Datas;
-            int GetErrorCode = returnGetObject.ErrorCode;
-            string GetErrorMsg = returnGetObject.ErrorMsg;
-            bool GetSuccessStatus = returnGetObject.IsSuccess;
+        //     // ---------------------------------- Get Data ------------------------------------------------
+        //     var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Add2");
+        //     // in the above line, instead of var we might use ReturnStruct<byte[]>
+        //     byte[]? GetDatas = returnGetObject.Datas;
+        //     int GetErrorCode = returnGetObject.ErrorCode;
+        //     string GetErrorMsg = returnGetObject.ErrorMsg;
+        //     bool GetSuccessStatus = returnGetObject.IsSuccess;
 
-            // Check Get Data Success Status
-            if(GetSuccessStatus)
-            {
-                Console.WriteLine("Get Data by CommunicationTag Status: Data Received Succesfully!");
-            }
-            else
-            {
-                Console.WriteLine("Get Data Status: Error Code: " + GetErrorCode + ". Error Message: " + GetErrorMsg + ".");
-            }
+        //     // Check Get Data Success Status
+        //     if(GetSuccessStatus)
+        //     {
+        //         Console.WriteLine("Get Data by CommunicationTag Status: Data Received Succesfully!");
+        //     }
+        //     else
+        //     {
+        //         Console.WriteLine("Get Data Status: Error Code: " + GetErrorCode + ". Error Message: " + GetErrorMsg + ".");
+        //     }
                 
-            // Print Received Data
-            Console.WriteLine("Data Received from Modbus Server:");
-            for (int i = 1; i < GetDatas!.Length; i+=2)
-            {
-                Console.WriteLine(GetDatas[i]);                
-            }
-        }
-        // Exit Program
-        Console.WriteLine("Press anything to exit...");
-        Console.ReadKey();
+        //     // Print Received Data
+        //     Console.WriteLine("Data Received from Modbus Server:");
+        //     for (int i = 1; i < GetDatas!.Length; i+=2)
+        //     {
+        //         Console.WriteLine(GetDatas[i]);                
+        //     }
+        // }
+        // // Exit Program
+        // Console.WriteLine("Press anything to exit...");
+        // Console.ReadKey();
 
         #endregion
     
-
         #region Extended Machine RTU
 
        
@@ -483,17 +482,28 @@ class Program
 
         #endregion
     
-
         #region Json Handler
 
-        string jsonFilePath = "Huawei.json"; // Replace with your JSON file path
 
-        JsonHandler? jsonData = JsonHandler.LoadFromFile(jsonFilePath);
-
-        if (jsonData != null)
+        string jsonFilePath = "TEST.json"; // Replace with your JSON file path
+        JsonHandler[]? jsonDataArray = JsonHandler.LoadFromFile(jsonFilePath);
+        if (jsonDataArray != null)
         {
             Console.WriteLine("JSON Data:");
-            Console.WriteLine(jsonData);
+            foreach (JsonHandler jsonData in jsonDataArray)
+            {
+                Console.WriteLine("------------------------------");
+                Console.WriteLine($"SN: {jsonData.SN}");
+                Console.WriteLine($"Name: {jsonData.Name}");
+                Console.WriteLine($"Read/Write: {jsonData.ReadWrite}");
+                Console.WriteLine($"Type: {jsonData.Type}");
+                Console.WriteLine($"Unit: {jsonData.Unit}");
+                Console.WriteLine($"Gain: {jsonData.Gain}");
+                Console.WriteLine($"Address: {jsonData.Address}");
+                Console.WriteLine($"Quantity: {jsonData.Quantity}");
+                Console.WriteLine($"Range: {jsonData.Range}");
+            }
+            Console.WriteLine("------------------------------");
         }
 
         #endregion

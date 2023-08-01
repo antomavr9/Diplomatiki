@@ -4,21 +4,25 @@ using System.Text.Json;
 
 public class JsonHandler
 {
-    public int Address { get; set; }
+    public int SN { get; set; }
+    public string? Name { get; set; }
+    public string? ReadWrite { get; set; }
     public string? Type { get; set; }
     public string? Unit { get; set; }
-    public string? Name { get; set; }
+    public int Gain { get; set; }
+    public int Address { get; set; }
     public int Quantity { get; set; }
+    public string? Range { get; set; }
 
-    public static JsonHandler? LoadFromFile(string jsonFilePath)
+    public static JsonHandler[]? LoadFromFile(string jsonFilePath)
     {
         try
         {
             // Read the JSON file as a string
             string json = File.ReadAllText(jsonFilePath);
 
-            // Deserialize the JSON string to a JsonHandler object
-            JsonHandler? jsonData = JsonSerializer.Deserialize<JsonHandler>(json);
+            // Deserialize the JSON string to a JsonHandler array
+            JsonHandler[]? jsonData = JsonSerializer.Deserialize<JsonHandler[]>(json);
 
             return jsonData;
         }
@@ -40,6 +44,6 @@ public class JsonHandler
 
     public override string ToString()
     {
-        return $"Address: {Address}, Type: {Type}, Unit: {Unit}, Name: {Name}, Quantity: {Quantity}";
+        return $"SN: {SN}, Name: {Name}, Read/Write: {ReadWrite}, Type: {Type}, Unit: {Unit}, Gain: {Gain}, Address: {Address}, Quantity: {Quantity}, Range: {Range}";
     }
 }

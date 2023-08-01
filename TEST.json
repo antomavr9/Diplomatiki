@@ -2,7 +2,7 @@
     {
       "SN": 1,
       "Name": "Date & Time",
-      "Read/Write": "RW",
+      "ReadWrite": "RW",
       "Type": "U32",
       "Unit": "N/A",
       "Gain": 1,
