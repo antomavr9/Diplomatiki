@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Text.Json;
+using System.Linq;
+
 
 public class JsonHandler
 {
@@ -41,6 +43,22 @@ public class JsonHandler
 
         return null;
     }
+
+    // public bool CheckData()
+    // {
+    //     return AddressUnits.All(addressUnit =>
+    //         !string.IsNullOrEmpty(addressUnit.Name) &&
+    //         addressUnit.Address > 0 &&
+    //         !string.IsNullOrEmpty(addressUnit.DataType) &&
+    //         addressUnit.Quantity > 0 &&
+    //         !string.IsNullOrEmpty(addressUnit.Unit)
+    //     );
+    // }
+
+    // public List<AddressUnit> ConvertData()
+    // {
+    //     return AddressUnits;
+    // }
 
     public override string ToString()
     {
