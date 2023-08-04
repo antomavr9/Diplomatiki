@@ -6,7 +6,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 2,
@@ -15,7 +16,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 3,
@@ -24,7 +26,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 4,
@@ -33,7 +36,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 5,
@@ -42,7 +46,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 6,
@@ -51,7 +56,8 @@
         "Data Type": "UTF-8",
         "Data Range": "",
         "Unit": "",
-        "Note": "Data type :UTF-8"
+        "Note": "Data type :UTF-8",
+        "Quantity": 1
     },
     {
         "No.": 7,
@@ -60,7 +66,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 8,
@@ -69,7 +76,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1kW",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 9,
@@ -78,7 +86,8 @@
         "Data Type": "U16",
         "Data Range": "0-two phase. 1-3P4L. 2-3P3L",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 10,
@@ -87,7 +96,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1 kWh",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 11,
@@ -96,7 +106,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "kWh",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 12,
@@ -105,7 +116,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "h",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 13,
@@ -114,7 +126,8 @@
         "Data Type": "S16",
         "Data Range": "",
         "Unit": "0.1℃",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 14,
@@ -123,7 +136,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "VA",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG33K3J, SG36KTL-M, SG40KTL-M, G50KTL, SG50KTL-M, SG60KTL, SG60KTL-M, SG60KU-M, G80KTL, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX,  SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX、SG75CX, SG225HX"
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG33K3J, SG36KTL-M, SG40KTL-M, G50KTL, SG50KTL-M, SG60KTL, SG60KTL-M, SG60KU-M, G80KTL, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX,  SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX、SG75CX, SG225HX",
+        "Quantity": 1
     },
     {
         "No.": 15,
@@ -132,7 +146,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 16,
@@ -141,7 +156,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 17,
@@ -150,7 +166,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 18,
@@ -159,7 +176,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 19,
@@ -168,7 +186,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 20,
@@ -177,7 +196,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 21,
@@ -186,7 +206,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "W",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 22,
@@ -195,7 +216,8 @@
         "Data Type": "U16",
         "Data Range": "0.1 V",
         "Unit": "",
-        "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage"
+        "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
+        "Quantity": 1
     },
     {
         "No.": 23,
@@ -204,7 +226,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1 V",
-        "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage"
+        "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
+        "Quantity": 1
     },
     {
         "No.": 24,
@@ -213,7 +236,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1 V",
-        "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage"
+        "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
+        "Quantity": 1
     },
     {
         "No.": 25,
@@ -222,7 +246,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1 A",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 26,
@@ -231,7 +256,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1 A",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 27,
@@ -240,7 +266,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1 A",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 28,
@@ -249,7 +276,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 29,
@@ -258,7 +286,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 30,
@@ -267,7 +296,8 @@
         "Data Type": "5029 - 5030",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 31,
@@ -276,7 +306,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "W",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 32,
@@ -285,7 +316,8 @@
         "Data Type": "S32",
         "Data Range": "",
         "Unit": "Var",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 33,
@@ -294,7 +326,8 @@
         "Data Type": "S16",
         "Data Range": "",
         "Unit": "0.001",
-        "Note": ">0 means leading. <0 means lagging"
+        "Note": ">0 means leading. <0 means lagging",
+        "Quantity": 1
     },
     {
         "No.": 34,
@@ -303,7 +336,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1 Hz",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 35,
@@ -312,7 +346,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 36,
@@ -321,7 +356,8 @@
         "Data Type": "U16",
         "Data Range": "See Appendix 1",
         "Unit": "",
-        "Note": "Data of address 5039 - 5045 are additional"
+        "Note": "Data of address 5039 - 5045 are additional",
+        "Quantity": 1
     },
     {
         "No.": 36,
@@ -330,7 +366,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100)."
+        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
+        "Quantity": 1
     },
     {
         "No.": 36,
@@ -339,7 +376,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100)."
+        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
+        "Quantity": 1
     },
     {
         "No.": 36,
@@ -348,7 +386,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100)."
+        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
+        "Quantity": 1
     },
     {
         "No.": 36,
@@ -357,7 +396,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100)."
+        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
+        "Quantity": 1
     },
     {
         "No.": 36,
@@ -366,7 +406,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100)."
+        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
+        "Quantity": 1
     },
     {
         "No.": 36,
@@ -375,7 +416,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100)."
+        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
+        "Quantity": 1
     },
     {
         "No.": 36,
@@ -384,7 +426,8 @@
         "Data Type": "U16",
         "Data Range": "See Appendix 3",
         "Unit": "",
-        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100)."
+        "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
+        "Quantity": 1
     },
     {
         "No.": 36,
@@ -393,7 +436,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 37,
@@ -402,7 +446,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1kVar",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 38,
@@ -411,7 +456,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 39,
@@ -420,7 +466,8 @@
         "Data Type": "U16",
         "Data Range": "1 - 20000(0xFFFF: invalid)",
         "Unit": "1kΩ",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 40,
@@ -429,7 +476,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 41,
@@ -438,7 +486,8 @@
         "Data Type": "",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 42,
@@ -447,7 +496,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "1w",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 43,
@@ -456,7 +506,8 @@
         "Data Type": "S32",
         "Data Range": "",
         "Unit": "1Var",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 44,
@@ -465,7 +516,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "",
-        "Note": "See Appendix 2"
+        "Note": "See Appendix 2",
+        "Quantity": 1
     },
     {
         "No.": 45,
@@ -474,7 +526,8 @@
         "Data Type": "S32",
         "Data Range": "",
         "Unit": "1w",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 46,
@@ -483,7 +536,8 @@
         "Data Type": "S32",
         "Data Range": "",
         "Unit": "1w",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 47,
@@ -492,7 +546,8 @@
         "Data Type": "S32",
         "Data Range": "",
         "Unit": "1w",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 48,
@@ -501,7 +556,8 @@
         "Data Type": "S32",
         "Data Range": "",
         "Unit": "1w",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 49,
@@ -510,7 +566,8 @@
         "Data Type": "S32",
         "Data Range": "",
         "Unit": "1w",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 50,
@@ -519,7 +576,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "0.1kWh",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 51,
@@ -528,7 +586,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "0.1kWh",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 52,
@@ -537,7 +596,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "0.1kWh",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 53,
@@ -546,7 +606,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "0.1kWh",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 54,
@@ -555,7 +616,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "0.1kWh",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 55,
@@ -564,7 +626,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "0.1kWh",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area."
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
+        "Quantity": 1
     },
     {
         "No.": 56,
@@ -573,7 +636,8 @@
         "Data Type": "",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 57,
@@ -582,7 +646,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "1min",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 58,
@@ -591,7 +656,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": "See Appendix 4"
+        "Note": "See Appendix 4",
+        "Quantity": 1
     },
     {
         "No.": 59,
@@ -600,7 +666,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 60,
@@ -609,7 +676,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 61,
@@ -618,7 +686,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 62,
@@ -627,7 +696,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 63,
@@ -636,7 +706,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 64,
@@ -645,7 +716,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 65,
@@ -654,7 +726,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 66,
@@ -663,7 +736,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 67,
@@ -672,7 +746,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 68,
@@ -681,7 +756,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 69,
@@ -690,7 +766,8 @@
         "Data Type": "",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 70,
@@ -699,7 +776,8 @@
         "Data Type": "",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 71,
@@ -708,7 +786,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "0.1kWh",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 72,
@@ -717,7 +796,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 73,
@@ -726,7 +806,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 74,
@@ -735,7 +816,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 75,
@@ -744,7 +826,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 76,
@@ -753,7 +836,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 77,
@@ -762,7 +846,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },    
     {
         "No.": 78,
@@ -771,7 +856,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1V",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 79,
@@ -780,7 +866,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.1A",
-        "Note": "See Appendix 6"
+        "Note": "See Appendix 6",
+        "Quantity": 1
     },
     {
         "No.": 80,
@@ -789,7 +876,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 81,
@@ -798,7 +886,8 @@
         "Data Type": "",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 82,
@@ -807,7 +896,8 @@
         "Data Type": "",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 83,
@@ -816,7 +906,8 @@
         "Data Type": "",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 84,
@@ -825,7 +916,8 @@
         "Data Type": "",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 85,
@@ -834,7 +926,8 @@
         "Data Type": "U32",
         "Data Range": "",
         "Unit": "0.1kWh",
-        "Note": "(Display accuracy increased to 0.1kWh) Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, G20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX, SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX, SG75CX, SG225HX"
+        "Note": "(Display accuracy increased to 0.1kWh) Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, G20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX, SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX, SG75CX, SG225HX",
+        "Quantity": 1
     },
     {
         "No.": 86,
@@ -843,7 +936,8 @@
         "Data Type": "S16",
         "Data Range": "-15000 ~ 15000",
         "Unit": "0.1V",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 87,
@@ -852,7 +946,8 @@
         "Data Type": "U16",
         "Data Range": "0 - 15000",
         "Unit": "0.1V",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 88,
@@ -861,7 +956,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "0.01Hz",
-        "Note": "(Display accuracy increased to 0.01Hz). Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX, SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX, SG75CX, SG225HX"
+        "Note": "(Display accuracy increased to 0.01Hz). Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX, SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX, SG75CX, SG225HX",
+        "Quantity": 1
     },
     {
         "No.": 89,
@@ -870,7 +966,8 @@
         "Data Type": "U16",
         "Data Range": "0 ~ 15000",
         "Unit": "0.1V",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 90,
@@ -879,7 +976,8 @@
         "Data Type": "U16",
         "Data Range": "2: PID Recover Operation, 4: Anti-PID Operation, 8: PID Abnormity",
         "Unit": "",
-        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20R, SG80KTL-M, SG125HV, SG125HV-20, SG80KTL, SG33CXSG40CX, SG50CX, SG110CX, SG100CX、SG75CX, SG136TX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG225HX"
+        "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20R, SG80KTL-M, SG125HV, SG125HV-20, SG80KTL, SG33CXSG40CX, SG50CX, SG110CX, SG100CX、SG75CX, SG136TX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG225HX",
+        "Quantity": 1
     },
     {
         "No.": 91,
@@ -888,7 +986,8 @@
         "Data Type": "U16",
         "Data Range": "432:PID resistance abnormal, 433:PID function abnormal, 434:PID overvoltage/overcur rent protection",
         "Unit": "",
-        "Note": "See Appendix 5"
+        "Note": "See Appendix 5",
+        "Quantity": 1
     },
     {
         "No.": 92,
@@ -897,7 +996,8 @@
         "Data Type": "U16",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     },
     {
         "No.": 93,
@@ -906,6 +1006,7 @@
         "Data Type": "",
         "Data Range": "",
         "Unit": "",
-        "Note": ""
+        "Note": "",
+        "Quantity": 1
     }
 ]

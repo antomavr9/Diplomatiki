@@ -2,21 +2,13 @@ using System;
 using System.IO;
 using System.Text.Json;
 using System.Linq;
-
+using BaseClass;
+using SungrowClass;
+using HuaweiClass;
 
 public class JsonHandler
 {
-    public int SN { get; set; }
-    public string? Name { get; set; }
-    public string? ReadWrite { get; set; }
-    public string? Type { get; set; }
-    public string? Unit { get; set; }
-    public int Gain { get; set; }
-    public int Address { get; set; }
-    public int Quantity { get; set; }
-    public string? Range { get; set; }
-
-    public static JsonHandler[]? LoadFromFile(string jsonFilePath)
+    public static List<Base>? LoadFromFile(string jsonFilePath)
     {
         try
         {
@@ -24,9 +16,9 @@ public class JsonHandler
             string json = File.ReadAllText(jsonFilePath);
 
             // Deserialize the JSON string to a JsonHandler array
-            JsonHandler[]? jsonData = JsonSerializer.Deserialize<JsonHandler[]>(json);
+            List<Base>? jsonList = JsonSerializer.Deserialize<List<Base>>(json);
 
-            return jsonData;
+            return jsonList;
         }
         catch (FileNotFoundException)
         {
@@ -44,24 +36,8 @@ public class JsonHandler
         return null;
     }
 
-    // public bool CheckData()
-    // {
-    //     return AddressUnits.All(addressUnit =>
-    //         !string.IsNullOrEmpty(addressUnit.Name) &&
-    //         addressUnit.Address > 0 &&
-    //         !string.IsNullOrEmpty(addressUnit.DataType) &&
-    //         addressUnit.Quantity > 0 &&
-    //         !string.IsNullOrEmpty(addressUnit.Unit)
-    //     );
-    // }
-
-    // public List<AddressUnit> ConvertData()
-    // {
-    //     return AddressUnits;
-    // }
-
     public override string ToString()
     {
-        return $"SN: {SN}, Name: {Name}, Read/Write: {ReadWrite}, Type: {Type}, Unit: {Unit}, Gain: {Gain}, Address: {Address}, Quantity: {Quantity}, Range: {Range}";
+        return "Handles the json data.";
     }
 }

@@ -1,44 +1,20 @@
 using System;
 using System.IO;
 using System.Text.Json;
+using BaseClass;
 
-public class Huawei : Base
+namespace HuaweiClass
 {
-    public int SN { get; set; }
-    public string? ReadWrite { get; set; }
-    public int Gain { get; set; }
-    public string? Range { get; set; }
-
-    public bool ValidateJsonHuawei(string jsonFilePath)
+    public class Huawei : Base
     {
-        if (!ValidateJson(jsonFilePath))
-        {
-            return false;
-        }
+        public int SN { get; set; }
+        public string? ReadWrite { get; set; }
+        public int Gain { get; set; }
+        public string? Range { get; set; }
 
-        try
+        public override string ToString()
         {
-            using (StreamReader reader = new StreamReader(jsonFilePath))
-            {
-                string jsonString = reader.ReadToEnd();
-                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                var data = JsonSerializer.Deserialize<Huawei[]>(jsonString, options);
-
-                foreach (var item in data)
-                {
-                    if (string.IsNullOrEmpty(item.ReadWrite) || item.Gain == 0 ||
-                        string.IsNullOrEmpty(item.Range) || item.SN == 0)
-                    {
-                        return false;
-                    }
-                }
-
-                return true;
-            }
-        }
-        catch (Exception)
-        {
-            return false;
+            return $"Name: {Name}, DataType: {DataType}, Unit: {Unit}, Address: {Address}, Quantity: {Quantity}, SN: {SN}, ReadWrite: {ReadWrite}, Gain: {Gain}, Range: {Range}";
         }
     }
 }

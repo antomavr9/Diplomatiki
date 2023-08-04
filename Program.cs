@@ -347,7 +347,7 @@ class Program
         #region Json Handler
 
 
-        // string jsonFilePath = "TEST.json"; // Replace with your JSON file path
+        // string jsonFilePath = "JsonData/TEST.json"; // JSON file path
         // JsonHandler[]? jsonDataArray = JsonHandler.LoadFromFile(jsonFilePath);
         // if (jsonDataArray != null)
         // {
@@ -355,7 +355,7 @@ class Program
         //     foreach (JsonHandler jsonData in jsonDataArray)
         //     {
         //         Console.WriteLine("------------------------------");
-        //         Console.WriteLine($"SN: {jsonData.SN}");
+        //         Console.WriteLine($"SN: {Huawei.SN}");
         //         Console.WriteLine($"Name: {jsonData.Name}");
         //         Console.WriteLine($"Read/Write: {jsonData.ReadWrite}");
         //         Console.WriteLine($"Type: {jsonData.Type}");
