@@ -353,11 +353,11 @@ class Program
         // List<Huawei>? jsonDataArrayHuawei = JsonHandler.LoadFromFileHuawei(jsonFilePath);
         // List<Sungrow>? jsonDataArraySungrow = JsonHandler.LoadFromFileSungrow(jsonFilePath);
 
-        // List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase);
+        List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase);
         // List<AddressUnit>? HuaweiAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayHuawei);
         // List<AddressUnit>? SungrowAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArraySungrow);
 
-        Console.WriteLine(jsonDataArrayBase[0].Name);
+        // Console.WriteLine(jsonDataArrayBase[0].Name);
         // Console.WriteLine(jsonDataArrayHuawei[0].Name);
         // Console.WriteLine(jsonDataArraySungrow[0].Name);
 
