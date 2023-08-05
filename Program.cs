@@ -345,12 +345,22 @@ class Program
     
         #region Json Handler
 
-        string jsonFilePath = "JsonData/Huawei.json"; // JSON file path
-        List<Base>? jsonDataArray = JsonHandler.LoadFromFileBase(jsonFilePath);
-        // List<Huawei>? jsonDataArray = JsonHandler.LoadFromFileHuawei(jsonFilePath);
-        // List<Sungrow>? jsonDataArray = JsonHandler.LoadFromFileSungrow(jsonFilePath);
-        List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArray);
-        Console.WriteLine(jsonDataArray[0].Name);
+        // string jsonFilePath = "JsonData/TEST.json"; // JSON file path
+        string jsonFilePath = "JsonData/Huawei.json";
+        // string jsonFilePath = "JsonData/Sungrow.json";
+
+        List<Base>? jsonDataArrayBase = JsonHandler.LoadFromFileBase(jsonFilePath);
+        // List<Huawei>? jsonDataArrayHuawei = JsonHandler.LoadFromFileHuawei(jsonFilePath);
+        // List<Sungrow>? jsonDataArraySungrow = JsonHandler.LoadFromFileSungrow(jsonFilePath);
+
+        // List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase);
+        // List<AddressUnit>? HuaweiAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayHuawei);
+        // List<AddressUnit>? SungrowAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArraySungrow);
+
+        Console.WriteLine(jsonDataArrayBase[0].Name);
+        // Console.WriteLine(jsonDataArrayHuawei[0].Name);
+        // Console.WriteLine(jsonDataArraySungrow[0].Name);
+
         
 
         // if (jsonDataArray != null)

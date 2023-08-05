@@ -22,7 +22,7 @@ namespace JsonClasses
     {
         public int SN { get; set; }
         public string? ReadWrite { get; set; }
-        public int Gain { get; set; }
+        public string? Gain { get; set; }
         public string? Range { get; set; }
 
         public override string ToString()
@@ -36,10 +36,11 @@ namespace JsonClasses
         public int No { get; set; }
         public string? DataRange { get; set; }
         public string? Note { get; set; }
+        public int FinalAddress { get; set; }
 
         public override string ToString()
         {
-            return $"Name: {Name}, DataType: {DataType}, Unit: {Unit}, Address: {Address}, Quantity: {Quantity}, No: {No}, DataRange: {DataRange}, Note: {Note}";
+            return $"Name: {Name}, DataType: {DataType}, Unit: {Unit}, Address: {Address}, Quantity: {Quantity}, No: {No}, DataRange: {DataRange}, Note: {Note}, FinalAddress: {FinalAddress}";
         }
     }
 }

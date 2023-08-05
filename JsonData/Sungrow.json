@@ -5,7 +5,7 @@
         "Address": 4950,
         "FinalAddress": 4951,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 2
@@ -16,7 +16,7 @@
         "Address": 4952,
         "FinalAddress": 4953,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 2
@@ -27,7 +27,7 @@
         "Address": 4954,
         "FinalAddress": 4968,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 15
@@ -38,7 +38,7 @@
         "Address": 4969,
         "FinalAddress": 4983,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 15
@@ -49,7 +49,7 @@
         "Address": 4984,
         "FinalAddress": 4989,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 6
@@ -60,7 +60,7 @@
         "Address": 4990,
         "FinalAddress": 4999,
         "DataType": "UTF-8",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "Datatype :UTF-8",
         "Quantity": 10
@@ -71,7 +71,7 @@
         "Address": 5000,
         "FinalAddress": 5000,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -82,7 +82,7 @@
         "Address": 5001,
         "FinalAddress": 5001,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kW",
         "Note": "",
         "Quantity": 1
@@ -93,7 +93,7 @@
         "Address": 5002,
         "FinalAddress": 5002,
         "DataType": "U16",
-        "Data Range": "0-two phase. 1-3P4L. 2-3P3L",
+        "DataRange": "0-two phase. 1-3P4L. 2-3P3L",
         "Unit": "",
         "Note": "",
         "Quantity": 1
@@ -104,7 +104,7 @@
         "Address": 5003,
         "FinalAddress": 5003,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1 kWh",
         "Note": "",
         "Quantity": 1
@@ -115,7 +115,7 @@
         "Address": 5004,
         "FinalAddress": 5005,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "kWh",
         "Note": "",
         "Quantity": 2
@@ -126,7 +126,7 @@
         "Address": 5006,
         "FinalAddress": 5007,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "h",
         "Note": "",
         "Quantity": 2
@@ -137,7 +137,7 @@
         "Address": 5008,
         "FinalAddress": 5008,
         "DataType": "S16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1℃",
         "Note": "",
         "Quantity": 1
@@ -148,7 +148,7 @@
         "Address": 5009,
         "FinalAddress": 5010,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "VA",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG33K3J, SG36KTL-M, SG40KTL-M, G50KTL, SG50KTL-M, SG60KTL, SG60KTL-M, SG60KU-M, G80KTL, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX,  SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX、SG75CX, SG225HX",
         "Quantity": 2
@@ -159,7 +159,7 @@
         "Address": 5011,
         "FinalAddress": 5011,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -170,7 +170,7 @@
         "Address": 5012,
         "FinalAddress": 5012,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -181,7 +181,7 @@
         "Address": 5013,
         "FinalAddress": 5013,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -192,7 +192,7 @@
         "Address": 5014,
         "FinalAddress": 5014,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -203,7 +203,7 @@
         "Address": 5015,
         "FinalAddress": 5015,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -214,7 +214,7 @@
         "Address": 5016,
         "FinalAddress": 5016,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -225,7 +225,7 @@
         "Address": 5017,
         "FinalAddress": 5018,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "W",
         "Note": "See Appendix 6",
         "Quantity": 2
@@ -236,7 +236,7 @@
         "Address": 5019,
         "FinalAddress": 5019,
         "DataType": "U16",
-        "Data Range": "0.1 V",
+        "DataRange": "0.1 V",
         "Unit": "",
         "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
         "Quantity": 1
@@ -247,7 +247,7 @@
         "Address": 5020,
         "FinalAddress": 5020,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1 V",
         "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
         "Quantity": 1
@@ -258,7 +258,7 @@
         "Address": 5021,
         "FinalAddress": 5021,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1 V",
         "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
         "Quantity": 1
@@ -269,7 +269,7 @@
         "Address": 5022,
         "FinalAddress": 5022,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1 A",
         "Note": "",
         "Quantity": 1
@@ -280,7 +280,7 @@
         "Address": 5023,
         "FinalAddress": 5023,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1 A",
         "Note": "",
         "Quantity": 1
@@ -291,7 +291,7 @@
         "Address": 5024,
         "FinalAddress": 5024,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1 A",
         "Note": "",
         "Quantity": 1
@@ -302,7 +302,7 @@
         "Address": 5025,
         "FinalAddress": 5026,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 2
@@ -313,7 +313,7 @@
         "Address": 5027,
         "FinalAddress": 5028,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 2
@@ -324,7 +324,7 @@
         "Address": 5029,
         "FinalAddress": 5030,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 2
@@ -335,7 +335,7 @@
         "Address": 5031,
         "FinalAddress": 5032,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "W",
         "Note": "",
         "Quantity": 2
@@ -346,7 +346,7 @@
         "Address": 5033,
         "FinalAddress": 5034,
         "DataType": "S32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "Var",
         "Note": "",
         "Quantity": 2
@@ -357,7 +357,7 @@
         "Address": 5035,
         "FinalAddress": 5035,
         "DataType": "S16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.001",
         "Note": ">0 means leading. <0 means lagging",
         "Quantity": 1
@@ -368,7 +368,7 @@
         "Address": 5036,
         "FinalAddress": 5036,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1 Hz",
         "Note": "",
         "Quantity": 1
@@ -379,7 +379,7 @@
         "Address": 5037,
         "FinalAddress": 5037,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 1
@@ -390,7 +390,7 @@
         "Address": 5038,
         "FinalAddress": 5038,
         "DataType": "U16",
-        "Data Range": "See Appendix 1",
+        "DataRange": "See Appendix 1",
         "Unit": "",
         "Note": "Data of address 5039 - 5045 are additional",
         "Quantity": 1
@@ -401,7 +401,7 @@
         "Address": 5039,
         "FinalAddress": 5039,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
         "Quantity": 1
@@ -412,7 +412,7 @@
         "Address": 5040,
         "FinalAddress": 5040,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
         "Quantity": 1
@@ -423,7 +423,7 @@
         "Address": 5041,
         "FinalAddress": 5041,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
         "Quantity": 1
@@ -434,7 +434,7 @@
         "Address": 5042,
         "FinalAddress": 5042,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
         "Quantity": 1
@@ -445,7 +445,7 @@
         "Address": 5043,
         "FinalAddress": 5043,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
         "Quantity": 1
@@ -456,7 +456,7 @@
         "Address": 5044,
         "FinalAddress": 5044,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
         "Quantity": 1
@@ -467,7 +467,7 @@
         "Address": 5045,
         "FinalAddress": 5045,
         "DataType": "U16",
-        "Data Range": "See Appendix 3",
+        "DataRange": "See Appendix 3",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
         "Quantity": 1
@@ -478,7 +478,7 @@
         "Address": 5046,
         "FinalAddress": 5048,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 3
@@ -489,7 +489,7 @@
         "Address": 5049,
         "FinalAddress": 5049,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kVar",
         "Note": "",
         "Quantity": 1
@@ -500,7 +500,7 @@
         "Address": 5050,
         "FinalAddress": 5070,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 21
@@ -511,7 +511,7 @@
         "Address": 5071,
         "FinalAddress": 5071,
         "DataType": "U16",
-        "Data Range": "1 - 20000(0xFFFF: invalid)",
+        "DataRange": "1 - 20000(0xFFFF: invalid)",
         "Unit": "1kΩ",
         "Note": "",
         "Quantity": 1
@@ -522,7 +522,7 @@
         "Address": 5072,
         "FinalAddress": 5072,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 1
@@ -533,7 +533,7 @@
         "Address": 5073,
         "FinalAddress": 5076,
         "DataType": "",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 4
@@ -544,7 +544,7 @@
         "Address": 5077,
         "FinalAddress": 5078,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "1w",
         "Note": "",
         "Quantity": 2
@@ -555,7 +555,7 @@
         "Address": 5079,
         "FinalAddress": 5080,
         "DataType": "S32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "1Var",
         "Note": "",
         "Quantity": 2
@@ -566,7 +566,7 @@
         "Address": 5081,
         "FinalAddress": 5082,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "See Appendix 2",
         "Quantity": 2
@@ -577,7 +577,7 @@
         "Address": 5083,
         "FinalAddress": 5084,
         "DataType": "S32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -588,7 +588,7 @@
         "Address": 5085,
         "FinalAddress": 5086,
         "DataType": "S32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -599,7 +599,7 @@
         "Address": 5087,
         "FinalAddress": 5088,
         "DataType": "S32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -610,7 +610,7 @@
         "Address": 5089,
         "FinalAddress": 5090,
         "DataType": "S32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -621,7 +621,7 @@
         "Address": 5091,
         "FinalAddress": 5092,
         "DataType": "S32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -632,7 +632,7 @@
         "Address": 5093,
         "FinalAddress": 5094,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -643,7 +643,7 @@
         "Address": 5095,
         "FinalAddress": 5096,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -654,7 +654,7 @@
         "Address": 5097,
         "FinalAddress": 5098,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -665,7 +665,7 @@
         "Address": 5099,
         "FinalAddress": 5100,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -676,7 +676,7 @@
         "Address": 5101,
         "FinalAddress": 5102,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -687,7 +687,7 @@
         "Address": 5103,
         "FinalAddress": 5104,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
         "Quantity": 2
@@ -698,7 +698,7 @@
         "Address": 5105,
         "FinalAddress": 5112,
         "DataType": "",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 8
@@ -709,7 +709,7 @@
         "Address": 5113,
         "FinalAddress": 5113,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "1min",
         "Note": "",
         "Quantity": 1
@@ -720,7 +720,7 @@
         "Address": 5114,
         "FinalAddress": 5114,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "See Appendix 4",
         "Quantity": 1
@@ -731,7 +731,7 @@
         "Address": 5115,
         "FinalAddress": 5115,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -742,7 +742,7 @@
         "Address": 5116,
         "FinalAddress": 5116,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -753,7 +753,7 @@
         "Address": 5117,
         "FinalAddress": 5117,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -764,7 +764,7 @@
         "Address": 5118,
         "FinalAddress": 5118,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -775,7 +775,7 @@
         "Address": 5119,
         "FinalAddress": 5119,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -786,7 +786,7 @@
         "Address": 5120,
         "FinalAddress": 5120,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -797,7 +797,7 @@
         "Address": 5121,
         "FinalAddress": 5121,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -808,7 +808,7 @@
         "Address": 5122,
         "FinalAddress": 5122,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -819,7 +819,7 @@
         "Address": 5123,
         "FinalAddress": 5123,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -830,7 +830,7 @@
         "Address": 5124,
         "FinalAddress": 5124,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -841,7 +841,7 @@
         "Address": 5125,
         "FinalAddress": 5125,
         "DataType": "",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 1
@@ -852,7 +852,7 @@
         "Address": 5126,
         "FinalAddress": 5127,
         "DataType": "",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 2
@@ -863,7 +863,7 @@
         "Address": 5128,
         "FinalAddress": 5129,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "",
         "Quantity": 2
@@ -874,7 +874,7 @@
         "Address": 5130,
         "FinalAddress": 5130,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -885,7 +885,7 @@
         "Address": 5131,
         "FinalAddress": 5131,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -896,7 +896,7 @@
         "Address": 5132,
         "FinalAddress": 5132,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -907,7 +907,7 @@
         "Address": 5133,
         "FinalAddress": 5133,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -918,7 +918,7 @@
         "Address": 5134,
         "FinalAddress": 5134,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -929,7 +929,7 @@
         "Address": 5135,
         "FinalAddress": 5135,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -940,7 +940,7 @@
         "Address": 5136,
         "FinalAddress": 5136,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -951,7 +951,7 @@
         "Address": 5137,
         "FinalAddress": 5137,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
         "Quantity": 1
@@ -962,7 +962,7 @@
         "Address": 5138,
         "FinalAddress": 5139,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 2
@@ -973,7 +973,7 @@
         "Address": 5140,
         "FinalAddress": 5140,
         "DataType": "",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 1
@@ -984,7 +984,7 @@
         "Address": 5141,
         "FinalAddress": 5141,
         "DataType": "",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 1
@@ -995,7 +995,7 @@
         "Address": 5142,
         "FinalAddress": 5142,
         "DataType": "",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 1
@@ -1006,7 +1006,7 @@
         "Address": 5143,
         "FinalAddress": 5143,
         "DataType": "",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 1
@@ -1017,7 +1017,7 @@
         "Address": 5144,
         "FinalAddress": 5145,
         "DataType": "U32",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "(Display accuracy increased to 0.1kWh) Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, G20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX, SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX, SG75CX, SG225HX",
         "Quantity": 2
@@ -1028,7 +1028,7 @@
         "Address": 5146,
         "FinalAddress": 5146,
         "DataType": "S16",
-        "Data Range": "-15000 ~ 15000",
+        "DataRange": "-15000 ~ 15000",
         "Unit": "0.1V",
         "Note": "",
         "Quantity": 1
@@ -1039,7 +1039,7 @@
         "Address": 5147,
         "FinalAddress": 5147,
         "DataType": "U16",
-        "Data Range": "0 - 15000",
+        "DataRange": "0 - 15000",
         "Unit": "0.1V",
         "Note": "",
         "Quantity": 1
@@ -1050,7 +1050,7 @@
         "Address": 5148,
         "FinalAddress": 5148,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "0.01Hz",
         "Note": "(Display accuracy increased to 0.01Hz). Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX, SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX, SG75CX, SG225HX",
         "Quantity": 1
@@ -1061,7 +1061,7 @@
         "Address": 5149,
         "FinalAddress": 5149,
         "DataType": "U16",
-        "Data Range": "0 ~ 15000",
+        "DataRange": "0 ~ 15000",
         "Unit": "0.1V",
         "Note": "",
         "Quantity": 1
@@ -1072,7 +1072,7 @@
         "Address": 5150,
         "FinalAddress": 5150,
         "DataType": "U16",
-        "Data Range": "2: PID Recover Operation, 4: Anti-PID Operation, 8: PID Abnormity",
+        "DataRange": "2: PID Recover Operation, 4: Anti-PID Operation, 8: PID Abnormity",
         "Unit": "",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20R, SG80KTL-M, SG125HV, SG125HV-20, SG80KTL, SG33CXSG40CX, SG50CX, SG110CX, SG100CX、SG75CX, SG136TX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG225HX",
         "Quantity": 1
@@ -1083,7 +1083,7 @@
         "Address": 5151,
         "FinalAddress": 5151,
         "DataType": "U16",
-        "Data Range": "432:PID resistance abnormal, 433:PID function abnormal, 434:PID overvoltage/overcur rent protection",
+        "DataRange": "432:PID resistance abnormal, 433:PID function abnormal, 434:PID overvoltage/overcur rent protection",
         "Unit": "",
         "Note": "See Appendix 5",
         "Quantity": 1
@@ -1094,7 +1094,7 @@
         "Address": 5152,
         "FinalAddress": 5152,
         "DataType": "U16",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 1
@@ -1105,7 +1105,7 @@
         "Address": 5153,
         "FinalAddress":7012,
         "DataType": "",
-        "Data Range": "",
+        "DataRange": "",
         "Unit": "",
         "Note": "",
         "Quantity": 1860
