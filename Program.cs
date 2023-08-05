@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Modbus.Net;
 using Modbus.Net.Modbus;
 using ModbusMachineExtended;
-// Pantelis Branch
+using JsonClasses;
 
 class Program
 {
@@ -19,7 +19,6 @@ class Program
         ModbusUtility utility = new ModbusUtility(ModbusType.Tcp, "127.0.0.1", 1, 0);
         bool connectionStatus = await utility.ConnectAsync(); // Here the execution starts
 
-        
         // // ReturnStruct<ushort[]> result = await utility.GetMultipleRegister(0, 1, 0,new ushort[] {}); // , new ushort[] { 0 }
         // if (result.IsSuccess)
         // {
@@ -346,9 +345,14 @@ class Program
     
         #region Json Handler
 
+        string jsonFilePath = "JsonData/Huawei.json"; // JSON file path
+        List<Base>? jsonDataArray = JsonHandler.LoadFromFileBase(jsonFilePath);
+        // List<Huawei>? jsonDataArray = JsonHandler.LoadFromFileHuawei(jsonFilePath);
+        // List<Sungrow>? jsonDataArray = JsonHandler.LoadFromFileSungrow(jsonFilePath);
+        List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArray);
+        Console.WriteLine(jsonDataArray[0].Name);
+        
 
-        // string jsonFilePath = "JsonData/TEST.json"; // JSON file path
-        // JsonHandler[]? jsonDataArray = JsonHandler.LoadFromFile(jsonFilePath);
         // if (jsonDataArray != null)
         // {
         //     Console.WriteLine("JSON Data:");
