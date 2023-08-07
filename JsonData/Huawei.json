@@ -2,10 +2,10 @@
   {
     "SN": 1,
     "Name": "Date & Time",
-    "Read/Write": "RW",
-    "Type": "U32",
+    "ReadWrite": "RW",
+    "DataType": "U32",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40000,
     "Quantity": 2,
     "Range": "Epoch seconds UTC"
@@ -13,10 +13,10 @@
   {
     "SN": 2,
     "Name": "City",
-    "Read/Write": "RW",
-    "Type": "U32",
+    "ReadWrite": "RW",
+    "DataType": "U32",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40002,
     "Quantity": 2,
     "Range": ""
@@ -24,10 +24,10 @@
   {
     "SN": 3,
     "Name": "Daylight Saving Time (DST)",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40004,
     "Quantity": 1,
     "Range": "0: Disabled, 1: Enabled"
@@ -35,10 +35,10 @@
   {
     "SN": 4,
     "Name": "Time Zone",
-    "Read/Write": "RO",
-    "Type": "I32",
+    "ReadWrite": "RO",
+    "DataType": "I32",
     "Unit": "s",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40005,
     "Quantity": 2,
     "Range": "Time zone offset measured in seconds"
@@ -46,10 +46,10 @@
   {
     "SN": 5,
     "Name": "DST state",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40007,
     "Quantity": 1,
     "Range": "0: DST time not entered, 1: DST time entered"
@@ -57,10 +57,10 @@
   {
     "SN": 6,
     "Name": "DST offset",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "mins",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40008,
     "Quantity": 1,
     "Range": "N/A"
@@ -68,10 +68,10 @@
   {
     "SN": 7,
     "Name": "The Local Time",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40009,
     "Quantity": 2,
     "Range": "Epoch seconds, local time of the SmartLogger"
@@ -79,10 +79,10 @@
   {
     "SN": 8,
     "Name": "Power on",
-    "Read/Write": "WO",
-    "Type": "U16",
+    "ReadWrite": "WO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40200,
     "Quantity": 1,
     "Range": "The data field can only be 0 for powering on all inverters."
@@ -90,10 +90,10 @@
   {
     "SN": 9,
     "Name": "Power off",
-    "Read/Write": "WO",
-    "Type": "U16",
+    "ReadWrite": "WO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40201,
     "Quantity": 1,
     "Range": "The data field can only be 0 for powering off all inverters."
@@ -101,10 +101,10 @@
   {
     "SN": 10,
     "Name": "Power on/off",
-    "Read/Write": "WO",
-    "Type": "U16",
+    "ReadWrite": "WO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40202,
     "Quantity": 1,
     "Range": "0: Power off all inverters, 1: Power on all inverters"
@@ -112,10 +112,10 @@
   {
     "SN": 11,
     "Name": "Power on/off",
-    "Read/Write": "WO",
-    "Type": "U16",
+    "ReadWrite": "WO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40203,
     "Quantity": 1,
     "Range": "0: Power on all inverters, 1: Power off all inverters"
@@ -123,10 +123,10 @@
   {
     "SN": 12,
     "Name": "Transfer trip",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40204,
     "Quantity": 1,
     "Range": "0: Run, 1: Fault outage. The device shuts down when it stops due to faults and does not respond to the startup request."
@@ -134,10 +134,10 @@
   {
     "SN": 13,
     "Name": "Array reset",
-    "Read/Write": "WO",
-    "Type": "U16",
+    "ReadWrite": "WO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40205,
     "Quantity": 1,
     "Range": "The data domain can only be 0."
@@ -145,10 +145,10 @@
   {
     "SN": 14,
     "Name": "Active adjustment",
-    "Read/Write": "RW",
-    "Type": "U32",
+    "ReadWrite": "RW",
+    "DataType": "U32",
     "Unit": "kW",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40420,
     "Quantity": 2,
     "Range": "Adjusts the total active output power of all inverters connected to the SmartLogger. The adjustment value that is beyond the range is discarded."
@@ -156,10 +156,10 @@
   {
     "SN": 15,
     "Name": "Reactive adjustment",
-    "Read/Write": "RW",
-    "Type": "I32",
+    "ReadWrite": "RW",
+    "DataType": "I32",
     "Unit": "kVar",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40422,
     "Quantity": 2,
     "Range": "Adjusts the total reactive output power of all inverters connected to the SmartLogger. The adjustment value that is beyond the range is discarded."
@@ -167,10 +167,10 @@
   {
     "SN": 16,
     "Name": "Active adjustment",
-    "Read/Write": "RW",
-    "Type": "U32",
+    "ReadWrite": "RW",
+    "DataType": "U32",
     "Unit": "kW",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40424,
     "Quantity": 2,
     "Range": "Adjusts the total active output power of all inverters connected to the SmartLogger."
@@ -178,10 +178,10 @@
   {
     "SN": 17,
     "Name": "Reactive adjustment",
-    "Read/Write": "RW",
-    "Type": "I32",
+    "ReadWrite": "RW",
+    "DataType": "I32",
     "Unit": "kVar",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40426,
     "Quantity": 2,
     "Range": "Adjusts the total reactive output power of all inverters connected to the SmartLogger."
@@ -189,10 +189,10 @@
   {
     "SN": 18,
     "Name": "Active power",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "%",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40428,
     "Quantity": 1,
     "Range": "Adjusts the total active output power of all inverters connected to the SmartLogger. The percentage rnge is 0-100%."
@@ -200,10 +200,10 @@
   {
     "SN": 19,
     "Name": "Power factor adjustment",
-    "Read/Write": "RW",
-    "Type": "I16",
+    "ReadWrite": "RW",
+    "DataType": "I16",
     "Unit": "N/A",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 40429,
     "Quantity": 1,
     "Range": "Adjusts the total reactive output power of all inverters connected to the SmartLogger. The range is (-1, -0.8] U [0.8, 1]."
@@ -211,10 +211,10 @@
   {
     "SN": 20,
     "Name": "DC current",
-    "Read/Write": "RO",
-    "Type": "I16",
+    "ReadWrite": "RO",
+    "DataType": "I16",
     "Unit": "A",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40500,
     "Quantity": 1,
     "Range": "Equals the total input DC current of all inverters. If the value exceeds the range specified by I16, register 40554 is recommended."
@@ -222,10 +222,10 @@
   {
     "SN": 21,
     "Name": "Input power",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": " kW",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 40521,
     "Quantity": 2,
     "Range": "Equals the total input power of all inverters."
@@ -233,10 +233,10 @@
   {
     "SN": 22,
     "Name": "CO2 reduction",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "kg",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40523,
     "Quantity": 2,
     "Range": "Equals the total CO2 reduction of all inverters. If the value exceeds the range specified by U32, register 40550 is recommended."
@@ -244,10 +244,10 @@
   {
     "SN": 23,
     "Name": "Active power",
-    "Read/Write": "RO",
-    "Type": "I32",
+    "ReadWrite": "RO",
+    "DataType": "I32",
     "Unit": "kW",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 40525,
     "Quantity": 2,
     "Range": "Equals the total active output power of all inverters."
@@ -255,10 +255,10 @@
   {
     "SN": 24,
     "Name": "Power factor",
-    "Read/Write": "RO",
-    "Type": "I16",
+    "ReadWrite": "RO",
+    "DataType": "I16",
     "Unit": "N/A",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 40532,
     "Quantity": 1,
     "Range": "Equals the total power factor of all inverters."
@@ -266,10 +266,10 @@
   {
     "SN": 25,
     "Name": "Plant status",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40543,
     "Quantity": 1,
     "Range": "Used by Qinghai 1: Unlimited power operation 2: Limited power operation 3: Idle 4: Outage (fault, maintenance etc.) 5: Communication interrupt"
@@ -277,10 +277,10 @@
   {
     "SN": 26,
     "Name": "Reactive power",
-    "Read/Write": "RO",
-    "Type": "I32",
+    "ReadWrite": "RO",
+    "DataType": "I32",
     "Unit": "kVar",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 40544,
     "Quantity": 2,
     "Range": "Equals the total reactive output power of all inverters"
@@ -288,10 +288,10 @@
   {
     "SN": 27,
     "Name": "CO2 reduction",
-    "Read/Write": "RO",
-    "Type": "U64",
+    "ReadWrite": "RO",
+    "DataType": "U64",
     "Unit": "kg",
-    "Gain": 100,
+    "Gain": "100",
     "Address": 40550,
     "Quantity": 4,
     "Range": "Equals the total CO2 reduction of allinverters.This register represents a larger value range compared with register 40523."
@@ -299,10 +299,10 @@
   {
     "SN": 28,
     "Name": "DC current 2",
-    "Read/Write": "RO",
-    "Type": "I32",
+    "ReadWrite": "RO",
+    "DataType": "I32",
     "Unit": "A",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40554,
     "Quantity": 2,
     "Range": "Equals the total input DC current of all inverters. This register represents a larger value range compared with register 40500."
@@ -310,10 +310,10 @@
   {
     "SN": 29,
     "Name": "E-Total",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "kWh",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40560,
     "Quantity": 2,
     "Range": "Equals the total energy yield generated by all inverters."
@@ -321,10 +321,10 @@
   {
     "SN": 30,
     "Name": "E-Daily",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "kWh",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40562,
     "Quantity": 2,
     "Range": "Equals daily energy yield generated by all inverters."
@@ -332,10 +332,10 @@
   {
     "SN": 31,
     "Name": "Duration of daily power generation",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "h",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40564,
     "Quantity": 2,
     "Range": ""
@@ -343,10 +343,10 @@
   {
     "SN": 32,
     "Name": "Plant status",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40566,
     "Quantity": 1,
     "Range": "Used by Xinjiang. 0: Idle, 1: On-grid, 2: On-grid: self derating, 3: On-grid: Power limit, 4: Planned outage, 5: Power limit outage, 6: Fault outage, 7: Communication interrupt"
@@ -354,10 +354,10 @@
   {
     "SN": 33,
     "Name": "Plant status",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40567,
     "Quantity": 1,
     "Range": "Used by Ningxia. 1: On-grid, 2: Outage, 3: Maintenance, 4: Idle"
@@ -365,10 +365,10 @@
   {
     "SN": 34,
     "Name": "Active alarm sequence number",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40568,
     "Quantity": 2,
     "Range": "N/A"
@@ -376,10 +376,10 @@
   {
     "SN": 35,
     "Name": "Historical alarm sequence number",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40570,
     "Quantity": 2,
     "Range": "N/A"
@@ -387,10 +387,10 @@
   {
     "SN": 36,
     "Name": "Phase A current",
-    "Read/Write": "RO",
-    "Type": "I16",
+    "ReadWrite": "RO",
+    "DataType": "I16",
     "Unit": "A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40572,
     "Quantity": 1,
     "Range": "Equals the sum of phase A currents of all inverters."
@@ -398,10 +398,10 @@
   {
     "SN": 37,
     "Name": "Phase B current",
-    "Read/Write": "RO",
-    "Type": "I16",
+    "ReadWrite": "RO",
+    "DataType": "I16",
     "Unit": "A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40573,
     "Quantity": 1,
     "Range": "Equals the sum of phase B currents of all inverters."
@@ -409,10 +409,10 @@
   {
     "SN": 38,
     "Name": "Phase C current",
-    "Read/Write": "RO",
-    "Type": "I16",
+    "ReadWrite": "RO",
+    "DataType": "I16",
     "Unit": "A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40574,
     "Quantity": 1,
     "Range": "Equals the sum of phase C currents of all inverters."
@@ -420,10 +420,10 @@
   {
     "SN": 39,
     "Name": "Uab",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "V",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40575,
     "Quantity": 1,
     "Range": ""
@@ -431,10 +431,10 @@
   {
     "SN": 40,
     "Name": "Ubc",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "V",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40576,
     "Quantity": 1,
     "Range": ""
@@ -442,10 +442,10 @@
   {
     "SN": 41,
     "Name": "Uca",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "V",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40577,
     "Quantity": 1,
     "Range": ""
@@ -453,10 +453,10 @@
   {
     "SN": 42,
     "Name": "Reserved",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40608,
     "Quantity": 10,
     "Range": "N/A"
@@ -464,10 +464,10 @@
   {
     "SN": 43,
     "Name": "Inverter Efficiency",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "%",
-    "Gain": 100,
+    "Gain": "100",
     "Address": 40685,
     "Quantity": 1,
     "Range": "N/A"
@@ -475,21 +475,21 @@
   {
     "SN": 44,
     "Name": "Max. reactive adjustment",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "kVar",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40693,
-    "Quantity": "2 ",
+    "Quantity": 2,
     "Range": "Equals the total maximum power of all inverters connected in parallel multiplied by 60%."
   },
   {
     "SN": 45,
     "Name": "Min. reactive adjustment",
-    "Read/Write": "RO",
-    "Type": "I32",
+    "ReadWrite": "RO",
+    "DataType": "I32",
     "Unit": "kVar",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40695,
     "Quantity": 2,
     "Range": "Equals the total maximum power of all inverters connected in parallel multiplied by 60% x (-1)."
@@ -497,10 +497,10 @@
   {
     "SN": 46,
     "Name": "Max. active adjustment",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "kW",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40697,
     "Quantity": 2,
     "Range": "Equals the total maximum power of all inverters connected in parallel."
@@ -508,10 +508,10 @@
   {
     "SN": 47,
     "Name": "Locked",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40699,
     "Quantity": 1,
     "Range": "0: Locked, 1: Unlocked. If more than one inverter is on-grid and feeding power to the grid, the status is Unlocked."
@@ -519,10 +519,10 @@
   {
     "SN": 48,
     "Name": "DI status",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40700,
     "Quantity": 1,
     "Range": "Bit0: DI1 - Bit7: DI8 . 1: Closed, 0: Open. Equals the status of the eight DIs of the SmartLogger."
@@ -530,10 +530,10 @@
   {
     "SN": 49,
     "Name": "ESN",
-    "Read/Write": "RO",
-    "Type": "STR",
+    "ReadWrite": "RO",
+    "DataType": "STR",
     "Unit": "NA",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40713,
     "Quantity": 10,
     "Range": "N/A"
@@ -541,10 +541,10 @@
   {
     "SN": 50,
     "Name": "System reset",
-    "Read/Write": "WO",
-    "Type": "U16",
+    "ReadWrite": "WO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40723,
     "Quantity": 1,
     "Range": "Resets the SmartLogger. The data domain is not checked."
@@ -552,10 +552,10 @@
   {
     "SN": 51,
     "Name": "Fast device access",
-    "Read/Write": "WO",
-    "Type": "U16",
+    "ReadWrite": "WO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40724,
     "Quantity": 1,
     "Range": "Automatically allocates and searches for devices."
@@ -563,21 +563,21 @@
   {
     "SN": 52,
     "Name": "Device operation",
-    "Read/Write": "WO",
-    "Type": "MLD",
+    "ReadWrite": "WO",
+    "DataType": "MLD",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40725,
     "Quantity": 11,
-    "Range": "First 10 registers: determine the device to be operated based on the ESN. The register content is the device ESN. Last register: If the operation type is 0, the SmartLogger deletes inverters. If the operation type is 1, the inverter alarm is reset on the SmartLogger side."
+    "Range": "First 10 registers: determine the device to be operated based on the ESN. The register content is the device ESN. Last register: If the operation Datatype is 0, the SmartLogger deletes inverters. If the operation Datatype is 1, the inverter alarm is reset on the SmartLogger side."
   },
   {
     "SN": 53,
     "Name": "Device access status",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40736,
     "Quantity": 1,
     "Range": "0: Search completed, 1: Search in progress, 2: Search failed"
@@ -585,10 +585,10 @@
   {
     "SN": 54,
     "Name": "Active power control mode",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40737,
     "Quantity": 1,
     "Range": "0: No limit, 1: DI active scheduling, 3: Percentage fixed-value limitation (open loop), 4: Remote scheduling, 6: Export Limitation (kW). 200: Remote output control. 65533: Slave SmartLogger. 65534: No scheduling"
@@ -596,10 +596,10 @@
   {
     "SN": 55,
     "Name": "Active power scheduling target value",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "kW",
-    "Gain": 10,
+    "Gain": "10",
     "Address": 40738,
     "Quantity": 2,
     "Range": "Target total active power for the SmartLogger active power scheduling"
@@ -607,10 +607,10 @@
   {
     "SN": 56,
     "Name": "Reactive power control mode",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40740,
     "Quantity": 1,
     "Range": "0: No output, 1: DI reactive, 2: Reactive power fix control, 3: Power factor fix control, 4: 9 -U characteristic curve, 5: cos(Phi) -P Pn characteristic curve, 6: 9 -U hysteresis curve (CE10 -16), 7: Remotescheduling, 9: Power factor closed-loop control(ole policy), 10: Power factor closed-loop control, 65533: Slave SmagLogger, 65534: no scheduling"
@@ -618,10 +618,10 @@
   {
     "SN": 57,
     "Name": "Reactive power scheduling curve mode",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40741,
     "Quantity": 1,
     "Range": "0: indicates the power factor, 1: indicates the reactive power fixed value"
@@ -629,8 +629,8 @@
   {
     "SN": 58,
     "Name": "Reactive power scheduling target value",
-    "Read/Write": "RO",
-    "Type": "I32",
+    "ReadWrite": "RO",
+    "DataType": "I32",
     "Unit": "kVar",
     "Gain": "10/1000",
     "Address": 40742,
@@ -640,10 +640,10 @@
   {
     "SN": 59,
     "Name": "Active power scheduling percentage",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "%",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 40802,
     "Quantity": 2,
     "Range": "[0, 100]"
@@ -651,10 +651,10 @@
   {
     "SN": 60,
     "Name": "CO2 emission reduction coefficient",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "kg/kWh",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 41124,
     "Quantity": 1,
     "Range": "[0, 10]"
@@ -662,10 +662,10 @@
   {
     "SN": 61,
     "Name": "PV module capacity",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "kW",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 41934,
     "Quantity": 2,
     "Range": "[0, 2000000]"
@@ -673,10 +673,10 @@
   {
     "SN": 62,
     "Name": "Rated plant capacity",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "kW",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 41936,
     "Quantity": 2,
     "Range": "N/A"
@@ -684,10 +684,10 @@
   {
     "SN": 63,
     "Name": "Total rated capacity of grid-connected inverters",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "kW",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 41938,
     "Quantity": 2,
     "Range": "N/A"
@@ -695,10 +695,10 @@
   {
     "SN": 64,
     "Name": "Conversion coefficient",
-    "Read/Write": "RO",
-    "Type": "U32",
+    "ReadWrite": "RO",
+    "DataType": "U32",
     "Unit": "N/A",
-    "Gain": 1000,
+    "Gain": "1000",
     "Address": 41940,
     "Quantity": 2,
     "Range": "N/A"
@@ -706,10 +706,10 @@
   {
     "SN": 65,
     "Name": "Communication on status",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 41942,
     "Quantity": 1,
     "Range": "Status of communication between the SmartLogger and the servers of Japanese power companies: 0: Connection success, 1: Connection failed"
@@ -717,8 +717,8 @@
   {
     "SN": 66,
     "Name": "Communication on abnormal shutdown",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
     "Gain": "N/A",
     "Address": 41947,
@@ -728,8 +728,8 @@
   {
     "SN": 67,
     "Name": "Communication on abnormal detection time",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "s",
     "Gain": "N/A",
     "Address": 41948,
@@ -739,8 +739,8 @@
   {
     "SN": 68,
     "Name": "Auto start upon communication recovery",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
     "Gain": "N/A",
     "Address": 41949,
@@ -750,8 +750,8 @@
   {
     "SN": 69,
     "Name": "System Time: year",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
     "Gain": "1",
     "Address": 42017,
@@ -761,8 +761,8 @@
   {
     "SN": 70,
     "Name": "System Time: month",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
     "Gain": "1",
     "Address": 42018,
@@ -772,8 +772,8 @@
   {
     "SN": 71,
     "Name": "System Time: day",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
     "Gain": "1",
     "Address": 42019,
@@ -783,10 +783,10 @@
   {
     "SN": 72,
     "Name": "The System Time: hour",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 42020,
     "Quantity": 1,
     "Range": "0-23"
@@ -794,10 +794,10 @@
   {
     "SN": 73,
     "Name": "The System Time: minute",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 42021,
     "Quantity": 1,
     "Range": "0-59"
@@ -805,10 +805,10 @@
   {
     "SN": 74,
     "Name": "The System Time: second",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 42022,
     "Quantity": 1,
     "Range": "0-59"
@@ -816,10 +816,10 @@
   {
     "SN": 75,
     "Name": "Current error during scanning",
-    "Read/Write": "RW",
-    "Type": "U16",
+    "ReadWrite": "RW",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 100,
+    "Gain": "100",
     "Address": 42150,
     "Quantity": 1,
     "Range": "0-2"
@@ -827,10 +827,10 @@
   {
     "SN": 76,
     "Name": "Inspection",
-    "Read/Write": "WO",
-    "Type": "U16",
+    "ReadWrite": "WO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 42730,
     "Quantity": 1,
     "Range": "00:Start, 01:Stop"
@@ -838,10 +838,10 @@
   {
     "SN": 77,
     "Name": "IV curve scanning",
-    "Read/Write": "WO",
-    "Type": "U16",
+    "ReadWrite": "WO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 42779,
     "Quantity": 1,
     "Range": "00:Stop, 01:Start (64 Points), 02:Start (128 Points), 03:Start (256 Points)"
@@ -849,10 +849,10 @@
   {
     "SN": 78,
     "Name": "Alarm Info 1",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 50000,
     "Quantity": 1,
     "Range": "N/A"
@@ -860,10 +860,10 @@
   {
     "SN": 79,
     "Name": "Alarm Info 2",
-    "Read/Write": "RO",
-    "Type": "U16",
+    "ReadWrite": "RO",
+    "DataType": "U16",
     "Unit": "N/A",
-    "Gain": 1,
+    "Gain": "1",
     "Address": 50001,
     "Quantity": 1,
     "Range": "N/A"
