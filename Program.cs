@@ -341,6 +341,7 @@ class Program
         #endregion
     
         #region Json Handler
+
         // string jsonFilePath = "JsonData/TEST.json"; // JSON file path
         // string jsonFilePath = "JsonData/Huawei.json";
         // string jsonFilePath = "JsonData/Sungrow.json";
@@ -358,6 +359,7 @@ class Program
         // Console.WriteLine(jsonDataArraySungrow[0].Name);
 
         // var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0);
+        
         #endregion
 
         #region ExtendedMachineJson
@@ -380,7 +382,8 @@ class Program
         {
             Console.WriteLine("Connection Successful!");
             // ---------------------------------- Set Data -------------------------------------------------
-            var returnSetObject = await extendedMachine.SetDatasByCommunicationTag("Date & Time", 111);
+            var returnSetObject = await extendedMachine.SetDatasByCommunicationTag("Date & Time", 112);
+            // await extendedMachine.SetDatasByCommunicationTag("City", 222);
             // bool SetDatas = returnSetObject.Datas; // this parameter is not needed because SetDatas and the following parameter SetSuccessStatus are the same.
             int SetErrorCode = returnSetObject.ErrorCode;
             string SetErrorMsg = returnSetObject.ErrorMsg; 
@@ -413,7 +416,7 @@ class Program
                 
             // Print Received Data
             Console.WriteLine("Data Received from Modbus Server:");
-            for (int i = 1; i < GetDatas!.Length; i+=2)
+            for (int i = 0; i < GetDatas!.Length; i+=1)
             {
                 Console.WriteLine(GetDatas[i]);                
             }
