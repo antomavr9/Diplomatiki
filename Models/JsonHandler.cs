@@ -128,26 +128,32 @@ public class JsonHandler
         };
     }
 
-    public static string ConvertArea(int Address)
+    public static string? ConvertArea(int Address)
     {
-        if( (int) (Address/10000) == 4)
+        try
         {
-            return "4X";
+            if( (int) (Address/10000) == 4)
+            {
+                return "4X";
+            }
+            else if((int) (Address/10000) == 3)
+            {
+                return "3X";
+            }
+            else if((int) (Address/10000) == 1)
+            {
+                return "1X";
+            }
+            else if ((int) (Address/10000) == 0)
+            {
+                return "0X";
+            }
         }
-        else if((int) (Address/10000) == 3)
+        catch (Exception)
         {
-            return "3X";
+            Console.WriteLine("Cannot Convert Address!");
         }
-        else if((int) (Address/10000) == 1)
-        {
-            return "1X";
-        }
-        else if ((int) (Address/10000) == 0)
-        {
-            return "0X";
-        }
-
-        return "";//Ελεγχος
+        return null;
     }
 
     public static int ConvertAddress(int Address)
