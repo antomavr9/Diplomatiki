@@ -93,15 +93,15 @@ public class JsonHandler
 
     for (int i = 0; i < jsonDataArray.Count; i++) // Use '<' instead of '<='
     {
-        var addressUnit = new AddressUnit(); // Create a new instance for each AddressUnit
+        var addressUnit = new AddressUnit
+        {
+            Id = (i + 1).ToString(),
+            CommunicationTag = jsonDataArray[i].Name,
+            DataType = ConvertDataType(jsonDataArray[i].DataType!)
+        }; 
 
-        addressUnit.Id = (i+1).ToString();
-        addressUnit.CommunicationTag = jsonDataArray[i].Name;
-        addressUnit.DataType = ConvertDataType(jsonDataArray[i].DataType);
-        
         var Area = ConvertArea(jsonDataArray[i].Address);
         var Address = ConvertAddress(jsonDataArray[i].Address);
-        
         addressUnit.Area = Area;
         addressUnit.Address = Address;
 
@@ -110,7 +110,6 @@ public class JsonHandler
 
     return BaseAddressUnits;
 }
-
 
     public static Type ConvertDataType(string DataType)
     {
@@ -153,7 +152,7 @@ public class JsonHandler
 
     public static int ConvertAddress(int Address)
     {
-        return Address%10000;
+        return (int)(Address%10000)+1;
     }
 
     // public static List<AddressUnit>? AddressUnitCreator(List<Huawei> jsonDataArray)

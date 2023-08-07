@@ -14,10 +14,9 @@ class Program
     static async Task Main()
     {
         #region Utility
-
-        // Connect to server through utility api
-        ModbusUtility utility = new ModbusUtility(ModbusType.Tcp, "127.0.0.1", 1, 0);
-        bool connectionStatus = await utility.ConnectAsync(); // Here the execution starts
+        // // Connect to server through utility api
+        // ModbusUtility utility = new ModbusUtility(ModbusType.Tcp, "127.0.0.1", 1, 0);
+        // bool connectionStatus = await utility.ConnectAsync(); // Here the execution starts
 
         // // ReturnStruct<ushort[]> result = await utility.GetMultipleRegister(0, 1, 0,new ushort[] {}); // , new ushort[] { 0 }
         // if (result.IsSuccess)
@@ -265,9 +264,7 @@ class Program
 
         #endregion
 
-        #region Extended Machine
-        
-
+        #region Extended Machine    
         // // ---------------------------------- Extended Machine -------------------------------------------------
         // List<AddressUnit> addressUnits = new()
         // {
@@ -344,16 +341,15 @@ class Program
         #endregion
     
         #region Json Handler
-
         // string jsonFilePath = "JsonData/TEST.json"; // JSON file path
-        string jsonFilePath = "JsonData/Huawei.json";
+        // string jsonFilePath = "JsonData/Huawei.json";
         // string jsonFilePath = "JsonData/Sungrow.json";
 
-        List<Base>? jsonDataArrayBase = JsonHandler.LoadFromFileBase(jsonFilePath);
+        // List<Base>? jsonDataArrayBase = JsonHandler.LoadFromFileBase(jsonFilePath);
         // List<Huawei>? jsonDataArrayHuawei = JsonHandler.LoadFromFileHuawei(jsonFilePath);
         // List<Sungrow>? jsonDataArraySungrow = JsonHandler.LoadFromFileSungrow(jsonFilePath);
 
-        List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase);
+        // List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase);
         // List<AddressUnit>? HuaweiAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayHuawei);
         // List<AddressUnit>? SungrowAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArraySungrow);
 
@@ -361,28 +357,71 @@ class Program
         // Console.WriteLine(jsonDataArrayHuawei[0].Name);
         // Console.WriteLine(jsonDataArraySungrow[0].Name);
 
-        
-
-        // if (jsonDataArray != null)
-        // {
-        //     Console.WriteLine("JSON Data:");
-        //     foreach (JsonHandler jsonData in jsonDataArray)
-        //     {
-        //         Console.WriteLine("------------------------------");
-        //         Console.WriteLine($"SN: {Huawei.SN}");
-        //         Console.WriteLine($"Name: {jsonData.Name}");
-        //         Console.WriteLine($"Read/Write: {jsonData.ReadWrite}");
-        //         Console.WriteLine($"Type: {jsonData.Type}");
-        //         Console.WriteLine($"Unit: {jsonData.Unit}");
-        //         Console.WriteLine($"Gain: {jsonData.Gain}");
-        //         Console.WriteLine($"Address: {jsonData.Address}");
-        //         Console.WriteLine($"Quantity: {jsonData.Quantity}");
-        //         Console.WriteLine($"Range: {jsonData.Range}");
-        //     }
-        //     Console.WriteLine("------------------------------");
-        // }
-
+        // var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0);
         #endregion
 
+        #region ExtendedMachineJson
+
+        string jsonFilePath = "JsonData/Huawei.json";
+        List<Base>? jsonDataArrayBase = JsonHandler.LoadFromFileBase(jsonFilePath);
+        List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase!);
+        Console.WriteLine(jsonDataArrayBase![0].Name);
+
+        // ---------------------------------- Extended Machine ------------------------------------------------
+        var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0);
+
+        // Connect to server through extendedMachine
+        bool connectionStatusMachine = await extendedMachine.ConnectAsync();
+        if(!connectionStatusMachine)
+        {
+            Console.WriteLine("Connection Timed Out!");
+        }
+        else
+        {
+            Console.WriteLine("Connection Successful!");
+            // ---------------------------------- Set Data -------------------------------------------------
+            var returnSetObject = await extendedMachine.SetDatasByCommunicationTag("Date & Time", 111);
+            // bool SetDatas = returnSetObject.Datas; // this parameter is not needed because SetDatas and the following parameter SetSuccessStatus are the same.
+            int SetErrorCode = returnSetObject.ErrorCode;
+            string SetErrorMsg = returnSetObject.ErrorMsg; 
+            bool SetSuccessStatus = returnSetObject.IsSuccess;
+            // Check Set Data Success Status
+            if(SetSuccessStatus)
+                Console.WriteLine("Set Data Status: Data Set Succesfully!");
+            else
+            {
+                Console.WriteLine("Set Data Status: Error Code: " + SetErrorCode+ ". Error Message: " + SetErrorMsg + ".");
+            }
+                
+            // ---------------------------------- Get Data ------------------------------------------------
+            var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Date & Time");
+            // in the above line, instead of var we might use ReturnStruct<byte[]>
+            byte[]? GetDatas = returnGetObject.Datas;
+            int GetErrorCode = returnGetObject.ErrorCode;
+            string GetErrorMsg = returnGetObject.ErrorMsg;
+            bool GetSuccessStatus = returnGetObject.IsSuccess;
+
+            // Check Get Data Success Status
+            if(GetSuccessStatus)
+            {
+                Console.WriteLine("Get Data by CommunicationTag Status: Data Received Succesfully!");
+            }
+            else
+            {
+                Console.WriteLine("Get Data Status: Error Code: " + GetErrorCode + ". Error Message: " + GetErrorMsg + ".");
+            }
+                
+            // Print Received Data
+            Console.WriteLine("Data Received from Modbus Server:");
+            for (int i = 1; i < GetDatas!.Length; i+=2)
+            {
+                Console.WriteLine(GetDatas[i]);                
+            }
+        }
+        // Exit Program
+        Console.WriteLine("Press anything to exit...");
+        Console.ReadKey();
+
+        #endregion
     }
 }
