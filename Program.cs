@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Modbus.Net;
 using Modbus.Net.Modbus;
 using ModbusMachineExtended;
-using JsonClasses;
+using Application.Models;
 
 class Program
 {
@@ -366,8 +366,12 @@ class Program
 
         string jsonFilePath = "JsonData/Huawei.json";
         List<Base>? jsonDataArrayBase = JsonHandler.LoadFromFileBase(jsonFilePath);
+        // List<Huawei>? jsonDataArrayHuawei = JsonHandler.LoadFromFileHuawei(jsonFilePath);
         List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase!);
+        // List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayHuawei!);
+
         Console.WriteLine(jsonDataArrayBase![0].Name);
+        // Console.WriteLine(jsonDataArrayHuawei![0].Name);
 
         // ---------------------------------- Extended Machine ------------------------------------------------
         var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0);

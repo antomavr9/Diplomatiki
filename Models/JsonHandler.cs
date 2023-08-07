@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text.Json;
 using System.Linq;
-using JsonClasses;
+using Application.Models;
 using Modbus.Net;
 using Modbus.Net.Modbus;
 using System.Runtime.InteropServices;
@@ -147,7 +147,7 @@ public class JsonHandler
             return "0X";
         }
 
-        return "";
+        return "";//Ελεγχος
     }
 
     public static int ConvertAddress(int Address)
