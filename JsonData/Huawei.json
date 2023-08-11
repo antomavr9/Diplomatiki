@@ -45,7 +45,7 @@
   },
   {
     "SN": 5,
-    "Name": "DST state",
+    "Name": "DST State",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -56,7 +56,7 @@
   },
   {
     "SN": 6,
-    "Name": "DST offset",
+    "Name": "DST Offset",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "mins",
@@ -78,7 +78,7 @@
   },
   {
     "SN": 8,
-    "Name": "Power on",
+    "Name": "Power On",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -89,7 +89,7 @@
   },
   {
     "SN": 9,
-    "Name": "Power off",
+    "Name": "Power Off",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -100,7 +100,7 @@
   },
   {
     "SN": 10,
-    "Name": "Power on/off",
+    "Name": "Power On/Off",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -111,7 +111,7 @@
   },
   {
     "SN": 11,
-    "Name": "Power on/off",
+    "Name": "Power On/Off",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -122,7 +122,7 @@
   },
   {
     "SN": 12,
-    "Name": "Transfer trip",
+    "Name": "Transfer Trip",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -133,7 +133,7 @@
   },
   {
     "SN": 13,
-    "Name": "Array reset",
+    "Name": "Array Reset",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -144,7 +144,7 @@
   },
   {
     "SN": 14,
-    "Name": "Active adjustment",
+    "Name": "Active Adjustment",
     "ReadWrite": "RW",
     "DataType": "U32",
     "Unit": "kW",
@@ -155,7 +155,7 @@
   },
   {
     "SN": 15,
-    "Name": "Reactive adjustment",
+    "Name": "Reactive Adjustment",
     "ReadWrite": "RW",
     "DataType": "I32",
     "Unit": "kVar",
@@ -166,7 +166,7 @@
   },
   {
     "SN": 16,
-    "Name": "Active adjustment",
+    "Name": "Active Adjustment",
     "ReadWrite": "RW",
     "DataType": "U32",
     "Unit": "kW",
@@ -177,7 +177,7 @@
   },
   {
     "SN": 17,
-    "Name": "Reactive adjustment",
+    "Name": "Reactive Adjustment",
     "ReadWrite": "RW",
     "DataType": "I32",
     "Unit": "kVar",
@@ -188,7 +188,7 @@
   },
   {
     "SN": 18,
-    "Name": "Active power",
+    "Name": "Active Power Adjustement By Power",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "%",
@@ -199,7 +199,7 @@
   },
   {
     "SN": 19,
-    "Name": "Power factor adjustment",
+    "Name": "Power Factor Adjustment",
     "ReadWrite": "RW",
     "DataType": "I16",
     "Unit": "N/A",
@@ -210,7 +210,7 @@
   },
   {
     "SN": 20,
-    "Name": "DC current",
+    "Name": "DC Current",
     "ReadWrite": "RO",
     "DataType": "I16",
     "Unit": "A",
@@ -221,7 +221,7 @@
   },
   {
     "SN": 21,
-    "Name": "Input power",
+    "Name": "Input Power",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": " kW",
@@ -232,7 +232,7 @@
   },
   {
     "SN": 22,
-    "Name": "CO2 reduction",
+    "Name": "CO2 Reduction",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "kg",
@@ -243,7 +243,7 @@
   },
   {
     "SN": 23,
-    "Name": "Active power",
+    "Name": "Active Power",
     "ReadWrite": "RO",
     "DataType": "I32",
     "Unit": "kW",
@@ -254,7 +254,7 @@
   },
   {
     "SN": 24,
-    "Name": "Power factor",
+    "Name": "Power Factor",
     "ReadWrite": "RO",
     "DataType": "I16",
     "Unit": "N/A",
@@ -265,7 +265,7 @@
   },
   {
     "SN": 25,
-    "Name": "Plant status",
+    "Name": "Plant Status",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -276,7 +276,7 @@
   },
   {
     "SN": 26,
-    "Name": "Reactive power",
+    "Name": "Reactive Power",
     "ReadWrite": "RO",
     "DataType": "I32",
     "Unit": "kVar",
@@ -287,7 +287,7 @@
   },
   {
     "SN": 27,
-    "Name": "CO2 reduction",
+    "Name": "CO2 Reduction",
     "ReadWrite": "RO",
     "DataType": "U64",
     "Unit": "kg",
@@ -298,7 +298,7 @@
   },
   {
     "SN": 28,
-    "Name": "DC current 2",
+    "Name": "DC Current 2",
     "ReadWrite": "RO",
     "DataType": "I32",
     "Unit": "A",
@@ -331,7 +331,7 @@
   },
   {
     "SN": 31,
-    "Name": "Duration of daily power generation",
+    "Name": "Duration of Daily Power Generation",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "h",
@@ -342,7 +342,7 @@
   },
   {
     "SN": 32,
-    "Name": "Plant status",
+    "Name": "Plant Status",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -353,7 +353,7 @@
   },
   {
     "SN": 33,
-    "Name": "Plant status",
+    "Name": "Plant Status",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -364,7 +364,7 @@
   },
   {
     "SN": 34,
-    "Name": "Active alarm sequence number",
+    "Name": "Active Alarm Sequence Number",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "N/A",
@@ -375,7 +375,7 @@
   },
   {
     "SN": 35,
-    "Name": "Historical alarm sequence number",
+    "Name": "Historical Alarm Sequence Number",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "N/A",
@@ -386,7 +386,7 @@
   },
   {
     "SN": 36,
-    "Name": "Phase A current",
+    "Name": "Phase A Current",
     "ReadWrite": "RO",
     "DataType": "I16",
     "Unit": "A",
@@ -397,7 +397,7 @@
   },
   {
     "SN": 37,
-    "Name": "Phase B current",
+    "Name": "Phase B Current",
     "ReadWrite": "RO",
     "DataType": "I16",
     "Unit": "A",
@@ -408,7 +408,7 @@
   },
   {
     "SN": 38,
-    "Name": "Phase C current",
+    "Name": "Phase C Current",
     "ReadWrite": "RO",
     "DataType": "I16",
     "Unit": "A",
@@ -474,7 +474,7 @@
   },
   {
     "SN": 44,
-    "Name": "Max. reactive adjustment",
+    "Name": "Max. Reactive Adjustment",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "kVar",
@@ -485,7 +485,7 @@
   },
   {
     "SN": 45,
-    "Name": "Min. reactive adjustment",
+    "Name": "Min. Reactive Adjustment",
     "ReadWrite": "RO",
     "DataType": "I32",
     "Unit": "kVar",
@@ -496,7 +496,7 @@
   },
   {
     "SN": 46,
-    "Name": "Max. active adjustment",
+    "Name": "Max. Active Adjustment",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "kW",
@@ -518,7 +518,7 @@
   },
   {
     "SN": 48,
-    "Name": "DI status",
+    "Name": "DI Status",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -540,7 +540,7 @@
   },
   {
     "SN": 50,
-    "Name": "System reset",
+    "Name": "System Reset",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -551,7 +551,7 @@
   },
   {
     "SN": 51,
-    "Name": "Fast device access",
+    "Name": "Fast Device Access",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -562,7 +562,7 @@
   },
   {
     "SN": 52,
-    "Name": "Device operation",
+    "Name": "Device Operation",
     "ReadWrite": "WO",
     "DataType": "MLD",
     "Unit": "N/A",
@@ -573,7 +573,7 @@
   },
   {
     "SN": 53,
-    "Name": "Device access status",
+    "Name": "Device Access Status",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -584,7 +584,7 @@
   },
   {
     "SN": 54,
-    "Name": "Active power control mode",
+    "Name": "Active Power Control Mode",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -595,7 +595,7 @@
   },
   {
     "SN": 55,
-    "Name": "Active power scheduling target value",
+    "Name": "Active Power Scheduling Target Value",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "kW",
@@ -606,7 +606,7 @@
   },
   {
     "SN": 56,
-    "Name": "Reactive power control mode",
+    "Name": "Reactive Power Control Mode",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -617,7 +617,7 @@
   },
   {
     "SN": 57,
-    "Name": "Reactive power scheduling curve mode",
+    "Name": "Reactive Power Scheduling Curve Mode",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -628,7 +628,7 @@
   },
   {
     "SN": 58,
-    "Name": "Reactive power scheduling target value",
+    "Name": "Reactive Power Scheduling Target Value",
     "ReadWrite": "RO",
     "DataType": "I32",
     "Unit": "kVar",
@@ -639,7 +639,7 @@
   },
   {
     "SN": 59,
-    "Name": "Active power scheduling percentage",
+    "Name": "Active Power Scheduling Percentage",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "%",
@@ -650,7 +650,7 @@
   },
   {
     "SN": 60,
-    "Name": "CO2 emission reduction coefficient",
+    "Name": "CO2 Emission Reduction Coefficient",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "kg/kWh",
@@ -661,7 +661,7 @@
   },
   {
     "SN": 61,
-    "Name": "PV module capacity",
+    "Name": "PV Module Capacity",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "kW",
@@ -672,7 +672,7 @@
   },
   {
     "SN": 62,
-    "Name": "Rated plant capacity",
+    "Name": "Rated Plant Capacity",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "kW",
@@ -683,7 +683,7 @@
   },
   {
     "SN": 63,
-    "Name": "Total rated capacity of grid-connected inverters",
+    "Name": "Total Rated Capacity Of Grid-Connected Inverters",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "kW",
@@ -694,7 +694,7 @@
   },
   {
     "SN": 64,
-    "Name": "Conversion coefficient",
+    "Name": "Conversion Coefficient",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "N/A",
@@ -705,7 +705,7 @@
   },
   {
     "SN": 65,
-    "Name": "Communication on status",
+    "Name": "Communication On Status",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -716,7 +716,7 @@
   },
   {
     "SN": 66,
-    "Name": "Communication on abnormal shutdown",
+    "Name": "Communication On Abnormal Shutdown",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -727,7 +727,7 @@
   },
   {
     "SN": 67,
-    "Name": "Communication on abnormal detection time",
+    "Name": "Communication On Abnormal Detection Time",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "s",
@@ -738,7 +738,7 @@
   },
   {
     "SN": 68,
-    "Name": "Auto start upon communication recovery",
+    "Name": "Auto Start Upon Communication Recovery",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -749,7 +749,7 @@
   },
   {
     "SN": 69,
-    "Name": "System Time: year",
+    "Name": "System Time: Year",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -760,7 +760,7 @@
   },
   {
     "SN": 70,
-    "Name": "System Time: month",
+    "Name": "System Time: Month",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -771,7 +771,7 @@
   },
   {
     "SN": 71,
-    "Name": "System Time: day",
+    "Name": "System Time: Day",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -782,7 +782,7 @@
   },
   {
     "SN": 72,
-    "Name": "The System Time: hour",
+    "Name": "The System Time: Hour",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -793,7 +793,7 @@
   },
   {
     "SN": 73,
-    "Name": "The System Time: minute",
+    "Name": "The System Time: Minute",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -804,7 +804,7 @@
   },
   {
     "SN": 74,
-    "Name": "The System Time: second",
+    "Name": "The System Time: Second",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -815,7 +815,7 @@
   },
   {
     "SN": 75,
-    "Name": "Current error during scanning",
+    "Name": "Current Error During Scanning",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "N/A",
@@ -837,7 +837,7 @@
   },
   {
     "SN": 77,
-    "Name": "IV curve scanning",
+    "Name": "IV Curve Scanning",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",

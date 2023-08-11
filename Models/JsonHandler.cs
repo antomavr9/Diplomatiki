@@ -91,6 +91,54 @@ public class JsonHandler
     {
         var addressUnits  = new List<AddressUnit>();
 
+        for (int i = 0; i < jsonDataArray.Count; i++)
+        {
+            var addressUnit = new AddressUnit
+            {
+                Id = (i + 1).ToString(),
+                CommunicationTag = jsonDataArray[i].Name,
+                DataType = ConvertDataType(jsonDataArray[i].DataType!)
+            }; 
+
+            var area = ConvertArea(jsonDataArray[i].Address);
+            var address = ConvertAddress(jsonDataArray[i].Address);
+            addressUnit.Area = area;
+            addressUnit.Address = address;
+
+            addressUnits .Add(addressUnit); // Add the AddressUnit to the list
+        }
+
+        return addressUnits ;
+    }
+
+    public static List<AddressUnit>? AddressUnitCreator(List<Huawei> jsonDataArray)
+    {
+        var addressUnits  = new List<AddressUnit>();
+
+        for (int i = 0; i < jsonDataArray.Count; i++)
+        {
+            var addressUnit = new AddressUnit
+            {
+                Id = (i + 1).ToString(),
+                CommunicationTag = jsonDataArray[i].Name,
+                DataType = ConvertDataType(jsonDataArray[i].DataType!)
+            }; 
+
+            var area = ConvertArea(jsonDataArray[i].Address);
+            var address = ConvertAddress(jsonDataArray[i].Address);
+            addressUnit.Area = area;
+            addressUnit.Address = address;
+
+            addressUnits .Add(addressUnit); // Add the AddressUnit to the list
+        }
+
+        return addressUnits ;
+    }
+
+    public static List<AddressUnit>? AddressUnitCreator(List<Sungrow> jsonDataArray)
+    {
+        var addressUnits  = new List<AddressUnit>();
+
         for (int i = 0; i < jsonDataArray.Count; i++) // Use '<' instead of '<='
         {
             var addressUnit = new AddressUnit
@@ -100,16 +148,17 @@ public class JsonHandler
                 DataType = ConvertDataType(jsonDataArray[i].DataType!)
             }; 
 
-            var Area = ConvertArea(jsonDataArray[i].Address);
-            var Address = ConvertAddress(jsonDataArray[i].Address);
-            addressUnit.Area = Area;
-            addressUnit.Address = Address;
+            var area = ConvertArea(jsonDataArray[i].Address);
+            var address = ConvertAddress(jsonDataArray[i].Address);
+            addressUnit.Area = area;
+            addressUnit.Address = address;
 
             addressUnits .Add(addressUnit); // Add the AddressUnit to the list
         }
 
         return addressUnits ;
     }
+
 
     public static Type ConvertDataType(string DataType)
     {
@@ -153,17 +202,6 @@ public class JsonHandler
     {
         return address % 10000 + 1;
     }
-
-    // public static List<AddressUnit>? AddressUnitCreator(List<Huawei> jsonDataArray)
-    // {
-    //     return ;
-    // }
-
-    // public static List<AddressUnit>? AddressUnitCreator(List<Sungrow> jsonDataArray)
-    // {
-    //     return ;
-    // }
-
 
     public override string ToString()
     {

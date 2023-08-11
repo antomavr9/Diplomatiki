@@ -67,7 +67,7 @@
     },
     {
         "No": 7,
-        "Name": "Device type code",
+        "Name": "Device Type Code",
         "Address": 5000,
         "FinalAddress": 5000,
         "DataType": "U16",
@@ -89,7 +89,7 @@
     },
     {
         "No": 9,
-        "Name": "Output type",
+        "Name": "Output Type",
         "Address": 5002,
         "FinalAddress": 5002,
         "DataType": "U16",
@@ -100,7 +100,7 @@
     },
     {
         "No": 10,
-        "Name": "Daily power yields",
+        "Name": "Daily Power Yields",
         "Address": 5003,
         "FinalAddress": 5003,
         "DataType": "U16",
@@ -111,7 +111,7 @@
     },
     {
         "No": 11,
-        "Name": "Total power yields",
+        "Name": "Total Power Yields",
         "Address": 5004,
         "FinalAddress": 5005,
         "DataType": "U32",
@@ -122,7 +122,7 @@
     },
     {
         "No": 12,
-        "Name": "Total running time",
+        "Name": "Total Running Time",
         "Address": 5006,
         "FinalAddress": 5007,
         "DataType": "U32",
@@ -133,7 +133,7 @@
     },
     {
         "No": 13,
-        "Name": "Internal temperature",
+        "Name": "Internal Temperature",
         "Address": 5008,
         "FinalAddress": 5008,
         "DataType": "S16",
@@ -155,7 +155,7 @@
     },
     {
         "No": 15,
-        "Name": "MPPT 1 voltage",
+        "Name": "MPPT 1 Voltage",
         "Address": 5011,
         "FinalAddress": 5011,
         "DataType": "U16",
@@ -166,7 +166,7 @@
     },
     {
         "No": 16,
-        "Name": "MPPT 1 current",
+        "Name": "MPPT 1 Current",
         "Address": 5012,
         "FinalAddress": 5012,
         "DataType": "U16",
@@ -177,7 +177,7 @@
     },
     {
         "No": 17,
-        "Name": "MPPT 2 voltage",
+        "Name": "MPPT 2 Voltage",
         "Address": 5013,
         "FinalAddress": 5013,
         "DataType": "U16",
@@ -188,7 +188,7 @@
     },
     {
         "No": 18,
-        "Name": "MPPT 2 current",
+        "Name": "MPPT 2 Current",
         "Address": 5014,
         "FinalAddress": 5014,
         "DataType": "U16",
@@ -199,7 +199,7 @@
     },
     {
         "No": 19,
-        "Name": "MPPT 3 voltage",
+        "Name": "MPPT 3 Voltage",
         "Address": 5015,
         "FinalAddress": 5015,
         "DataType": "U16",
@@ -210,7 +210,7 @@
     },
     {
         "No": 20,
-        "Name": "MPPT 3 current",
+        "Name": "MPPT 3 Current",
         "Address": 5016,
         "FinalAddress": 5016,
         "DataType": "U16",
@@ -221,7 +221,7 @@
     },
     {
         "No": 21,
-        "Name": "Total DC power",
+        "Name": "Total DC Power",
         "Address": 5017,
         "FinalAddress": 5018,
         "DataType": "U32",
@@ -232,18 +232,18 @@
     },
     {
         "No": 22,
-        "Name": "A-B line voltage/phase A voltage",
+        "Name": "A-B Line Voltage/Phase A Voltage",
         "Address": 5019,
         "FinalAddress": 5019,
         "DataType": "U16",
-        "DataRange": "0.1 V",
-        "Unit": "",
+        "DataRange": "",
+        "Unit": "0.1 V",
         "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
         "Quantity": 1
     },
     {
         "No": 23,
-        "Name": "B-C line Voltage/phase B Voltage",
+        "Name": "B-C Line Voltage/Phase B Voltage",
         "Address": 5020,
         "FinalAddress": 5020,
         "DataType": "U16",
@@ -254,7 +254,7 @@
     },
     {
         "No": 24,
-        "Name": "C-A line Voltage/phase C Voltage",
+        "Name": "C-A Line Voltage/Phase C Voltage",
         "Address": 5021,
         "FinalAddress": 5021,
         "DataType": "U16",
@@ -265,7 +265,7 @@
     },
     {
         "No": 25,
-        "Name": "Phase A current",
+        "Name": "Phase A Current",
         "Address": 5022,
         "FinalAddress": 5022,
         "DataType": "U16",
@@ -276,7 +276,7 @@
     },
     {
         "No": 26,
-        "Name": "Phase B current",
+        "Name": "Phase B Current",
         "Address": 5023,
         "FinalAddress": 5023,
         "DataType": "U16",
@@ -287,7 +287,7 @@
     },
     {
         "No": 27,
-        "Name": "Phase C current",
+        "Name": "Phase C Current",
         "Address": 5024,
         "FinalAddress": 5024,
         "DataType": "U16",
@@ -331,7 +331,7 @@
     },
     {
         "No": 31,
-        "Name": "Total active power",
+        "Name": "Total Active Power",
         "Address": 5031,
         "FinalAddress": 5032,
         "DataType": "U32",
@@ -342,7 +342,7 @@
     },
     {
         "No": 32,
-        "Name": "Total reactive power",
+        "Name": "Total Reactive Power",
         "Address": 5033,
         "FinalAddress": 5034,
         "DataType": "S32",
@@ -353,7 +353,7 @@
     },
     {
         "No": 33,
-        "Name": "Power factor",
+        "Name": "Power Factor",
         "Address": 5035,
         "FinalAddress": 5035,
         "DataType": "S16",
@@ -364,7 +364,7 @@
     },
     {
         "No": 34,
-        "Name": "Grid frequency",
+        "Name": "Grid Frequency",
         "Address": 5036,
         "FinalAddress": 5036,
         "DataType": "U16",
@@ -386,7 +386,7 @@
     },
     {
         "No": 36,
-        "Name": "Work state",
+        "Name": "Work State",
         "Address": 5038,
         "FinalAddress": 5038,
         "DataType": "U16",
@@ -397,7 +397,7 @@
     },
     {
         "No": 36,
-        "Name": "Fault/Alarm time: Year",
+        "Name": "Fault/Alarm Time: Year",
         "Address": 5039,
         "FinalAddress": 5039,
         "DataType": "U16",
@@ -408,7 +408,7 @@
     },
     {
         "No": 36,
-        "Name": "Fault/Alarm time: Month",
+        "Name": "Fault/Alarm Time: Month",
         "Address": 5040,
         "FinalAddress": 5040,
         "DataType": "U16",
@@ -419,7 +419,7 @@
     },
     {
         "No": 36,
-        "Name": "Fault/Alarm time: Day",
+        "Name": "Fault/Alarm Time: Day",
         "Address": 5041,
         "FinalAddress": 5041,
         "DataType": "U16",
@@ -430,7 +430,7 @@
     },
     {
         "No": 36,
-        "Name": "Fault/Alarm time: Hour",
+        "Name": "Fault/Alarm Time: Hour",
         "Address": 5042,
         "FinalAddress": 5042,
         "DataType": "U16",
@@ -441,7 +441,7 @@
     },
     {
         "No": 36,
-        "Name": "Fault/Alarm time: Minute",
+        "Name": "Fault/Alarm Time: Minute",
         "Address": 5043,
         "FinalAddress": 5043,
         "DataType": "U16",
@@ -452,7 +452,7 @@
     },
     {
         "No": 36,
-        "Name": "Fault/Alarm time: Second",
+        "Name": "Fault/Alarm Time: Second",
         "Address": 5044,
         "FinalAddress": 5044,
         "DataType": "U16",
@@ -463,7 +463,7 @@
     },
     {
         "No": 36,
-        "Name": "Fault/Alarm code 1",
+        "Name": "Fault/Alarm Code 1",
         "Address": 5045,
         "FinalAddress": 5045,
         "DataType": "U16",
@@ -507,7 +507,7 @@
     },
     {
         "No": 39,
-        "Name": "Array insulation Resistance",
+        "Name": "Array Insulation Resistance",
         "Address": 5071,
         "FinalAddress": 5071,
         "DataType": "U16",
@@ -573,7 +573,7 @@
     },
     {
         "No": 45,
-        "Name": "Meter power",
+        "Name": "Meter Power",
         "Address": 5083,
         "FinalAddress": 5084,
         "DataType": "S32",
@@ -584,7 +584,7 @@
     },
     {
         "No": 46,
-        "Name": "Meter A phase power",
+        "Name": "Meter A Phase Power",
         "Address": 5085,
         "FinalAddress": 5086,
         "DataType": "S32",
@@ -595,7 +595,7 @@
     },
     {
         "No": 47,
-        "Name": "Meter B phase power",
+        "Name": "Meter B Phase Power",
         "Address": 5087,
         "FinalAddress": 5088,
         "DataType": "S32",
@@ -617,7 +617,7 @@
     },
     {
         "No": 49,
-        "Name": "Load power",
+        "Name": "Load Power",
         "Address": 5091,
         "FinalAddress": 5092,
         "DataType": "S32",
@@ -628,7 +628,7 @@
     },
     {
         "No": 50,
-        "Name": "Daily export energy",
+        "Name": "Daily Export Energy",
         "Address": 5093,
         "FinalAddress": 5094,
         "DataType": "U32",
@@ -639,7 +639,7 @@
     },
     {
         "No": 51,
-        "Name": "Total export energy",
+        "Name": "Total Export Energy",
         "Address": 5095,
         "FinalAddress": 5096,
         "DataType": "U32",
@@ -650,7 +650,7 @@
     },
     {
         "No": 52,
-        "Name": "Daily import energy",
+        "Name": "Daily Import Energy",
         "Address": 5097,
         "FinalAddress": 5098,
         "DataType": "U32",
@@ -705,7 +705,7 @@
     },
     {
         "No": 57,
-        "Name": "Daily running time",
+        "Name": "Daily Running Time",
         "Address": 5113,
         "FinalAddress": 5113,
         "DataType": "U16",
@@ -738,7 +738,7 @@
     },
     {
         "No": 60,
-        "Name": "MPPT 4 current",
+        "Name": "MPPT 4 Current",
         "Address": 5116,
         "FinalAddress": 5116,
         "DataType": "U16",
@@ -749,7 +749,7 @@
     },
     {
         "No": 61,
-        "Name": "MPPT 5 voltage",
+        "Name": "MPPT 5 Voltage",
         "Address": 5117,
         "FinalAddress": 5117,
         "DataType": "U16",
@@ -760,7 +760,7 @@
     },
     {
         "No": 62,
-        "Name": "MPPT 5 current",
+        "Name": "MPPT 5 Current",
         "Address": 5118,
         "FinalAddress": 5118,
         "DataType": "U16",
@@ -771,7 +771,7 @@
     },
     {
         "No": 63,
-        "Name": "MPPT 6 voltage",
+        "Name": "MPPT 6 Voltage",
         "Address": 5119,
         "FinalAddress": 5119,
         "DataType": "U16",
@@ -782,7 +782,7 @@
     },
     {
         "No": 64,
-        "Name": "MPPT 6 current",
+        "Name": "MPPT 6 Current",
         "Address": 5120,
         "FinalAddress": 5120,
         "DataType": "U16",
@@ -793,7 +793,7 @@
     },
     {
         "No": 65,
-        "Name": "MPPT 7 voltage",
+        "Name": "MPPT 7 Voltage",
         "Address": 5121,
         "FinalAddress": 5121,
         "DataType": "U16",
@@ -804,7 +804,7 @@
     },
     {
         "No": 66,
-        "Name": "MPPT 7 current",
+        "Name": "MPPT 7 Current",
         "Address": 5122,
         "FinalAddress": 5122,
         "DataType": "U16",
@@ -815,7 +815,7 @@
     },
     {
         "No": 67,
-        "Name": "MPPT 8 voltage",
+        "Name": "MPPT 8 Voltage",
         "Address": 5123,
         "FinalAddress": 5123,
         "DataType": "U16",
@@ -826,7 +826,7 @@
     },
     {
         "No": 68,
-        "Name": "MPPT 8 current",
+        "Name": "MPPT 8 Current",
         "Address": 5124,
         "FinalAddress": 5124,
         "DataType": "U16",
@@ -870,7 +870,7 @@
     },
     {
         "No": 72,
-        "Name": "MPPT 9 voltage",
+        "Name": "MPPT 9 Voltage",
         "Address": 5130,
         "FinalAddress": 5130,
         "DataType": "U16",
@@ -881,7 +881,7 @@
     },
     {
         "No": 73,
-        "Name": "MPPT 9 current",
+        "Name": "MPPT 9 Current",
         "Address": 5131,
         "FinalAddress": 5131,
         "DataType": "U16",
@@ -892,7 +892,7 @@
     },
     {
         "No": 74,
-        "Name": "MPPT 10 voltage",
+        "Name": "MPPT 10 Voltage",
         "Address": 5132,
         "FinalAddress": 5132,
         "DataType": "U16",
@@ -903,7 +903,7 @@
     },
     {
         "No": 75,
-        "Name": "MPPT 10 current",
+        "Name": "MPPT 10 Current",
         "Address": 5133,
         "FinalAddress": 5133,
         "DataType": "U16",
@@ -914,7 +914,7 @@
     },
     {
         "No": 76,
-        "Name": "MPPT 11 voltage",
+        "Name": "MPPT 11 Voltage",
         "Address": 5134,
         "FinalAddress": 5134,
         "DataType": "U16",
@@ -925,7 +925,7 @@
     },
     {
         "No": 77,
-        "Name": "MPPT 11 current",
+        "Name": "MPPT 11 Current",
         "Address": 5135,
         "FinalAddress": 5135,
         "DataType": "U16",
@@ -936,7 +936,7 @@
     },    
     {
         "No": 78,
-        "Name": "MPPT 12 voltage",
+        "Name": "MPPT 12 Voltage",
         "Address": 5136,
         "FinalAddress": 5136,
         "DataType": "U16",
@@ -947,7 +947,7 @@
     },
     {
         "No": 79,
-        "Name": "MPPT 12 current",
+        "Name": "MPPT 12 Current",
         "Address": 5137,
         "FinalAddress": 5137,
         "DataType": "U16",
@@ -1024,7 +1024,7 @@
     },
     {
         "No": 86,
-        "Name": "Negative voltage to the ground",
+        "Name": "Negative Voltage To The Ground",
         "Address": 5146,
         "FinalAddress": 5146,
         "DataType": "S16",
@@ -1035,7 +1035,7 @@
     },
     {
         "No": 87,
-        "Name": "Bus voltage",
+        "Name": "Bus Voltage",
         "Address": 5147,
         "FinalAddress": 5147,
         "DataType": "U16",
@@ -1046,7 +1046,7 @@
     },
     {
         "No": 88,
-        "Name": "Grid frequency",
+        "Name": "Grid Frequency",
         "Address": 5148,
         "FinalAddress": 5148,
         "DataType": "U16",
@@ -1068,7 +1068,7 @@
     },
     {
         "No": 90,
-        "Name": "PID work state",
+        "Name": "PID Work State",
         "Address": 5150,
         "FinalAddress": 5150,
         "DataType": "U16",
@@ -1079,7 +1079,7 @@
     },
     {
         "No": 91,
-        "Name": "PID alarm code",
+        "Name": "PID Alarm Code",
         "Address": 5151,
         "FinalAddress": 5151,
         "DataType": "U16",
