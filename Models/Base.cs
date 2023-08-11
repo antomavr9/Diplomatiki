@@ -25,7 +25,7 @@ namespace Application.Models
             set
             {
                 // Enforce a value range (between 0 and 1000000)
-                if (value >= 0 && value <= 1000000)
+                if (value >= 0 && value <= 465537)
                 {
                     _address = value;
                 }
