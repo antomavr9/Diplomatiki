@@ -1,6 +1,6 @@
 namespace Application.Models
 {
-    public class Sungrow : Base
+    public class Sungrow : Base, IPlantServiceInterface
     {
         public int No { get; set; }
         public string? DataRange { get; set; }

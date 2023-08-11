@@ -1,6 +1,6 @@
 namespace Application.Models
 {
-    public class Huawei : Base
+    public class Huawei : Base, IPlantServiceInterface
     {
         public int SN { get; set; }
         public string? ReadWrite { get; set; }
@@ -12,11 +12,11 @@ namespace Application.Models
             return $"Name: {Name}, DataType: {DataType}, Unit: {Unit}, Address: {Address}, Quantity: {Quantity}, SN: {SN}, ReadWrite: {ReadWrite}, Gain: {Gain}, Range: {Range}";
         }
 
-        public int GetActivePower()
+        public string GetActivePower()
         {
-            return 23;
+            return "Active Power";
         }
-"Active Power"
+
         public string GetReactivePower()
         {
             return "Reactive Power";

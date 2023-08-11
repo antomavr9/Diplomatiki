@@ -1,6 +1,6 @@
 namespace Application.Models
 {
-    public class Base:IPlantServiceInterface
+    public class Base
     {
         // private variables
         private int _address;
