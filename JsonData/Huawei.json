@@ -109,7 +109,7 @@
   },
   {
     "SN": 10,
-    "Name": "Power On/Off",
+    "Name": "Power On/Off 1",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -117,11 +117,11 @@
     "Address": 40202,
     "Quantity": 1,
     "Range": "0: Power off all inverters, 1: Power on all inverters",
-    "Description": ""
+    "Description": "0: Power off all inverters, 1: Power on all inverters"
   },
   {
     "SN": 11,
-    "Name": "Power On/Off",
+    "Name": "Power On/Off 2",
     "ReadWrite": "WO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -129,7 +129,7 @@
     "Address": 40203,
     "Quantity": 1,
     "Range": "0: Power on all inverters, 1: Power off all inverters",
-    "Description": ""
+    "Description": "0: Power on all inverters, 1: Power off all inverters"
   },
   {
     "SN": 12,
@@ -157,7 +157,7 @@
   },
   {
     "SN": 14,
-    "Name": "Active Adjustment",
+    "Name": "Active Adjustment 1",
     "ReadWrite": "RW",
     "DataType": "U32",
     "Unit": "kW",
@@ -165,11 +165,11 @@
     "Address": 40420,
     "Quantity": 2,
     "Range": "Adjusts the total active output power of all inverters connected to the SmartLogger. The adjustment value that is beyond the range is discarded.",
-    "Description": ""
+    "Description": "Adjusts the total active output power of all inverters connected to the SmartLogger. The adjustment value that is beyond the range is discarded."
   },
   {
     "SN": 15,
-    "Name": "Reactive Adjustment",
+    "Name": "Reactive Adjustment 1",
     "ReadWrite": "RW",
     "DataType": "I32",
     "Unit": "kVar",
@@ -177,11 +177,11 @@
     "Address": 40422,
     "Quantity": 2,
     "Range": "Adjusts the total reactive output power of all inverters connected to the SmartLogger. The adjustment value that is beyond the range is discarded.",
-    "Description": ""
+    "Description": "Adjusts the total reactive output power of all inverters connected to the SmartLogger. The adjustment value that is beyond the range is discarded."
   },
   {
     "SN": 16,
-    "Name": "Active Adjustment",
+    "Name": "Active Adjustment 2",
     "ReadWrite": "RW",
     "DataType": "U32",
     "Unit": "kW",
@@ -189,11 +189,11 @@
     "Address": 40424,
     "Quantity": 2,
     "Range": "Adjusts the total active output power of all inverters connected to the SmartLogger.",
-    "Description": ""
+    "Description": "Adjusts the total active output power of all inverters connected to the SmartLogger."
   },
   {
     "SN": 17,
-    "Name": "Reactive Adjustment",
+    "Name": "Reactive Adjustment 2",
     "ReadWrite": "RW",
     "DataType": "I32",
     "Unit": "kVar",
@@ -201,7 +201,7 @@
     "Address": 40426,
     "Quantity": 2,
     "Range": "Adjusts the total reactive output power of all inverters connected to the SmartLogger.",
-    "Description": ""
+    "Description": "Adjusts the total reactive output power of all inverters connected to the SmartLogger."
   },
   {
     "SN": 18,
@@ -253,7 +253,7 @@
   },
   {
     "SN": 22,
-    "Name": "CO2 Reduction",
+    "Name": "CO2 Reduction 1",
     "ReadWrite": "RO",
     "DataType": "U32",
     "Unit": "kg",
@@ -261,7 +261,7 @@
     "Address": 40523,
     "Quantity": 2,
     "Range": "Equals the total CO2 reduction of all inverters. If the value exceeds the range specified by U32, register 40550 is recommended.",
-    "Description": ""
+    "Description": "Equals the total CO2 reduction of all inverters. If the value exceeds the range specified by U32, register 40550 is recommended."
   },
   {
     "SN": 23,
@@ -289,7 +289,7 @@
   },
   {
     "SN": 25,
-    "Name": "Plant Status",
+    "Name": "Plant Status 1",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -297,7 +297,7 @@
     "Address": 40543,
     "Quantity": 1,
     "Range": "Used by Qinghai 1: Unlimited power operation 2: Limited power operation 3: Idle 4: Outage (fault, maintenance etc.) 5: Communication interrupt",
-    "Description": ""
+    "Description": "Used by Qinghai 1: Unlimited power operation 2: Limited power operation 3: Idle 4: Outage (fault, maintenance etc.) 5: Communication interrupt"
   },
   {
     "SN": 26,
@@ -313,7 +313,7 @@
   },
   {
     "SN": 27,
-    "Name": "CO2 Reduction",
+    "Name": "CO2 Reduction 2",
     "ReadWrite": "RO",
     "DataType": "U64",
     "Unit": "kg",
@@ -321,7 +321,7 @@
     "Address": 40550,
     "Quantity": 4,
     "Range": "Equals the total CO2 reduction of allinverters.This register represents a larger value range compared with register 40523.",
-    "Description": ""
+    "Description": "Equals the total CO2 reduction of allinverters.This register represents a larger value range compared with register 40523."
   },
   {
     "SN": 28,
@@ -373,7 +373,7 @@
   },
   {
     "SN": 32,
-    "Name": "Plant Status",
+    "Name": "Plant Status 2",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -381,11 +381,11 @@
     "Address": 40566,
     "Quantity": 1,
     "Range": "Used by Xinjiang. 0: Idle, 1: On-grid, 2: On-grid: self derating, 3: On-grid: Power limit, 4: Planned outage, 5: Power limit outage, 6: Fault outage, 7: Communication interrupt",
-    "Description": ""
+    "Description": "Used by Xinjiang. 0: Idle, 1: On-grid, 2: On-grid: self derating, 3: On-grid: Power limit, 4: Planned outage, 5: Power limit outage, 6: Fault outage, 7: Communication interrupt"
   },
   {
     "SN": 33,
-    "Name": "Plant Status",
+    "Name": "Plant Status 3",
     "ReadWrite": "RO",
     "DataType": "U16",
     "Unit": "N/A",
@@ -393,7 +393,7 @@
     "Address": 40567,
     "Quantity": 1,
     "Range": "Used by Ningxia. 1: On-grid, 2: Outage, 3: Maintenance, 4: Idle",
-    "Description": ""
+    "Description": "Used by Ningxia. 1: On-grid, 2: Outage, 3: Maintenance, 4: Idle"
   },
   {
     "SN": 34,
