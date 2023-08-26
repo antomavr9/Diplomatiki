@@ -10,6 +10,7 @@ namespace Application.Models
         // Properties
         public string Name { get; set; } = null!;
         public string? Unit { get; set; }
+        public string? Description { get; set; }
         public string DataType
         {
             get => _dataType;
@@ -46,11 +47,10 @@ namespace Application.Models
                 }
                 _quantity = value;
             }
-        }
-
+        }   
         public override string ToString()
         {
-            return $"Name: {Name}, DataType: {DataType}, Unit: {Unit}, Address: {Address}, Quantity: {Quantity}";
+            return $"Name: {Name}, DataType: {DataType}, Unit: {Unit}, Address: {Address}, Quantity: {Quantity}, Description: {Description}";
         }
     }
 }

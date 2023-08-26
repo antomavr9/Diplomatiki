@@ -8,7 +8,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 2,
@@ -19,7 +20,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 3,
@@ -30,7 +32,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 15
+        "Quantity": 15,
+        "Description": ""
     },
     {
         "No": 4,
@@ -41,7 +44,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 15
+        "Quantity": 15,
+        "Description": ""
     },
     {
         "No": 5,
@@ -52,7 +56,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 6
+        "Quantity": 6,
+        "Description": ""
     },
     {
         "No": 6,
@@ -63,7 +68,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "Datatype :UTF-8",
-        "Quantity": 10
+        "Quantity": 10,
+        "Description": ""
     },
     {
         "No": 7,
@@ -74,7 +80,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 8,
@@ -85,7 +92,8 @@
         "DataRange": "",
         "Unit": "0.1kW",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 9,
@@ -96,7 +104,8 @@
         "DataRange": "0-two phase. 1-3P4L. 2-3P3L",
         "Unit": "",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 10,
@@ -107,7 +116,8 @@
         "DataRange": "",
         "Unit": "0.1 kWh",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 11,
@@ -118,7 +128,8 @@
         "DataRange": "",
         "Unit": "kWh",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 12,
@@ -129,7 +140,8 @@
         "DataRange": "",
         "Unit": "h",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 13,
@@ -140,7 +152,8 @@
         "DataRange": "",
         "Unit": "0.1℃",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 14,
@@ -151,7 +164,8 @@
         "DataRange": "",
         "Unit": "VA",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG33K3J, SG36KTL-M, SG40KTL-M, G50KTL, SG50KTL-M, SG60KTL, SG60KTL-M, SG60KU-M, G80KTL, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX,  SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX、SG75CX, SG225HX",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 15,
@@ -162,7 +176,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 16,
@@ -173,7 +188,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 17,
@@ -184,7 +200,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 18,
@@ -195,7 +212,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 19,
@@ -206,7 +224,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 20,
@@ -217,7 +236,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 21,
@@ -228,7 +248,8 @@
         "DataRange": "",
         "Unit": "W",
         "Note": "See Appendix 6",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 22,
@@ -239,7 +260,8 @@
         "DataRange": "",
         "Unit": "0.1 V",
         "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 23,
@@ -250,7 +272,8 @@
         "DataRange": "",
         "Unit": "0.1 V",
         "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 24,
@@ -261,7 +284,8 @@
         "DataRange": "",
         "Unit": "0.1 V",
         "Note": "Output type (address: 5002) is 1: upload phase voltage. 2: upload line voltage",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 25,
@@ -272,7 +296,8 @@
         "DataRange": "",
         "Unit": "0.1 A",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 26,
@@ -283,7 +308,8 @@
         "DataRange": "",
         "Unit": "0.1 A",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 27,
@@ -294,7 +320,8 @@
         "DataRange": "",
         "Unit": "0.1 A",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 28,
@@ -305,7 +332,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 29,
@@ -316,7 +344,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 30,
@@ -327,7 +356,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 31,
@@ -338,7 +368,8 @@
         "DataRange": "",
         "Unit": "W",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 32,
@@ -349,7 +380,8 @@
         "DataRange": "",
         "Unit": "Var",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 33,
@@ -360,7 +392,8 @@
         "DataRange": "",
         "Unit": "0.001",
         "Note": ">0 means leading. <0 means lagging",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 34,
@@ -371,7 +404,8 @@
         "DataRange": "",
         "Unit": "0.1 Hz",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 35,
@@ -382,7 +416,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 36,
@@ -393,7 +428,8 @@
         "DataRange": "See Appendix 1",
         "Unit": "",
         "Note": "Data of address 5039 - 5045 are additional",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 36,
@@ -404,7 +440,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 36,
@@ -415,7 +452,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 36,
@@ -426,7 +464,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 36,
@@ -437,7 +476,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 36,
@@ -448,7 +488,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 36,
@@ -459,7 +500,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 36,
@@ -470,7 +512,8 @@
         "DataRange": "See Appendix 3",
         "Unit": "",
         "Note": "Fault/Alarm time and Fault/Alarm code (5039 - 5045) are valid only when the device work state is fault (0x5500) or alarm (0x9100).",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 36,
@@ -481,7 +524,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 3
+        "Quantity": 3,
+        "Description": ""
     },
     {
         "No": 37,
@@ -492,7 +536,8 @@
         "DataRange": "",
         "Unit": "0.1kVar",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 38,
@@ -503,7 +548,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 21
+        "Quantity": 21,
+        "Description": ""
     },
     {
         "No": 39,
@@ -514,7 +560,8 @@
         "DataRange": "1 - 20000(0xFFFF: invalid)",
         "Unit": "1kΩ",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 40,
@@ -525,7 +572,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 41,
@@ -536,7 +584,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 4
+        "Quantity": 4,
+        "Description": ""
     },
     {
         "No": 42,
@@ -547,7 +596,8 @@
         "DataRange": "",
         "Unit": "1w",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 43,
@@ -558,7 +608,8 @@
         "DataRange": "",
         "Unit": "1Var",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 44,
@@ -569,7 +620,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "See Appendix 2",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 45,
@@ -580,7 +632,8 @@
         "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 46,
@@ -591,7 +644,8 @@
         "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 47,
@@ -602,7 +656,8 @@
         "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 48,
@@ -613,7 +668,8 @@
         "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 49,
@@ -624,7 +680,8 @@
         "DataRange": "",
         "Unit": "1w",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 50,
@@ -635,7 +692,8 @@
         "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 51,
@@ -646,7 +704,8 @@
         "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 52,
@@ -657,7 +716,8 @@
         "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 53,
@@ -668,7 +728,8 @@
         "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 54,
@@ -679,7 +740,8 @@
         "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 55,
@@ -690,7 +752,8 @@
         "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M. Note: Country set to Europe Area.",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 56,
@@ -701,7 +764,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 8
+        "Quantity": 8,
+        "Description": ""
     },
     {
         "No": 57,
@@ -712,7 +776,8 @@
         "DataRange": "",
         "Unit": "1min",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 58,
@@ -723,7 +788,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "See Appendix 4",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 59,
@@ -734,7 +800,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 60,
@@ -745,7 +812,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 61,
@@ -756,7 +824,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 62,
@@ -767,7 +836,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 63,
@@ -778,7 +848,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 64,
@@ -789,7 +860,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 65,
@@ -800,7 +872,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 66,
@@ -811,7 +884,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 67,
@@ -822,7 +896,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 68,
@@ -833,7 +908,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 69,
@@ -844,7 +920,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 70,
@@ -855,7 +932,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 71,
@@ -866,7 +944,8 @@
         "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 72,
@@ -877,7 +956,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 73,
@@ -888,7 +968,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 74,
@@ -899,7 +980,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 75,
@@ -910,7 +992,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 76,
@@ -921,7 +1004,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 77,
@@ -932,7 +1016,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },    
     {
         "No": 78,
@@ -943,7 +1028,8 @@
         "DataRange": "",
         "Unit": "0.1V",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 79,
@@ -954,7 +1040,8 @@
         "DataRange": "",
         "Unit": "0.1A",
         "Note": "See Appendix 6",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 80,
@@ -965,7 +1052,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 81,
@@ -976,7 +1064,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 82,
@@ -987,7 +1076,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 83,
@@ -998,7 +1088,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 84,
@@ -1009,7 +1100,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 85,
@@ -1020,7 +1112,8 @@
         "DataRange": "",
         "Unit": "0.1kWh",
         "Note": "(Display accuracy increased to 0.1kWh) Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, G20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX, SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX, SG75CX, SG225HX",
-        "Quantity": 2
+        "Quantity": 2,
+        "Description": ""
     },
     {
         "No": 86,
@@ -1031,7 +1124,8 @@
         "DataRange": "-15000 ~ 15000",
         "Unit": "0.1V",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 87,
@@ -1042,7 +1136,8 @@
         "DataRange": "0 - 15000",
         "Unit": "0.1V",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 88,
@@ -1053,7 +1148,8 @@
         "DataRange": "",
         "Unit": "0.01Hz",
         "Note": "(Display accuracy increased to 0.01Hz). Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20RT, SG80KTL-M, SG111HV, SG125HV, SG125HV-20, SG33CX, SG40CX, SG50CX, SG110CX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG100CX, SG75CX, SG225HX",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 89,
@@ -1064,7 +1160,8 @@
         "DataRange": "0 ~ 15000",
         "Unit": "0.1V",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 90,
@@ -1075,7 +1172,8 @@
         "DataRange": "2: PID Recover Operation, 4: Anti-PID Operation, 8: PID Abnormity",
         "Unit": "",
         "Note": "Valid for inverters: SG5KTL-MT, SG6KTL-MT, SG8KTL-M, SG10KTL-M, SG10KTL-MT, SG12KTL-M, SG15KTL-M, SG17KTL-M, SG20KTL-M, SG3.0RT, SG4.0RT, SG5.0RT, SG6.0RT, SG7.0RT, SG8.0RT, SG10RT, SG12RT, SG15RT, SG17RT, SG20R, SG80KTL-M, SG125HV, SG125HV-20, SG80KTL, SG33CXSG40CX, SG50CX, SG110CX, SG100CX、SG75CX, SG136TX, SG250HX, SG30CX, SG36CX-US, SG60CX-US, SG250HX-US, SG250HX-IN, SG25CX-SA, SG225HX",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 91,
@@ -1086,7 +1184,8 @@
         "DataRange": "432:PID resistance abnormal, 433:PID function abnormal, 434:PID overvoltage/overcur rent protection",
         "Unit": "",
         "Note": "See Appendix 5",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 92,
@@ -1097,7 +1196,8 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 1
+        "Quantity": 1,
+        "Description": ""
     },
     {
         "No": 93,
@@ -1108,6 +1208,7 @@
         "DataRange": "",
         "Unit": "",
         "Note": "",
-        "Quantity": 1860
+        "Quantity": 1860,
+        "Description": ""
     }
 ]

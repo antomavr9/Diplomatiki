@@ -9,7 +9,7 @@ namespace Application.Models
 
         public override string ToString()
         {
-            return $"Name: {Name}, DataType: {DataType}, Unit: {Unit}, Address: {Address}, Quantity: {Quantity}, No: {No}, DataRange: {DataRange}, Note: {Note}, FinalAddress: {FinalAddress}";
+            return $"Name: {Name}, DataType: {DataType}, Unit: {Unit}, Address: {Address}, Quantity: {Quantity}, No: {No}, DataRange: {DataRange}, Note: {Note}, FinalAddress: {FinalAddress}, Description: {Description}";
         }
 
         public string GetActivePower()
@@ -39,12 +39,12 @@ namespace Application.Models
 
         public string GetDeviceStatus()
         {
-            return "";
+            return "";//?
         }
 
         public string GetLogStatus()
         {
-            return "";
+            return "";//?
         }
 
         public string GetPowerSetPointLevel()
