@@ -8,6 +8,7 @@ using Modbus.Net;
 using Modbus.Net.Modbus;
 using ModbusMachineExtended;
 using Application.Models;
+using JsonHandlerName;
 
 class Program
 {
