@@ -370,7 +370,7 @@ class Program
         List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase!);
         // List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayHuawei!);
 
-        Console.WriteLine(jsonDataArrayBase![0].Name);
+        // Console.WriteLine(jsonDataArrayBase![0].Name);
         // Console.WriteLine(jsonDataArrayHuawei![0].Name);
 
         // ---------------------------------- Extended Machine ------------------------------------------------

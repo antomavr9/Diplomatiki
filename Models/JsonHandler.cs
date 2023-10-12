@@ -88,28 +88,77 @@ public class JsonHandler
     }
 
     public static List<AddressUnit> AddressUnitCreator(List<Base> jsonDataArray)
-{
-    var BaseAddressUnits = new List<AddressUnit>();
-
-    for (int i = 0; i < jsonDataArray.Count; i++) // Use '<' instead of '<='
     {
-        var addressUnit = new AddressUnit
+        var addressUnits  = new List<AddressUnit>();
+
+        for (int i = 0; i < jsonDataArray.Count; i++)
         {
-            Id = (i + 1).ToString(),
-            CommunicationTag = jsonDataArray[i].Name,
-            DataType = ConvertDataType(jsonDataArray[i].DataType!)
-        }; 
+            var addressUnit = new AddressUnit
+            {
+                Id = (i + 1).ToString(),
+                CommunicationTag = jsonDataArray[i].Name,
+                DataType = ConvertDataType(jsonDataArray[i].DataType!)
+            }; 
 
-        var Area = ConvertArea(jsonDataArray[i].Address);
-        var Address = ConvertAddress(jsonDataArray[i].Address);
-        addressUnit.Area = Area;
-        addressUnit.Address = Address;
+            var area = ConvertArea(jsonDataArray[i].Address);
+            var address = ConvertAddress(jsonDataArray[i].Address);
+            addressUnit.Area = area;
+            addressUnit.Address = address;
 
-        BaseAddressUnits.Add(addressUnit); // Add the AddressUnit to the list
+            addressUnits .Add(addressUnit); // Add the AddressUnit to the list
+        }
+
+        return addressUnits ;
     }
 
-    return BaseAddressUnits;
-}
+    public static List<AddressUnit>? AddressUnitCreator(List<Huawei> jsonDataArray)
+    {
+        var addressUnits  = new List<AddressUnit>();
+
+        for (int i = 0; i < jsonDataArray.Count; i++)
+        {
+            var addressUnit = new AddressUnit
+            {
+                Id = (i + 1).ToString(),
+                CommunicationTag = jsonDataArray[i].Name,
+                DataType = ConvertDataType(jsonDataArray[i].DataType!)
+            }; 
+
+            var area = ConvertArea(jsonDataArray[i].Address);
+            var address = ConvertAddress(jsonDataArray[i].Address);
+            addressUnit.Area = area;
+            addressUnit.Address = address;
+
+            addressUnits .Add(addressUnit); // Add the AddressUnit to the list
+        }
+
+        return addressUnits ;
+    }
+
+    public static List<AddressUnit>? AddressUnitCreator(List<Sungrow> jsonDataArray)
+    {
+        var addressUnits  = new List<AddressUnit>();
+
+        for (int i = 0; i < jsonDataArray.Count; i++) // Use '<' instead of '<='
+        {
+            var addressUnit = new AddressUnit
+            {
+                Id = (i + 1).ToString(),
+                CommunicationTag = jsonDataArray[i].Name,
+                DataType = ConvertDataType(jsonDataArray[i].DataType!)
+            }; 
+
+            var area = ConvertArea(jsonDataArray[i].Address);
+            var address = ConvertAddress(jsonDataArray[i].Address);
+            addressUnit.Area = area;
+            addressUnit.Address = address;
+
+            addressUnits .Add(addressUnit); // Add the AddressUnit to the list
+        }
+
+        return addressUnits ;
+    }
+
 
     public static Type ConvertDataType(string DataType)
     {
@@ -128,43 +177,31 @@ public class JsonHandler
         };
     }
 
-    public static string ConvertArea(int Address)
+    public static string ConvertArea(int address)
     {
-        if( (int) (Address/10000) == 4)
+        try
         {
-            return "4X";
+            int areaCode = address / 10000;
+            string result = areaCode switch
+            {
+                4 => "4X",
+                3 => "3X",
+                1 => "1X",
+                0 => "0X",
+                _ => "Invalid Area"
+            };
+            return result;
         }
-        else if((int) (Address/10000) == 3)
+        catch (Exception)
         {
-            return "3X";
+            return "Cannot Convert Address!";
         }
-        else if((int) (Address/10000) == 1)
-        {
-            return "1X";
-        }
-        else if ((int) (Address/10000) == 0)
-        {
-            return "0X";
-        }
-
-        return "";//Ελεγχος
     }
 
-    public static int ConvertAddress(int Address)
+    public static int ConvertAddress(int address)
     {
-        return (int)(Address%10000)+1;
+        return address % 10000 + 1;
     }
-
-    // public static List<AddressUnit>? AddressUnitCreator(List<Huawei> jsonDataArray)
-    // {
-    //     return ;
-    // }
-
-    // public static List<AddressUnit>? AddressUnitCreator(List<Sungrow> jsonDataArray)
-    // {
-    //     return ;
-    // }
-
 
     public override string ToString()
     {
