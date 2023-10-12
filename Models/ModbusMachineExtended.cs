@@ -4,6 +4,7 @@ using Modbus.Net;
 using Modbus.Net.Modbus;
 using System.Runtime.InteropServices;
 
+namespace ModbusMachineExtended;
 //  List<AddressUnit> addressUnits = new List<AddressUnit>
 //         {
 //             new AddressUnit() {Id = "1", Area = "4X", Address = 1, CommunicationTag = "Add1", DataType = typeof (ushort)}, //Id is mandatory
@@ -11,8 +12,6 @@ using System.Runtime.InteropServices;
 //             new AddressUnit() {Id = "3", Area = "4X", Address = 3, CommunicationTag = "Add3", DataType = typeof (ushort)},
 //             new AddressUnit() {Id = "4", Area = "4X", Address = 4, CommunicationTag = "Add4", DataType = typeof (ushort)}
 //         };
-
-namespace ModbusMachineExtended;
 
 public class ModbusMachineExtended<TKey, TUnitKey> : ModbusMachine<TKey, TUnitKey> where TKey : IEquatable<TKey>
 where TUnitKey : IEquatable<TUnitKey>
