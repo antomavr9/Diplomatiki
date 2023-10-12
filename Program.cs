@@ -9,8 +9,6 @@ using Modbus.Net.Modbus;
 using ModbusMachineExtended;
 using Application.Models;
 
-using ModbusMachineExtended;
-
 // Pantelis Branch
 
 class Program
