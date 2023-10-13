@@ -10,7 +10,6 @@ using ModbusMachineExtended;
 using Application.Models;
 using JsonHandlerName;
 
-using ModbusMachineExtended;
 
 // Pantelis Branch
 
