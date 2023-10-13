@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\QuickSilver\\Desktop\\modbus_app\\MODBUS_APP.csproj": {}
+    "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\MODBUS_APP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\QuickSilver\\Desktop\\modbus_app\\MODBUS_APP.csproj": {
+    "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\MODBUS_APP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\QuickSilver\\Desktop\\modbus_app\\MODBUS_APP.csproj",
+        "projectUniqueName": "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\MODBUS_APP.csproj",
         "projectName": "MODBUS_APP",
-        "projectPath": "C:\\Users\\QuickSilver\\Desktop\\modbus_app\\MODBUS_APP.csproj",
-        "packagesPath": "C:\\Users\\QuickSilver\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\QuickSilver\\Desktop\\modbus_app\\obj\\",
+        "projectPath": "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\MODBUS_APP.csproj",
+        "packagesPath": "C:\\Users\\stilk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\QuickSilver\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\stilk\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     }
