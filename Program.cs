@@ -11,8 +11,6 @@ using Application.Models;
 using JsonHandlerName;
 
 
-// Pantelis Branch
-
 class Program
 {
     static async Task Main()
