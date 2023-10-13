@@ -7,6 +7,7 @@ using Modbus.Net;
 using Modbus.Net.Modbus;
 using System.Runtime.InteropServices;
 
+namespace JsonHandlerName;
 public class JsonHandler
 {
     public static List<Base>? LoadFromFileBase(string jsonFilePath)

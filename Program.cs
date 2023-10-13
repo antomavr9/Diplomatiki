@@ -4,10 +4,11 @@ using System.Drawing.Printing;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
-using Modbus.Net;
-using Modbus.Net.Modbus;
+using Modbus.Net; //Version 1.4.1
+using Modbus.Net.Modbus; //Version 1.4.1
 using ModbusMachineExtended;
 using Application.Models;
+using JsonHandlerName;
 
 using ModbusMachineExtended;
 
