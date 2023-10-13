@@ -10,7 +10,6 @@ using ModbusMachineExtended;
 using Application.Models;
 using JsonHandlerName;
 
-
 class Program
 {
     static async Task Main()
@@ -195,6 +194,7 @@ class Program
             
         //     // Check success status
         //     if(SetSuccessStatus)
+        //     {
         //         Console.WriteLine("Set Data Status: Data Set Succesfully!");
                 
         //     }
