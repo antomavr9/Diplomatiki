@@ -1,4 +1,5 @@
 namespace ModbusExtension;
+
 public class Base
 {
     // private variables

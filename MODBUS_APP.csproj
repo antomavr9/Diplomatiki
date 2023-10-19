@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Modbus.Net" Version="1.4.1" />
-    <PackageReference Include="Modbus.Net.Modbus" Version="1.4.1" />
+    <PackageReference Include="Modbus.Net" Version="1.4.3" />
+    <PackageReference Include="Modbus.Net.Modbus" Version="1.4.3" />
     <PackageReference Include="NModbus" Version="3.0.78" />
   </ItemGroup>
 

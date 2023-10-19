@@ -42,11 +42,11 @@
           "dependencies": {
             "Modbus.Net": {
               "target": "Package",
-              "version": "[1.4.1, )"
+              "version": "[1.4.3, )"
             },
             "Modbus.Net.Modbus": {
               "target": "Package",
-              "version": "[1.4.1, )"
+              "version": "[1.4.3, )"
             },
             "NModbus": {
               "target": "Package",

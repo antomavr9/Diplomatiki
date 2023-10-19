@@ -13,22 +13,31 @@ namespace ModbusExtension;
 //             new AddressUnit() {Id = "4", Area = "4X", Address = 4, CommunicationTag = "Add4", DataType = typeof (ushort)}
 //         };
 
-public class ModbusMachineExtended<TKey, TUnitKey> : ModbusMachine<TKey, TUnitKey> where TKey : IEquatable<TKey>
-where TUnitKey : IEquatable<TUnitKey>
+public class ModbusMachineExtended<TKey, TUnitKey, TAddressKey, TSubAddressKey> : ModbusMachine<TKey, TUnitKey> where TKey : IEquatable<TKey>
+where TUnitKey : IEquatable<TUnitKey> where TAddressKey : IEquatable<TAddressKey> where TSubAddressKey : IEquatable<TSubAddressKey> 
 {
     // Constructor 1
-    public ModbusMachineExtended(TKey id, ModbusType connectionType, string connectionString,
-        IEnumerable<AddressUnit<TUnitKey>> getAddresses, bool keepConnect, byte slaveAddress, byte masterAddress,
-        Endian endian = Endian.BigEndianLsb)
-        : base(id, connectionType, connectionString, getAddresses, keepConnect, slaveAddress, masterAddress, endian)
-    {
+    public ModbusMachineExtended(TKey id,
+                                 ModbusType connectionType,
+                                 string connectionString,
+                                 IEnumerable<AddressUnit<TUnitKey, int, int>> getAddresses,
+                                 bool keepConnect,
+                                 byte slaveAddress,
+                                 byte masterAddress,
+                                 Endian endian)
+    : base(id, connectionType, connectionString, getAddresses, keepConnect, slaveAddress, masterAddress, endian)
+    { 
     }
 
     // Constructor 2
-    public ModbusMachineExtended(TKey id, ModbusType connectionType, string connectionString,
-        IEnumerable<AddressUnit<TUnitKey>> getAddresses, byte slaveAddress, byte masterAddress,
-        Endian endian = Endian.BigEndianLsb)
-        : this(id, connectionType, connectionString, getAddresses, true, slaveAddress, masterAddress, endian)
+    public ModbusMachineExtended(TKey id,
+                                 ModbusType connectionType,
+                                 string connectionString,
+                                 IEnumerable<AddressUnit<TUnitKey, int, int>> getAddresses,
+                                 byte slaveAddress,
+                                 byte masterAddress,
+                                 Endian endian)
+    : this(id, connectionType, connectionString, getAddresses, true, slaveAddress, masterAddress, endian)
     {
     }
 
@@ -115,7 +124,6 @@ where TUnitKey : IEquatable<TUnitKey>
                 return returnSetObject;
             }
 
-
             return new ReturnStruct<bool>()
             {
                 Datas = false,
@@ -136,7 +144,4 @@ where TUnitKey : IEquatable<TUnitKey>
             };    
         }
     }
-
-
-
 }

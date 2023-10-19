@@ -52,3 +52,4 @@ public class Sungrow : Base, IPlantServiceInterface
         return "Active Power Regulation Setpoint";
     }
 }
+

@@ -4,11 +4,9 @@ using System.Drawing.Printing;
 using System.Reflection.Metadata.Ecma335;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
-using Modbus.Net;
-using Modbus.Net.Modbus;
+using Modbus.Net; //Version 1.4.1
+using Modbus.Net.Modbus; //Version 1.4.1
 using ModbusExtension;
-
-// Pantelis Branch
 
 class Program
 {
@@ -194,6 +192,7 @@ class Program
             
         //     // Check success status
         //     if(SetSuccessStatus)
+        //     {
         //         Console.WriteLine("Set Data Status: Data Set Succesfully!");
                 
         //     }
@@ -367,14 +366,14 @@ class Program
         string jsonFilePath = "JsonData/Huawei.json";
         List<Base>? jsonDataArrayBase = JsonHandler.LoadFromFileBase(jsonFilePath);
         // List<Huawei>? jsonDataArrayHuawei = JsonHandler.LoadFromFileHuawei(jsonFilePath);
-        List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase!);
+        List<AddressUnit<string, int, int>>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase!);
         // List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayHuawei!);
 
         // Console.WriteLine(jsonDataArrayBase![0].Name);
         // Console.WriteLine(jsonDataArrayHuawei![0].Name);
 
         // ---------------------------------- Extended Machine ------------------------------------------------
-        var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0, Endian.BigEndianLsb);
+        var extendedMachine = new ModbusMachineExtended<string, string, string, string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0, Endian.BigEndianLsb);
 
         // Connect to server through extendedMachine
         bool connectionStatusMachine = await extendedMachine.ConnectAsync();
