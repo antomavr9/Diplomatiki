@@ -13,9 +13,9 @@
     <SourceRoot Include="C:\Users\stilk\.nuget\packages\" />
   </ItemGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Content Include="$(NuGetPackageRoot)modbus.net\1.4.1\contentFiles\any\net6.0\appsettings.default.json" Condition="Exists('$(NuGetPackageRoot)modbus.net\1.4.1\contentFiles\any\net6.0\appsettings.default.json')">
+    <Content Include="$(NuGetPackageRoot)modbus.net\1.4.3\contentFiles\any\net6.0\appsettings.default.json" Condition="Exists('$(NuGetPackageRoot)modbus.net\1.4.3\contentFiles\any\net6.0\appsettings.default.json')">
       <NuGetPackageId>Modbus.Net</NuGetPackageId>
-      <NuGetPackageVersion>1.4.1</NuGetPackageVersion>
+      <NuGetPackageVersion>1.4.3</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
       <Pack>false</Pack>
       <Private>False</Private>

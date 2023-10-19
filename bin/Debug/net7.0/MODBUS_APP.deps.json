@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "MODBUS_APP/1.0.0": {
         "dependencies": {
-          "Modbus.Net": "1.4.1",
-          "Modbus.Net.Modbus": "1.4.1",
+          "Modbus.Net": "1.4.3",
+          "Modbus.Net.Modbus": "1.4.3",
           "NModbus": "3.0.78"
         },
         "runtime": {
@@ -77,14 +77,6 @@
           "lib/net6.0/DotNetty.Transport.dll": {
             "assemblyVersion": "0.7.5.0",
             "fileVersion": "0.7.5.0"
-          }
-        }
-      },
-      "FastEnum/1.8.0": {
-        "runtime": {
-          "lib/net6.0/FastEnum.dll": {
-            "assemblyVersion": "1.8.0.0",
-            "fileVersion": "1.8.0.0"
           }
         }
       },
@@ -261,32 +253,30 @@
           }
         }
       },
-      "Modbus.Net/1.4.1": {
+      "Modbus.Net/1.4.3": {
         "dependencies": {
           "DotNetty.Handlers": "0.7.5",
-          "FastEnum": "1.8.0",
           "Microsoft.Extensions.Configuration.Binder": "7.0.4",
           "Microsoft.Extensions.Configuration.Json": "7.0.0",
           "Nito.AsyncEx": "5.1.2",
-          "Quartz": "3.6.2",
-          "System.IO.Ports": "7.0.0",
-          "System.ValueTuple": "4.5.0"
+          "Quartz": "3.6.3",
+          "System.IO.Ports": "7.0.0"
         },
         "runtime": {
           "lib/net6.0/Modbus.Net.dll": {
-            "assemblyVersion": "1.4.1.0",
-            "fileVersion": "1.4.1.0"
+            "assemblyVersion": "1.4.3.0",
+            "fileVersion": "1.4.3.0"
           }
         }
       },
-      "Modbus.Net.Modbus/1.4.1": {
+      "Modbus.Net.Modbus/1.4.3": {
         "dependencies": {
-          "Modbus.Net": "1.4.1"
+          "Modbus.Net": "1.4.3"
         },
         "runtime": {
           "lib/net6.0/Modbus.Net.Modbus.dll": {
-            "assemblyVersion": "1.4.1.0",
-            "fileVersion": "1.4.1.0"
+            "assemblyVersion": "1.4.3.0",
+            "fileVersion": "1.4.3.0"
           }
         }
       },
@@ -394,7 +384,7 @@
           }
         }
       },
-      "Quartz/3.6.2": {
+      "Quartz/3.6.3": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
           "System.Configuration.ConfigurationManager": "6.0.1",
@@ -402,8 +392,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Quartz.dll": {
-            "assemblyVersion": "3.6.2.0",
-            "fileVersion": "3.6.2.0"
+            "assemblyVersion": "3.6.3.0",
+            "fileVersion": "3.6.3.0"
           }
         }
       },
@@ -561,7 +551,6 @@
           "System.Text.Encodings.Web": "7.0.0"
         }
       },
-      "System.ValueTuple/4.5.0": {},
       "System.Windows.Extensions/6.0.0": {
         "dependencies": {
           "System.Drawing.Common": "6.0.0"
@@ -623,13 +612,6 @@
       "sha512": "sha512-Ha1ZDqUOEPgk5/IWpAcP220cUtcekLankgkq/KhkrmvVANNbTxwTvjBS50m2/nAK623HjT+1wcLZBfFzBg3TyQ==",
       "path": "dotnetty.transport/0.7.5",
       "hashPath": "dotnetty.transport.0.7.5.nupkg.sha512"
-    },
-    "FastEnum/1.8.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cBVeGWLPPHyrVcJKpANXtw0CbVyb1Ltr7Lqc/HE/WktAgxKpVD3mFMbLT4IAa5cuM5oKv2zPt6ovT7AhZf4zsg==",
-      "path": "fastenum/1.8.0",
-      "hashPath": "fastenum.1.8.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/7.0.0": {
       "type": "package",
@@ -736,19 +718,19 @@
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
     },
-    "Modbus.Net/1.4.1": {
+    "Modbus.Net/1.4.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xP2SaXuRNOBzWw2DhO8HOs/ua42V6OmC+QKHrzg1KH2vfRe1eV+kKPeI9ZWTMR+mGQNXjSPjeTVaD/9/08rZ2Q==",
-      "path": "modbus.net/1.4.1",
-      "hashPath": "modbus.net.1.4.1.nupkg.sha512"
+      "sha512": "sha512-e1WszYPSZ+ChLkOFEM2CrTJZusQVDANuKexfRsrMvY45EyGUjJ6t487eT/TRNWrvD7wD8VR6dxOuZh74YcdWhw==",
+      "path": "modbus.net/1.4.3",
+      "hashPath": "modbus.net.1.4.3.nupkg.sha512"
     },
-    "Modbus.Net.Modbus/1.4.1": {
+    "Modbus.Net.Modbus/1.4.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GTFSbcHyFNMMA7Qe0PWlz1o3hLkysCwrSlbRCquGXLoi/xbGpPKXT+4ICUI1kS1I8VtLup8fW1DE/RkI8BpLtg==",
-      "path": "modbus.net.modbus/1.4.1",
-      "hashPath": "modbus.net.modbus.1.4.1.nupkg.sha512"
+      "sha512": "sha512-CO7s9WX0lAEGrMGfEfnbJXWgJwQiI4kO65c6y0GWkdWtHNFRVQ2kCMp+dcksW9Cgid7LzMGmwjy08aYGmY4rxQ==",
+      "path": "modbus.net.modbus/1.4.3",
+      "hashPath": "modbus.net.modbus.1.4.3.nupkg.sha512"
     },
     "Nito.AsyncEx/5.1.2": {
       "type": "package",
@@ -820,12 +802,12 @@
       "path": "nmodbus/3.0.78",
       "hashPath": "nmodbus.3.0.78.nupkg.sha512"
     },
-    "Quartz/3.6.2": {
+    "Quartz/3.6.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wCNiVQKdwSz85fOFvEixOuxiIqsenixf34b8w21oGF0qw9oylFPDrV/ri02cX531WelFsN8K5w6E5/qop5mRYw==",
-      "path": "quartz/3.6.2",
-      "hashPath": "quartz.3.6.2.nupkg.sha512"
+      "sha512": "sha512-t7hBo4OLbKigRlWW/b3qRO4peWjVg9NFx6nPgMo/Waie67Rl9ODsfHdBkD+/4sPlAvB9mGWWO84B/ZpVSB81lQ==",
+      "path": "quartz/3.6.3",
+      "hashPath": "quartz.3.6.3.nupkg.sha512"
     },
     "runtime.linux-arm.runtime.native.System.IO.Ports/7.0.0": {
       "type": "package",
@@ -945,13 +927,6 @@
       "sha512": "sha512-DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
       "path": "system.text.json/7.0.0",
       "hashPath": "system.text.json.7.0.0.nupkg.sha512"
-    },
-    "System.ValueTuple/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
-      "path": "system.valuetuple/4.5.0",
-      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "System.Windows.Extensions/6.0.0": {
       "type": "package",
