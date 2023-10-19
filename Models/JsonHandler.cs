@@ -88,13 +88,13 @@ public class JsonHandler
         return null;
     }
 
-    public static List<AddressUnit> AddressUnitCreator(List<Base> jsonDataArray)
+    public static List<AddressUnit<string, int, int>> AddressUnitCreator(List<Base> jsonDataArray)
     {
-        var addressUnits  = new List<AddressUnit>();
+        var addressUnits  = new List<AddressUnit<string, int, int>>();
 
         for (int i = 0; i < jsonDataArray.Count; i++)
         {
-            var addressUnit = new AddressUnit
+            var addressUnit = new AddressUnit<string, int, int>
             {
                 Id = (i + 1).ToString(),
                 CommunicationTag = jsonDataArray[i].Name,
@@ -112,13 +112,13 @@ public class JsonHandler
         return addressUnits ;
     }
 
-    public static List<AddressUnit>? AddressUnitCreator(List<Huawei> jsonDataArray)
+    public static List<AddressUnit<string, int, int>>? AddressUnitCreator(List<Huawei> jsonDataArray)
     {
-        var addressUnits  = new List<AddressUnit>();
+        var addressUnits  = new List<AddressUnit<string, int, int>>();
 
         for (int i = 0; i < jsonDataArray.Count; i++)
         {
-            var addressUnit = new AddressUnit
+            var addressUnit = new AddressUnit<string, int, int>
             {
                 Id = (i + 1).ToString(),
                 CommunicationTag = jsonDataArray[i].Name,
@@ -136,13 +136,13 @@ public class JsonHandler
         return addressUnits ;
     }
 
-    public static List<AddressUnit>? AddressUnitCreator(List<Sungrow> jsonDataArray)
+    public static List<AddressUnit<string, int, int>>? AddressUnitCreator(List<Sungrow> jsonDataArray)
     {
-        var addressUnits  = new List<AddressUnit>();
+        var addressUnits  = new List<AddressUnit<string, int, int>>();
 
         for (int i = 0; i < jsonDataArray.Count; i++) // Use '<' instead of '<='
         {
-            var addressUnit = new AddressUnit
+            var addressUnit = new AddressUnit<string, int, int>
             {
                 Id = (i + 1).ToString(),
                 CommunicationTag = jsonDataArray[i].Name,

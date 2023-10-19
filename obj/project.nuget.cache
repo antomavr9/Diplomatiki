@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WDbeTiqY9oobZSMPAMx5+KpvJCgJKLRg8SuqoBwr66A6pYFdjIc0xMLQQvTV9fH6n01sg5wtvx/geBij8xm+aw==",
+  "dgSpecHash": "trOZgncJ2iWrP9Fl197b/OQdUbGMnlq/j8SSk8mc4cfH4Os/FKzAIqhG5pU6q8eBDW3FnhL6x/lYdNr/yKhGMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\stilk\\Desktop\\MODBUS_APP\\MODBUS_APP.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,6 @@
     "C:\\Users\\stilk\\.nuget\\packages\\dotnetty.common\\0.7.5\\dotnetty.common.0.7.5.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\dotnetty.handlers\\0.7.5\\dotnetty.handlers.0.7.5.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\dotnetty.transport\\0.7.5\\dotnetty.transport.0.7.5.nupkg.sha512",
-    "C:\\Users\\stilk\\.nuget\\packages\\fastenum\\1.8.0\\fastenum.1.8.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.4\\microsoft.extensions.configuration.binder.7.0.4.nupkg.sha512",
@@ -25,8 +24,8 @@
     "C:\\Users\\stilk\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\stilk\\.nuget\\packages\\modbus.net\\1.4.1\\modbus.net.1.4.1.nupkg.sha512",
-    "C:\\Users\\stilk\\.nuget\\packages\\modbus.net.modbus\\1.4.1\\modbus.net.modbus.1.4.1.nupkg.sha512",
+    "C:\\Users\\stilk\\.nuget\\packages\\modbus.net\\1.4.3\\modbus.net.1.4.3.nupkg.sha512",
+    "C:\\Users\\stilk\\.nuget\\packages\\modbus.net.modbus\\1.4.3\\modbus.net.modbus.1.4.3.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\nito.asyncex\\5.1.2\\nito.asyncex.5.1.2.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\nito.asyncex.context\\5.1.2\\nito.asyncex.context.5.1.2.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\nito.asyncex.coordination\\5.1.2\\nito.asyncex.coordination.5.1.2.nupkg.sha512",
@@ -37,7 +36,7 @@
     "C:\\Users\\stilk\\.nuget\\packages\\nito.collections.deque\\1.1.1\\nito.collections.deque.1.1.1.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\nito.disposables\\2.2.1\\nito.disposables.2.2.1.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\nmodbus\\3.0.78\\nmodbus.3.0.78.nupkg.sha512",
-    "C:\\Users\\stilk\\.nuget\\packages\\quartz\\3.6.2\\quartz.3.6.2.nupkg.sha512",
+    "C:\\Users\\stilk\\.nuget\\packages\\quartz\\3.6.3\\quartz.3.6.3.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\7.0.0\\runtime.linux-arm.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\7.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\7.0.0\\runtime.linux-x64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
@@ -55,7 +54,6 @@
     "C:\\Users\\stilk\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\stilk\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\stilk\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []

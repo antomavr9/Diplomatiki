@@ -8,7 +8,6 @@ C:\Users\stilk\Desktop\MODBUS_APP\bin\Debug\net7.0\DotNetty.Codecs.dll
 C:\Users\stilk\Desktop\MODBUS_APP\bin\Debug\net7.0\DotNetty.Common.dll
 C:\Users\stilk\Desktop\MODBUS_APP\bin\Debug\net7.0\DotNetty.Handlers.dll
 C:\Users\stilk\Desktop\MODBUS_APP\bin\Debug\net7.0\DotNetty.Transport.dll
-C:\Users\stilk\Desktop\MODBUS_APP\bin\Debug\net7.0\FastEnum.dll
 C:\Users\stilk\Desktop\MODBUS_APP\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
 C:\Users\stilk\Desktop\MODBUS_APP\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\stilk\Desktop\MODBUS_APP\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll

@@ -91,19 +91,6 @@
           }
         }
       },
-      "FastEnum/1.8.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/FastEnum.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/FastEnum.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -380,17 +367,15 @@
           }
         }
       },
-      "Modbus.Net/1.4.1": {
+      "Modbus.Net/1.4.3": {
         "type": "package",
         "dependencies": {
           "DotNetty.Handlers": "0.7.5",
-          "FastEnum": "1.8.0",
           "Microsoft.Extensions.Configuration.Binder": "7.0.4",
           "Microsoft.Extensions.Configuration.Json": "7.0.0",
           "Nito.AsyncEx": "5.1.2",
-          "Quartz": "3.6.2",
-          "System.IO.Ports": "7.0.0",
-          "System.ValueTuple": "4.5.0"
+          "Quartz": "3.6.3",
+          "System.IO.Ports": "7.0.0"
         },
         "compile": {
           "lib/net6.0/Modbus.Net.dll": {}
@@ -406,10 +391,10 @@
           }
         }
       },
-      "Modbus.Net.Modbus/1.4.1": {
+      "Modbus.Net.Modbus/1.4.3": {
         "type": "package",
         "dependencies": {
-          "Modbus.Net": "1.4.1"
+          "Modbus.Net": "1.4.3"
         },
         "compile": {
           "lib/net6.0/Modbus.Net.Modbus.dll": {}
@@ -568,7 +553,7 @@
           }
         }
       },
-      "Quartz/3.6.2": {
+      "Quartz/3.6.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
@@ -863,15 +848,6 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "System.ValueTuple/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/netcoreapp2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/_._": {}
-        }
-      },
       "System.Windows.Extensions/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -990,28 +966,6 @@
         "lib/net6.0/DotNetty.Transport.xml",
         "lib/netstandard2.0/DotNetty.Transport.dll",
         "lib/netstandard2.0/DotNetty.Transport.xml"
-      ]
-    },
-    "FastEnum/1.8.0": {
-      "sha512": "cBVeGWLPPHyrVcJKpANXtw0CbVyb1Ltr7Lqc/HE/WktAgxKpVD3mFMbLT4IAa5cuM5oKv2zPt6ovT7AhZf4zsg==",
-      "type": "package",
-      "path": "fastenum/1.8.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "fastenum.1.8.0.nupkg.sha512",
-        "fastenum.nuspec",
-        "lib/net461/FastEnum.dll",
-        "lib/net461/FastEnum.xml",
-        "lib/net5.0/FastEnum.dll",
-        "lib/net5.0/FastEnum.xml",
-        "lib/net6.0/FastEnum.dll",
-        "lib/net6.0/FastEnum.xml",
-        "lib/netstandard2.0/FastEnum.dll",
-        "lib/netstandard2.0/FastEnum.xml",
-        "lib/netstandard2.1/FastEnum.dll",
-        "lib/netstandard2.1/FastEnum.xml"
       ]
     },
     "Microsoft.Extensions.Configuration/7.0.0": {
@@ -1396,34 +1350,31 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Modbus.Net/1.4.1": {
-      "sha512": "xP2SaXuRNOBzWw2DhO8HOs/ua42V6OmC+QKHrzg1KH2vfRe1eV+kKPeI9ZWTMR+mGQNXjSPjeTVaD/9/08rZ2Q==",
+    "Modbus.Net/1.4.3": {
+      "sha512": "e1WszYPSZ+ChLkOFEM2CrTJZusQVDANuKexfRsrMvY45EyGUjJ6t487eT/TRNWrvD7wD8VR6dxOuZh74YcdWhw==",
       "type": "package",
-      "path": "modbus.net/1.4.1",
+      "path": "modbus.net/1.4.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "content/appsettings.default.json",
-        "contentFiles/any/net462/appsettings.default.json",
         "contentFiles/any/net6.0/appsettings.default.json",
-        "lib/net462/Modbus.Net.dll",
         "lib/net6.0/Modbus.Net.dll",
-        "modbus.net.1.4.1.nupkg.sha512",
+        "modbus.net.1.4.3.nupkg.sha512",
         "modbus.net.nuspec"
       ]
     },
-    "Modbus.Net.Modbus/1.4.1": {
-      "sha512": "GTFSbcHyFNMMA7Qe0PWlz1o3hLkysCwrSlbRCquGXLoi/xbGpPKXT+4ICUI1kS1I8VtLup8fW1DE/RkI8BpLtg==",
+    "Modbus.Net.Modbus/1.4.3": {
+      "sha512": "CO7s9WX0lAEGrMGfEfnbJXWgJwQiI4kO65c6y0GWkdWtHNFRVQ2kCMp+dcksW9Cgid7LzMGmwjy08aYGmY4rxQ==",
       "type": "package",
-      "path": "modbus.net.modbus/1.4.1",
+      "path": "modbus.net.modbus/1.4.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "lib/net462/Modbus.Net.Modbus.dll",
         "lib/net6.0/Modbus.Net.Modbus.dll",
-        "modbus.net.modbus.1.4.1.nupkg.sha512",
+        "modbus.net.modbus.1.4.3.nupkg.sha512",
         "modbus.net.modbus.nuspec"
       ]
     },
@@ -1605,10 +1556,10 @@
         "nmodbus.nuspec"
       ]
     },
-    "Quartz/3.6.2": {
-      "sha512": "wCNiVQKdwSz85fOFvEixOuxiIqsenixf34b8w21oGF0qw9oylFPDrV/ri02cX531WelFsN8K5w6E5/qop5mRYw==",
+    "Quartz/3.6.3": {
+      "sha512": "t7hBo4OLbKigRlWW/b3qRO4peWjVg9NFx6nPgMo/Waie67Rl9ODsfHdBkD+/4sPlAvB9mGWWO84B/ZpVSB81lQ==",
       "type": "package",
-      "path": "quartz/3.6.2",
+      "path": "quartz/3.6.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1619,7 +1570,7 @@
         "lib/netstandard2.0/Quartz.dll",
         "lib/netstandard2.0/Quartz.xml",
         "quartz-logo-small.png",
-        "quartz.3.6.2.nupkg.sha512",
+        "quartz.3.6.3.nupkg.sha512",
         "quartz.nuspec"
       ]
     },
@@ -2096,50 +2047,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.ValueTuple/4.5.0": {
-      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
-      "type": "package",
-      "path": "system.valuetuple/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net461/System.ValueTuple.dll",
-        "lib/net461/System.ValueTuple.xml",
-        "lib/net47/System.ValueTuple.dll",
-        "lib/net47/System.ValueTuple.xml",
-        "lib/netcoreapp2.0/_._",
-        "lib/netstandard1.0/System.ValueTuple.dll",
-        "lib/netstandard1.0/System.ValueTuple.xml",
-        "lib/netstandard2.0/_._",
-        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
-        "lib/uap10.0.16299/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net461/System.ValueTuple.dll",
-        "ref/net47/System.ValueTuple.dll",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard2.0/_._",
-        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "ref/uap10.0.16299/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.valuetuple.4.5.0.nupkg.sha512",
-        "system.valuetuple.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Windows.Extensions/6.0.0": {
       "sha512": "IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "type": "package",
@@ -2166,8 +2073,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Modbus.Net >= 1.4.1",
-      "Modbus.Net.Modbus >= 1.4.1",
+      "Modbus.Net >= 1.4.3",
+      "Modbus.Net.Modbus >= 1.4.3",
       "NModbus >= 3.0.78"
     ]
   },
@@ -2210,11 +2117,11 @@
         "dependencies": {
           "Modbus.Net": {
             "target": "Package",
-            "version": "[1.4.1, )"
+            "version": "[1.4.3, )"
           },
           "Modbus.Net.Modbus": {
             "target": "Package",
-            "version": "[1.4.1, )"
+            "version": "[1.4.3, )"
           },
           "NModbus": {
             "target": "Package",

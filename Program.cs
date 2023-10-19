@@ -368,14 +368,14 @@ class Program
         string jsonFilePath = "JsonData/Huawei.json";
         List<Base>? jsonDataArrayBase = JsonHandler.LoadFromFileBase(jsonFilePath);
         // List<Huawei>? jsonDataArrayHuawei = JsonHandler.LoadFromFileHuawei(jsonFilePath);
-        List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase!);
+        List<AddressUnit<string, int, int>>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase!);
         // List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayHuawei!);
 
         // Console.WriteLine(jsonDataArrayBase![0].Name);
         // Console.WriteLine(jsonDataArrayHuawei![0].Name);
 
         // ---------------------------------- Extended Machine ------------------------------------------------
-        var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0);
+        var extendedMachine = new ModbusMachineExtended<string, string, string, string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0, Endian.BigEndianLsb);
 
         // Connect to server through extendedMachine
         bool connectionStatusMachine = await extendedMachine.ConnectAsync();
