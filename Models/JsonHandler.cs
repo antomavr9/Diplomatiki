@@ -2,10 +2,11 @@ using System;
 using System.IO;
 using System.Text.Json;
 using System.Linq;
-using Application.Models;
+using System.Runtime.InteropServices;
 using Modbus.Net;
 using Modbus.Net.Modbus;
-using System.Runtime.InteropServices;
+
+namespace ModbusExtension;
 
 public class JsonHandler
 {

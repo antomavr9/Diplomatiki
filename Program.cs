@@ -6,8 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
 using Modbus.Net;
 using Modbus.Net.Modbus;
-using ModbusMachineExtended;
-using Application.Models;
+using ModbusExtension;
 
 // Pantelis Branch
 
@@ -375,7 +374,7 @@ class Program
         // Console.WriteLine(jsonDataArrayHuawei![0].Name);
 
         // ---------------------------------- Extended Machine ------------------------------------------------
-        var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0);
+        var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0, Endian.BigEndianLsb);
 
         // Connect to server through extendedMachine
         bool connectionStatusMachine = await extendedMachine.ConnectAsync();
