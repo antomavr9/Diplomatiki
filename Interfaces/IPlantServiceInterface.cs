@@ -1,4 +1,4 @@
-namespace Application.Models;
+namespace ModbusExtension;
 public interface IPlantServiceInterface
 {
     string GetActivePower();

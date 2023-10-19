@@ -4,7 +4,7 @@ using Modbus.Net;
 using Modbus.Net.Modbus;
 using System.Runtime.InteropServices;
 
-namespace ModbusMachineExtended;
+namespace ModbusExtension;
 //  List<AddressUnit> addressUnits = new List<AddressUnit>
 //         {
 //             new AddressUnit() {Id = "1", Area = "4X", Address = 1, CommunicationTag = "Add1", DataType = typeof (ushort)}, //Id is mandatory

@@ -2,12 +2,11 @@ using System;
 using System.IO;
 using System.Text.Json;
 using System.Linq;
-using Application.Models;
 using Modbus.Net;
 using Modbus.Net.Modbus;
 using System.Runtime.InteropServices;
 
-namespace JsonHandlerName;
+namespace ModbusExtension;
 public class JsonHandler
 {
     public static List<Base>? LoadFromFileBase(string jsonFilePath)
