@@ -1,5 +1,6 @@
 // namespace ModbusExtension;
-// public interface IPlantServiceInterface
+
+// interface IPlantServiceInterface
 // {
 //     string GetActivePower();
 //     string GetReactivePower();

@@ -205,14 +205,14 @@
   },
   {
     "SN": 18,
-    "Name": "Active Power Adjustement By Power",
+    "Name": "Active Power Adjustement By Percentage",
     "ReadWrite": "RW",
     "DataType": "U16",
     "Unit": "%",
     "Gain": "10",
     "Address": 40428,
     "Quantity": 1,
-    "Range": "Adjusts the total active output power of all inverters connected to the SmartLogger. The percentage rnge is 0-100%.",
+    "Range": "Adjusts the total active output power of all inverters connected to the SmartLogger. The percentage range is 0-100%.",
     "Description": ""
   },
   {

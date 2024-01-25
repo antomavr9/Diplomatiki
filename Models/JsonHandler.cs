@@ -1,10 +1,5 @@
-using System;
-using System.IO;
 using System.Text.Json;
-using System.Linq;
 using Modbus.Net;
-using Modbus.Net.Modbus;
-using System.Runtime.InteropServices;
 
 namespace ModbusExtension;
 public class JsonHandler
@@ -34,7 +29,6 @@ public class JsonHandler
         }
         return null;
     }
-
     public static List<Huawei>? LoadFromFileHuawei(string jsonFilePath)
     {
         try
@@ -60,7 +54,6 @@ public class JsonHandler
         }
         return null;
     }
-
     public static List<Sungrow>? LoadFromFileSungrow(string jsonFilePath)
     {
         try
@@ -86,7 +79,28 @@ public class JsonHandler
         }
         return null;
     }
-
+    public static List<DataLogger>? LoadFromFileDataLogger(string jsonFilePath)
+    {  
+        try
+        {
+            // Deserialize the JSON string to a JsonHandler array
+            List<DataLogger>? jsonServersList = JsonSerializer.Deserialize<List<DataLogger>>(File.ReadAllText(jsonFilePath));
+            return jsonServersList;
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine("File not found. Please provide a valid JSON file path.");
+        }
+        catch (JsonException)
+        {
+            Console.WriteLine("Invalid JSON format. Please check your JSON file.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+        return null;
+    }
     public static List<AddressUnit<string, int, int>> AddressUnitCreator(List<Base> jsonDataArray)
     {
         var addressUnits  = new List<AddressUnit<string, int, int>>();
@@ -105,12 +119,11 @@ public class JsonHandler
             addressUnit.Area = area;
             addressUnit.Address = address;
 
-            addressUnits .Add(addressUnit); // Add the AddressUnit to the list
+            addressUnits.Add(addressUnit); // Add the AddressUnit to the list
         }
 
         return addressUnits ;
     }
-
     public static List<AddressUnit<string, int, int>>? AddressUnitCreator(List<Huawei> jsonDataArray)
     {
         var addressUnits  = new List<AddressUnit<string, int, int>>();
@@ -129,12 +142,11 @@ public class JsonHandler
             addressUnit.Area = area;
             addressUnit.Address = address;
 
-            addressUnits .Add(addressUnit); // Add the AddressUnit to the list
+            addressUnits.Add(addressUnit); // Add the AddressUnit to the list
         }
 
         return addressUnits ;
     }
-
     public static List<AddressUnit<string, int, int>>? AddressUnitCreator(List<Sungrow> jsonDataArray)
     {
         var addressUnits  = new List<AddressUnit<string, int, int>>();
@@ -153,13 +165,11 @@ public class JsonHandler
             addressUnit.Area = area;
             addressUnit.Address = address;
 
-            addressUnits .Add(addressUnit); // Add the AddressUnit to the list
+            addressUnits.Add(addressUnit); // Add the AddressUnit to the list
         }
 
         return addressUnits ;
     }
-
-
     public static Type ConvertDataType(string DataType)
     {
         return DataType switch
@@ -176,7 +186,6 @@ public class JsonHandler
             _ => typeof(bool)
         };
     }
-
     public static string ConvertArea(int address)
     {
         try
@@ -184,6 +193,7 @@ public class JsonHandler
             int areaCode = address / 10000;
             string result = areaCode switch
             {
+                // note: this might change depending on the version of the modbus protocol that is used, eg. tcp, udp, etc
                 4 => "4X",
                 3 => "3X",
                 1 => "1X",
@@ -197,12 +207,10 @@ public class JsonHandler
             return "Cannot Convert Address!";
         }
     }
-
     public static int ConvertAddress(int address)
     {
-        return address % 10000 + 1;
+        return address + 1 ; // json Address + 1
     }
-
     public override string ToString()
     {
         return "Handles the json data.";
