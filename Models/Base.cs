@@ -1,4 +1,4 @@
-namespace Application.Models;
+namespace ModbusExtension;
 
 public class Base
 {
@@ -26,13 +26,13 @@ public class Base
         set
         {
             // Enforce a value range (between 0 and 1000000)
-            if (value >= 0 && value <= 465537)
+            if (value >= 0 && value <= 465537) // 42779
             {
                 _address = value;
             }
             else
             {
-                throw new ArgumentOutOfRangeException("Address must be between 0 and 1000000");
+                throw new ArgumentOutOfRangeException("Address must be between 0 and 465537");
             }
         }
     }

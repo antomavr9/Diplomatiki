@@ -1,14 +1,16 @@
-﻿using System;
-using System.Data.Common;
-using System.Drawing.Printing;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Threading.Tasks;
-using Modbus.Net; //Version 1.4.1
-using Modbus.Net.Modbus; //Version 1.4.1
-using ModbusMachineExtended;
-using Application.Models;
-using JsonHandlerName;
+﻿using Modbus.Net; 
+using Modbus.Net.Modbus; 
+
+using ModbusExtension;
+using System.Text.Json;
+
+//  List<AddressUnit> addressUnits = new List<AddressUnit>
+//         {
+//             new AddressUnit() {Id = "1", Area = "4X", Address = 1, CommunicationTag = "Add1", DataType = typeof (ushort)}, //Id is mandatory
+//             new AddressUnit() {Id = "2", Area = "4X", Address = 2, CommunicationTag = "Add2", DataType = typeof (ushort)}, // each address unit has each own id
+//             new AddressUnit() {Id = "3", Area = "4X", Address = 3, CommunicationTag = "Add3", DataType = typeof (ushort)},
+//             new AddressUnit() {Id = "4", Area = "4X", Address = 4, CommunicationTag = "Add4", DataType = typeof (ushort)}
+//         };
 
 class Program
 {
@@ -33,9 +35,6 @@ class Program
         //     Console.WriteLine($"Error occurred: ErrorCode: {result.ErrorCode}, ErrorMsg: {result.ErrorMsg}");
         // }
         
-        
-
-
         // Console.WriteLine("Press anything to exit...");
         // Console.ReadKey();
 
@@ -365,19 +364,9 @@ class Program
 
         #region ExtendedMachineJson
 
-        string jsonFilePath = "JsonData/Huawei.json";
-        List<Base>? jsonDataArrayBase = JsonHandler.LoadFromFileBase(jsonFilePath);
-        // List<Huawei>? jsonDataArrayHuawei = JsonHandler.LoadFromFileHuawei(jsonFilePath);
-        List<AddressUnit<string, int, int>>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase!);
-        // List<AddressUnit>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayHuawei!);
+        List<DataLogger>? jsonServersList = JsonHandler.LoadFromFileDataLogger("JsonData/DataLoggers.json");
 
-        // Console.WriteLine(jsonDataArrayBase![0].Name);
-        // Console.WriteLine(jsonDataArrayHuawei![0].Name);
-
-        // ---------------------------------- Extended Machine ------------------------------------------------
-        var extendedMachine = new ModbusMachineExtended<string, string, string, string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0, Endian.BigEndianLsb);
-
-        // Connect to server through extendedMachine
+        var extendedMachine = CreateMachine.CreateModbusMachine(jsonServersList![0].Ip!, jsonServersList![0].DataLoggerType!); // 127.0.0.1:502 : Simulation IP an Port.  192.168.1.200:502 :
         bool connectionStatusMachine = await extendedMachine.ConnectAsync();
         if(!connectionStatusMachine)
         {
@@ -386,45 +375,190 @@ class Program
         else
         {
             Console.WriteLine("Connection Successful!");
-            // ---------------------------------- Set Data -------------------------------------------------
-            var returnSetObject = await extendedMachine.SetDatasByCommunicationTag("Date & Time", 112);
-            // await extendedMachine.SetDatasByCommunicationTag("City", 222);
-            // bool SetDatas = returnSetObject.Datas; // this parameter is not needed because SetDatas and the following parameter SetSuccessStatus are the same.
-            int SetErrorCode = returnSetObject.ErrorCode;
-            string SetErrorMsg = returnSetObject.ErrorMsg; 
-            bool SetSuccessStatus = returnSetObject.IsSuccess;
-            // Check Set Data Success Status
-            if(SetSuccessStatus)
-                Console.WriteLine("Set Data Status: Data Set Succesfully!");
-            else
-            {
-                Console.WriteLine("Set Data Status: Error Code: " + SetErrorCode+ ". Error Message: " + SetErrorMsg + ".");
-            }
-                
-            // ---------------------------------- Get Data ------------------------------------------------
-            var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Date & Time");
-            // in the above line, instead of var we might use ReturnStruct<byte[]>
-            byte[]? GetDatas = returnGetObject.Datas;
-            int GetErrorCode = returnGetObject.ErrorCode;
-            string GetErrorMsg = returnGetObject.ErrorMsg;
-            bool GetSuccessStatus = returnGetObject.IsSuccess;
 
-            // Check Get Data Success Status
-            if(GetSuccessStatus)
-            {
-                Console.WriteLine("Get Data by CommunicationTag Status: Data Received Succesfully!");
-            }
-            else
-            {
-                Console.WriteLine("Get Data Status: Error Code: " + GetErrorCode + ". Error Message: " + GetErrorMsg + ".");
-            }
+            //----------------------Get----------------------
+
+            #region GetActivePower
+            var activePowerData = await extendedMachine.GetActivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(activePowerData);
+            # endregion
+
+            #region GetReactivePower
+            var reactivePowerData = await extendedMachine.GetReactivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(reactivePowerData);
+            # endregion
+
+            #region GetVoltageL1
+            var voltage1Data = await extendedMachine.GetVoltageL1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(voltage1Data);
+            # endregion
+
+            #region GetVoltageL2
+            var voltage2Data = await extendedMachine.GetVoltageL2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(voltage2Data);
+            # endregion
+
+            #region GetVoltageL3
+            var voltage3Data = await extendedMachine.GetVoltageL3(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(voltage3Data);
+            # endregion
+
+            #region GetDeviceStatus
+            var deviceStatusData = await extendedMachine.GetDeviceStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(deviceStatusData);
+            # endregion
+
+            #region GetLogStatus
+            var logStatusData = await extendedMachine.GetLogStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(logStatusData);
+            # endregion
+
+            #region GetPowerSetPointLevel1
+            var powerSetPointLevel1Data = await extendedMachine.GetPowerSetPointLevel1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(powerSetPointLevel1Data);
+            # endregion
+
+            #region GetPowerSetPointLevel2
+            var powerSetPointLevel2Data = await extendedMachine.GetPowerSetPointLevel2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(powerSetPointLevel2Data);
+            # endregion
+
+            #region GetPowerSetPointLevelByPercentage
+            var powerSetPointLevelByPercentageData = await extendedMachine.GetPowerSetPointLevelByPercentage(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            DataPresentation.PrintGetData(powerSetPointLevelByPercentageData);
+            # endregion
+
+            //----------------------Set----------------------
+
+            # region SetActiveAdjustment1
+            // var ActiveAdjustment1Data = await extendedMachine.SetPowerSetPointLevel1(jsonServersList![0].DataLoggerType!, 4294967295); //Default: 4294967295   UInt32
+            // DataPresentation.PrintSetData(ActiveAdjustment1Data);
+
+            # endregion
+
+            # region SetActiveAdjustment2
+            // var ActiveAdjustment2Data = await extendedMachine.SetPowerSetPointLevel2(jsonServersList![0].DataLoggerType!, 5000); //Default: 4294967295   UInt32
+            // DataPresentation.PrintSetData(ActiveAdjustment2Data);
+
+            # endregion
+
+            # region SetPowerSetPointLevelByPercentage
+            // var ActiveAdjustmentByPercentageData = await extendedMachine.SetPowerSetPointLevelByPercentage(jsonServersList![0].DataLoggerType!, 90); //Default: 65535  UInt16
+            // DataPresentation.PrintSetData(ActiveAdjustmentByPercentageData);
+            
+            # endregion
+
+            //----------------------Debugging----------------------
+
+            # region SetData
+
+            // // ---------------------------------- Set Data -------------------------------------------------
+            // var returnSetObject = await extendedMachine.SetDatasByCommunicationTag("Active Adjustment 1", 112);
+            // // await extendedMachine.SetDatasByCommunicationTag("City", 222);
+            // // bool SetDatas = returnSetObject.Datas; // this parameter is not needed because SetDatas and the following parameter SetSuccessStatus are the same.
+            // int SetErrorCode = returnSetObject.ErrorCode;
+            // string SetErrorMsg = returnSetObject.ErrorMsg; 
+            // bool SetSuccessStatus = returnSetObject.IsSuccess;
+            // // Check Set Data Success Status
+            // if(SetSuccessStatus)
+            //     Console.WriteLine("Set Data Status: Data Set Succesfully!");
+            // else
+            // {
+            //     Console.WriteLine("Set Data Status: Error Code: " + SetErrorCode+ ". Error Message: " + SetErrorMsg + ".");
+            // }
+
+            #endregion    
+
+            # region IterateBaseAddressUnits
+
+
+            // string jsonFilePath = "JsonData/Huawei.json";
+            // List<Base>? jsonDataArrayBase = JsonHandler.LoadFromFileBase(jsonFilePath);
+            // List<AddressUnit<string,int,int>>? BaseAddressUnits = JsonHandler.AddressUnitCreator(jsonDataArrayBase!);
+            // var returnGetObjectList  = new List<ReturnStruct<byte[]>>();
+            // for (var i = 0; i < BaseAddressUnits.Count; i++)
+            // {
+            //     Console.WriteLine(i+1);
+            //     string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //     Console.WriteLine(BaseAddressUnits[i].CommunicationTag);
+            //     var returnGetObject = await extendedMachine.GetDatasByCommunicationTag(BaseAddressUnits[i].CommunicationTag);
                 
-            // Print Received Data
-            Console.WriteLine("Data Received from Modbus Server:");
-            for (int i = 0; i < GetDatas!.Length; i+=1)
-            {
-                Console.WriteLine(GetDatas[i]);                
-            }
+            //     byte[]? GetDatas = returnGetObject.Datas;
+            //     int GetErrorCode = returnGetObject.ErrorCode;
+            //     string GetErrorMsg = returnGetObject.ErrorMsg;
+            //     bool GetSuccessStatus = returnGetObject.IsSuccess;
+
+            //     if (GetSuccessStatus && GetDatas != null)
+            //     {
+            //         if(i==48)
+            //         {
+            //             Console.WriteLine(DataPresentation.ByteToStringUTF(GetDatas));
+            //         }
+            //         else
+            //         {
+            //             Console.WriteLine(DataPresentation.ByteToInt32(GetDatas));
+            //         }
+                    
+            //         // string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //         Console.WriteLine(getTimestamp);
+
+
+            //         Console.WriteLine("------------------DATA RECEIVED SUCCESSFULLY!!!!!!------------------"); // Data received successfully
+            //         // Console.WriteLine("Get '" + BaseAddressUnits[i].CommunicationTag + "' = " + GetDatas[^1] + ", from Server Port " + extendedMachine.ConnectionToken + ", at " + getTimestamp + ".");
+            //     }
+            //     else
+            //     {
+            //         Console.WriteLine("Failed to get data.");
+            //         // Console.WriteLine("Get '" + BaseAddressUnits[i].CommunicationTag + "' from Server Port " + extendedMachine.ConnectionToken + ": Error Code: " + GetErrorCode + ". Error Message: " + GetErrorMsg + ".");
+            //     }
+            //     returnGetObjectList.Add(returnGetObject);
+            // }
+
+            #endregion
+
+            # region GetData
+
+
+            // // ---------------------------------- Get Data ------------------------------------------------
+            // // var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Active Adjustment 1");
+            // // var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Active Power");
+
+            // var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Active Adjustment 2");
+            // // var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Active Power Adjustement By Percentage");
+
+            // // var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("CO2 Reduction 2"); 
+            // // var returnGetObject = await extendedMachine.BaseUtility.GetUtilityMethods<IUtilityMethodDatas>().GetDatasAsync("4X 50002", 2); //42779
+
+            // // in the above line, instead of var we might use ReturnStruct<byte[]>
+            // byte[]? GetDatas = returnGetObject.Datas;
+            // int GetErrorCode = returnGetObject.ErrorCode;
+            // string GetErrorMsg = returnGetObject.ErrorMsg;
+            // bool GetSuccessStatus = returnGetObject.IsSuccess;
+
+            // // Check Get Data Success Status
+            // if(GetSuccessStatus)
+            // {
+            //     Console.WriteLine("Get Data by CommunicationTag Status: Data Received Succesfully!");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Get Data Status: Error Code: " + GetErrorCode + ". Error Message: " + GetErrorMsg + ".");
+            // }
+                
+            // // Print Received Data
+            // Console.WriteLine("Data Received from Modbus Server:");
+            // if (GetSuccessStatus && GetDatas != null)
+            // {
+            //     Console.WriteLine(DataPresentation.ByteToUInt32(GetDatas));
+            //     // Console.WriteLine(DataPresentation.ByteToUInt16(GetDatas));
+            // }
+            // else
+            // {
+            //     Console.WriteLine("No Data Received!");
+            // }
+
+
+            #endregion
         }
         // Exit Program
         Console.WriteLine("Press anything to exit...");
