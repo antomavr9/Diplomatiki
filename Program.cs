@@ -5,6 +5,8 @@ using System.Threading;
 
 using ModbusExtension;
 using System.Text.Json;
+using ModbusExtension.Models;
+using ModbusExtension.Services;
 
 //  List<AddressUnit> addressUnits = new List<AddressUnit>
 //         {
@@ -366,9 +368,9 @@ class Program
 
         #region ExtendedMachineJson
 
-        List<DataLogger>? jsonServersList = JsonHandler.LoadFromFileDataLogger("JsonData/DataLoggers.json");
+        List<DataLogger>? jsonServersList = JsonHandlerService.LoadFromFileDataLogger("JsonData/DataLoggers.json");
 
-        var extendedMachine = CreateMachine.CreateModbusMachine(jsonServersList![0].Ip!, jsonServersList![0].DataLoggerType!); // 127.0.0.1:502 : Simulation IP an Port.  192.168.1.200:502 :
+        var extendedMachine = CreateMachineService.CreateModbusMachine(jsonServersList![0].Ip!, jsonServersList![0].DataLoggerType!); // 127.0.0.1:502 : Simulation IP an Port.  192.168.1.200:502 :
         bool connectionStatusMachine = await extendedMachine.ConnectAsync();
         if(!connectionStatusMachine)
         {
@@ -385,44 +387,44 @@ class Program
             while (DateTime.Now < endTime)
             {
                 var activePowerData = await extendedMachine.GetActivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(activePowerData, "CsvData/activePowerData.csv");
-                DataPresentation.PrintGetData(activePowerData);
+                DataPresentationService.AppendToCSV(activePowerData, "CsvData/activePowerData.csv");
+                DataPresentationService.PrintGetData(activePowerData);
 
                 var reactivePowerData = await extendedMachine.GetReactivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(reactivePowerData, "CsvData/reactivePowerData.csv");
-                DataPresentation.PrintGetData(reactivePowerData);
+                DataPresentationService.AppendToCSV(reactivePowerData, "CsvData/reactivePowerData.csv");
+                DataPresentationService.PrintGetData(reactivePowerData);
 
                 var voltage1Data = await extendedMachine.GetVoltageL1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(voltage1Data, "CsvData/voltage1Data.csv");
-                DataPresentation.PrintGetData(voltage1Data);
+                DataPresentationService.AppendToCSV(voltage1Data, "CsvData/voltage1Data.csv");
+                DataPresentationService.PrintGetData(voltage1Data);
 
                 var voltage2Data = await extendedMachine.GetVoltageL2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(voltage2Data, "CsvData/voltage2Data.csv");
-                DataPresentation.PrintGetData(voltage2Data);
+                DataPresentationService.AppendToCSV(voltage2Data, "CsvData/voltage2Data.csv");
+                DataPresentationService.PrintGetData(voltage2Data);
 
                 var voltage3Data = await extendedMachine.GetVoltageL3(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(voltage3Data, "CsvData/voltage3Data.csv");
-                DataPresentation.PrintGetData(voltage3Data);
+                DataPresentationService.AppendToCSV(voltage3Data, "CsvData/voltage3Data.csv");
+                DataPresentationService.PrintGetData(voltage3Data);
 
                 var deviceStatusData = await extendedMachine.GetDeviceStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(deviceStatusData, "CsvData/deviceStatusData.csv");
-                DataPresentation.PrintGetData(deviceStatusData);
+                DataPresentationService.AppendToCSV(deviceStatusData, "CsvData/deviceStatusData.csv");
+                DataPresentationService.PrintGetData(deviceStatusData);
 
                 var logStatusData = await extendedMachine.GetLogStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(logStatusData, "CsvData/logStatusData.csv");
-                DataPresentation.PrintGetData(logStatusData);
+                DataPresentationService.AppendToCSV(logStatusData, "CsvData/logStatusData.csv");
+                DataPresentationService.PrintGetData(logStatusData);
 
                 var powerSetPointLevel1Data = await extendedMachine.GetPowerSetPointLevel1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(powerSetPointLevel1Data, "CsvData/powerSetPointLevel1Data.csv");
-                DataPresentation.PrintGetData(powerSetPointLevel1Data);
+                DataPresentationService.AppendToCSV(powerSetPointLevel1Data, "CsvData/powerSetPointLevel1Data.csv");
+                DataPresentationService.PrintGetData(powerSetPointLevel1Data);
 
                 var powerSetPointLevel2Data = await extendedMachine.GetPowerSetPointLevel2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(powerSetPointLevel2Data, "CsvData/powerSetPointLevel2Data.csv");
-                DataPresentation.PrintGetData(powerSetPointLevel2Data);
+                DataPresentationService.AppendToCSV(powerSetPointLevel2Data, "CsvData/powerSetPointLevel2Data.csv");
+                DataPresentationService.PrintGetData(powerSetPointLevel2Data);
 
                 var powerSetPointLevelByPercentageData = await extendedMachine.GetPowerSetPointLevelByPercentage(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-                DataPresentation.AppendToCSV(powerSetPointLevelByPercentageData, "CsvData/powerSetPointLevelByPercentageData.csv");
-                DataPresentation.PrintGetData(powerSetPointLevelByPercentageData);
+                DataPresentationService.AppendToCSV(powerSetPointLevelByPercentageData, "CsvData/powerSetPointLevelByPercentageData.csv");
+                DataPresentationService.PrintGetData(powerSetPointLevelByPercentageData);
 
                 // Sleep for 60 seconds
                 Thread.Sleep(5 * 1000); // Sleep for 60 seconds (60,000 milliseconds)

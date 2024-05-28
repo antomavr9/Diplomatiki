@@ -1,4 +1,4 @@
-namespace ModbusExtension;
+namespace ModbusExtension.Models;
 
 public class DataLogger
 {

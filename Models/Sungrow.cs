@@ -1,6 +1,4 @@
-using Modbus.Net;
-
-namespace ModbusExtension;
+namespace ModbusExtension.Models;
 
 public class Sungrow : Base
 {

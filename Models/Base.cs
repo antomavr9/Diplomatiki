@@ -1,4 +1,6 @@
-namespace ModbusExtension;
+using ModbusExtension.Models.Enumerations;
+
+namespace ModbusExtension.Models;
 
 public class Base
 {
@@ -11,15 +13,7 @@ public class Base
     public string Name { get; set; } = null!;
     public string? Unit { get; set; }
     public string? Description { get; set; }
-    public string DataType
-    {
-        get => _dataType;
-        set => _dataType = value switch
-        {
-            "U16" or "U32" or "F32" or "U64" or "I16" or "I32" or "I64" or "STR" or "MLD" or "N/A" => value,
-            _ => throw new ArgumentException("Invalid value for DataType property.")
-        };
-    }
+    public DataTypeEnum DataType  { get; set; }
     public int Address
     {
         get => _address;
