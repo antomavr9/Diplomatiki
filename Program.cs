@@ -372,7 +372,7 @@ class Program
 
         var extendedMachine = CreateMachineService.CreateModbusMachine(jsonServersList![0].Ip!, jsonServersList![0].DataLoggerType!); // 127.0.0.1:502 : Simulation IP an Port.  192.168.1.200:502 :
         bool connectionStatusMachine = await extendedMachine.ConnectAsync();
-        if(!connectionStatusMachine)
+        if (!connectionStatusMachine)
         {
             Console.WriteLine("Connection Timed Out!");
         }

@@ -6,14 +6,13 @@ public class Base
 {
     // private variables
     private int _address;
-    private string _dataType = null!;
     private int _quantity;
 
     // Properties
     public string Name { get; set; } = null!;
     public string? Unit { get; set; }
     public string? Description { get; set; }
-    public DataTypeEnum DataType  { get; set; }
+    public DataTypeEnum DataType { get; set; }
     public int Address
     {
         get => _address;
@@ -41,7 +40,7 @@ public class Base
             }
             _quantity = value;
         }
-    }   
+    }
     public override string ToString()
     {
         return $"Name: {Name}, DataType: {DataType}, Unit: {Unit}, Address: {Address}, Quantity: {Quantity}, Description: {Description}";

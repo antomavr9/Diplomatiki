@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Modbus.Net;
 using ModbusExtension.Models;
+using ModbusExtension.Models.Enumerations;
 
 namespace ModbusExtension.Services;
 
@@ -31,7 +32,7 @@ public class JsonHandlerService
         }
         return null;
     }
-    
+
     public static List<Huawei>? LoadFromFileHuawei(string jsonFilePath)
     {
         try
@@ -57,7 +58,7 @@ public class JsonHandlerService
         }
         return null;
     }
-    
+
     public static List<Sungrow>? LoadFromFileSungrow(string jsonFilePath)
     {
         try
@@ -83,9 +84,9 @@ public class JsonHandlerService
         }
         return null;
     }
-    
+
     public static List<DataLogger>? LoadFromFileDataLogger(string jsonFilePath)
-    {  
+    {
         try
         {
             // Deserialize the JSON string to a JsonHandler array
@@ -106,10 +107,10 @@ public class JsonHandlerService
         }
         return null;
     }
-    
+
     public static List<AddressUnit<string, int, int>> AddressUnitCreator(List<Base> jsonDataArray)
     {
-        var addressUnits  = new List<AddressUnit<string, int, int>>();
+        var addressUnits = new List<AddressUnit<string, int, int>>();
 
         for (int i = 0; i < jsonDataArray.Count; i++)
         {
@@ -118,7 +119,7 @@ public class JsonHandlerService
                 Id = (i + 1).ToString(),
                 CommunicationTag = jsonDataArray[i].Name,
                 DataType = ConvertDataType(jsonDataArray[i].DataType!)
-            }; 
+            };
 
             var area = ConvertArea(jsonDataArray[i].Address);
             var address = ConvertAddress(jsonDataArray[i].Address);
@@ -128,12 +129,12 @@ public class JsonHandlerService
             addressUnits.Add(addressUnit); // Add the AddressUnit to the list
         }
 
-        return addressUnits ;
+        return addressUnits;
     }
-    
+
     public static List<AddressUnit<string, int, int>>? AddressUnitCreator(List<Huawei> jsonDataArray)
     {
-        var addressUnits  = new List<AddressUnit<string, int, int>>();
+        var addressUnits = new List<AddressUnit<string, int, int>>();
 
         for (int i = 0; i < jsonDataArray.Count; i++)
         {
@@ -142,7 +143,7 @@ public class JsonHandlerService
                 Id = (i + 1).ToString(),
                 CommunicationTag = jsonDataArray[i].Name,
                 DataType = ConvertDataType(jsonDataArray[i].DataType!)
-            }; 
+            };
 
             var area = ConvertArea(jsonDataArray[i].Address);
             var address = ConvertAddress(jsonDataArray[i].Address);
@@ -152,12 +153,12 @@ public class JsonHandlerService
             addressUnits.Add(addressUnit); // Add the AddressUnit to the list
         }
 
-        return addressUnits ;
+        return addressUnits;
     }
-    
+
     public static List<AddressUnit<string, int, int>>? AddressUnitCreator(List<Sungrow> jsonDataArray)
     {
-        var addressUnits  = new List<AddressUnit<string, int, int>>();
+        var addressUnits = new List<AddressUnit<string, int, int>>();
 
         for (int i = 0; i < jsonDataArray.Count; i++) // Use '<' instead of '<='
         {
@@ -166,7 +167,7 @@ public class JsonHandlerService
                 Id = (i + 1).ToString(),
                 CommunicationTag = jsonDataArray[i].Name,
                 DataType = ConvertDataType(jsonDataArray[i].DataType!)
-            }; 
+            };
 
             var area = ConvertArea(jsonDataArray[i].Address);
             var address = ConvertAddress(jsonDataArray[i].Address);
@@ -176,12 +177,12 @@ public class JsonHandlerService
             addressUnits.Add(addressUnit); // Add the AddressUnit to the list
         }
 
-        return addressUnits ;
+        return addressUnits;
     }
-    
+
     public static List<AddressUnit<string, int, int>>? AddressUnitCreator(List<AiStratis> jsonDataArray)
     {
-        var addressUnits  = new List<AddressUnit<string, int, int>>();
+        var addressUnits = new List<AddressUnit<string, int, int>>();
 
         for (int i = 0; i < jsonDataArray.Count; i++) // Use '<' instead of '<='
         {
@@ -190,7 +191,7 @@ public class JsonHandlerService
                 Id = (i + 1).ToString(),
                 CommunicationTag = jsonDataArray[i].Name,
                 DataType = ConvertDataType(jsonDataArray[i].DataType!)
-            }; 
+            };
 
             var area = ConvertArea(jsonDataArray[i].Address);
             var address = ConvertAddress(jsonDataArray[i].Address);
@@ -200,27 +201,28 @@ public class JsonHandlerService
             addressUnits.Add(addressUnit); // Add the AddressUnit to the list
         }
 
-        return addressUnits ;
+        return addressUnits;
     }
 
-    public static Type ConvertDataType(string DataType)
+    public static Type ConvertDataType(DataTypeEnum DataType)
     {
         return DataType switch
         {
-            "U16" => typeof(UInt16),
-            "U32" => typeof(UInt32),
-            "F32" => typeof(float),
-            "U64" => typeof(UInt64),
-            "I16" => typeof(Int16),
-            "I32" => typeof(Int32),
-            "I64" => typeof(Int64),
-            "STR" => typeof(string),
-            "MLD" => typeof(Byte),
-            "N/A" => typeof(bool),
+            DataTypeEnum.U16 => typeof(UInt16),
+            DataTypeEnum.U32 => typeof(UInt32),
+            DataTypeEnum.F32 => typeof(float),
+            DataTypeEnum.U64 => typeof(UInt64),
+            DataTypeEnum.I16 => typeof(Int16),
+            DataTypeEnum.I32 => typeof(Int32),
+            DataTypeEnum.I64 => typeof(Int64),
+            DataTypeEnum.STR => typeof(string),
+            DataTypeEnum.MLD => typeof(Byte),
+            DataTypeEnum.BOOL => typeof(bool),
+            DataTypeEnum.NA => typeof(bool),
             _ => typeof(bool)
         };
     }
-    
+
     public static string ConvertArea(int address)
     {
         try
@@ -242,12 +244,12 @@ public class JsonHandlerService
             return "Cannot Convert Address!";
         }
     }
-    
+
     public static int ConvertAddress(int address)
     {
-        return address + 1 ; // json Address + 1
+        return address + 1; // json Address + 1
     }
-    
+
     public override string ToString()
     {
         return "Handles the json data.";

@@ -6,15 +6,15 @@ public class DataPresentationService
 {
     public static Int32 ByteToInt32(byte[]? byteData)
     {
-        string result=""; //result is a binary string
+        string result = ""; //result is a binary string
         var byteList = new List<string>();
-        for (int i = 0; i < byteData!.Length; i+=1)
+        for (int i = 0; i < byteData!.Length; i += 1)
         {
             string binaryString = Convert.ToString(byteData[i], 2); // Convert byteData(int) to binary string
 
             // Pad zeros on the left if the binary representation is less than 8 bits
             int paddingLength = 8 - binaryString.Length;
-            string paddedBinary = new string('0', paddingLength) + binaryString;           
+            string paddedBinary = new string('0', paddingLength) + binaryString;
             byteList.Add(paddedBinary);
             result += byteList[i];
         }
@@ -25,15 +25,15 @@ public class DataPresentationService
 
     public static UInt32 ByteToUInt32(byte[]? byteData)
     {
-        string result=""; //result is a binary string
+        string result = ""; //result is a binary string
         var byteList = new List<string>();
-        for (int i = 0; i < byteData!.Length; i+=1)
+        for (int i = 0; i < byteData!.Length; i += 1)
         {
             string binaryString = Convert.ToString(byteData[i], 2); // Convert byteData(int) to binary string
 
             // Pad zeros on the left if the binary representation is less than 8 bits
             int paddingLength = 8 - binaryString.Length;
-            string paddedBinary = new string('0', paddingLength) + binaryString;           
+            string paddedBinary = new string('0', paddingLength) + binaryString;
             byteList.Add(paddedBinary);
             result += byteList[i];
         }
@@ -44,15 +44,15 @@ public class DataPresentationService
 
     public static Int16 ByteToInt16(byte[]? byteData)
     {
-        string result=""; //result is a binary string
+        string result = ""; //result is a binary string
         var byteList = new List<string>();
-        for (int i = 0; i < byteData!.Length; i+=1)
+        for (int i = 0; i < byteData!.Length; i += 1)
         {
             string binaryString = Convert.ToString(byteData[i], 2); // Convert byteData(int) to binary string
 
             // Pad zeros on the left if the binary representation is less than 8 bits
             int paddingLength = 8 - binaryString.Length;
-            string paddedBinary = new string('0', paddingLength) + binaryString;           
+            string paddedBinary = new string('0', paddingLength) + binaryString;
             byteList.Add(paddedBinary);
             result += byteList[i];
         }
@@ -63,15 +63,15 @@ public class DataPresentationService
 
     public static UInt16 ByteToUInt16(byte[]? byteData)
     {
-        string result=""; //result is a binary string
+        string result = ""; //result is a binary string
         var byteList = new List<string>();
-        for (int i = 0; i < byteData!.Length; i+=1)
+        for (int i = 0; i < byteData!.Length; i += 1)
         {
             string binaryString = Convert.ToString(byteData[i], 2); // Convert byteData(int) to binary string
 
             // Pad zeros on the left if the binary representation is less than 8 bits
             int paddingLength = 8 - binaryString.Length;
-            string paddedBinary = new string('0', paddingLength) + binaryString;           
+            string paddedBinary = new string('0', paddingLength) + binaryString;
             byteList.Add(paddedBinary);
             result += byteList[i];
         }
@@ -82,15 +82,15 @@ public class DataPresentationService
 
     public static string ByteToStringUTF(byte[]? byteData)
     {
-        string result=""; //result is a binary string
+        string result = ""; //result is a binary string
         var byteList = new List<string>();
-        for (int i = 0; i < byteData!.Length; i+=1)
+        for (int i = 0; i < byteData!.Length; i += 1)
         {
             string binaryString = Convert.ToString(byteData[i], 2); // Convert byteData(int) to binary string
 
             // Pad zeros on the left if the binary representation is less than 8 bits
             int paddingLength = 8 - binaryString.Length;
-            string paddedBinary = new string('0', paddingLength) + binaryString;           
+            string paddedBinary = new string('0', paddingLength) + binaryString;
             byteList.Add(paddedBinary);
             result += byteList[i];
         }
@@ -105,7 +105,7 @@ public class DataPresentationService
         // Decode byte array to UTF-8 string
         string utf8String = Encoding.UTF8.GetString(byteArray);
 
-        return  utf8String;
+        return utf8String;
     }
 
     public static void PrintGetData<T>((string, T, string, string, bool, string, int) getData)
@@ -116,12 +116,12 @@ public class DataPresentationService
         var getServerTime = getData.Item4;
         var GetSuccessStatus = getData.Item5;
         var GetErrorMsg = getData.Item6;
-        var GetErrorCode = getData.Item7;            
-        
+        var GetErrorCode = getData.Item7;
+
         // Check Get Data Success Status
-        if(GetSuccessStatus)
+        if (GetSuccessStatus)
         {
-            Console.WriteLine(name + ": " + value +". Local Time: " + getTimestamp + ". Server Time: " + getServerTime + ".");
+            Console.WriteLine(name + ": " + value + ". Local Time: " + getTimestamp + ". Server Time: " + getServerTime + ".");
         }
         else
         {
@@ -137,7 +137,7 @@ public class DataPresentationService
         var SetSuccessStatus = setData.Item4;
         var SetErrorMsg = setData.Item5;
         var SetErrorCode = setData.Item6;
-        if(SetSuccessStatus)
+        if (SetSuccessStatus)
             Console.WriteLine(name + " was Set Succesfully! Local Time: " + getTimestamp + ". Server Time: " + getServerTime + ".");
         else
         {
