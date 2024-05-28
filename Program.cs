@@ -370,7 +370,7 @@ class Program
 
         List<DataLogger>? jsonServersList = JsonHandlerService.LoadFromFileDataLogger("JsonData/DataLoggers.json");
 
-        var extendedMachine = CreateMachineService.CreateModbusMachine(jsonServersList![0].Ip!, jsonServersList![0].DataLoggerType!); // 127.0.0.1:502 : Simulation IP an Port.  192.168.1.200:502 :
+        var extendedMachine = CreateMachineService.CreateModbusMachine(jsonServersList![0].Ip!, jsonServersList![0].DataLoggerType!); // 127.0.0.1:502 : Simulation IP and Port.  192.168.1.200:502 :
         bool connectionStatusMachine = await extendedMachine.ConnectAsync();
         if (!connectionStatusMachine)
         {

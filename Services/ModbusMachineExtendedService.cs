@@ -1,6 +1,8 @@
 using Modbus.Net;
 using Modbus.Net.Modbus;
+using ModbusExtension.Helpers;
 using ModbusExtension.Models;
+using ModbusExtension.Models.Enumerations;
 using System.Runtime.InteropServices;
 
 namespace ModbusExtension.Services;
@@ -51,7 +53,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             {
                 return new ReturnStruct<byte[]>()
                 {
-                    Datas = new byte[0],
+                    Datas = [],
                     IsSuccess = false,
                     ErrorCode = -1,
                     ErrorMsg = "Connection Error."
@@ -115,7 +117,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
 
             return new ReturnStruct<byte[]>()
             {
-                Datas = new byte[0],
+                Datas = [],
                 IsSuccess = false,
                 ErrorCode = -500,
                 ErrorMsg = "No such CommunicationTag in AddressUnit List."
@@ -126,7 +128,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             Console.WriteLine(e);
             return new ReturnStruct<byte[]>()
             {
-                Datas = new byte[0],
+                Datas = [],
                 IsSuccess = false,
                 ErrorCode = -100,
                 ErrorMsg = "Unknown Exception."
@@ -236,10 +238,10 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
     //         };    
     //     }
     // }
-    public async Task<string> GetServerTime(string DataLoggerType)
+    public async Task<string> GetServerTime(DataLoggerTypeEnum DataLoggerType)
     {
         // Server Time must be in an U32 bit register in Epoch Time UTC
-        var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetServerTime(DataLoggerType));
+        var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetServerTime(DataLoggerType));
         var localTime = returnGetObject.Datas;
         var epochSeconds = DataPresentationService.ByteToInt32(localTime);
 
@@ -251,7 +253,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
 
         return formattedTimeString;
     }
-    public async Task<(string, UInt32, string, string, bool, string, int)> GetActivePower(string DataLoggerType)
+    public async Task<(string, UInt32, string, string, bool, string, int)> GetActivePower(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -265,7 +267,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetActivePower(DataLoggerType)); // There is exception handling incide
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetActivePower(DataLoggerType)); // There is exception handling incide
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -279,7 +281,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("GetActivePower failed. ", 0, "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, Int32, string, string, bool, string, int)> GetReactivePower(string DataLoggerType)
+    public async Task<(string, Int32, string, string, bool, string, int)> GetReactivePower(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -293,7 +295,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetReactivePower(DataLoggerType));
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetReactivePower(DataLoggerType));
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -306,7 +308,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("GetReactivePower failed. ", 0, "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, UInt16, string, string, bool, string, int)> GetVoltageL1(string DataLoggerType)
+    public async Task<(string, UInt16, string, string, bool, string, int)> GetVoltageL1(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -320,7 +322,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetVoltageL1(DataLoggerType));
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetVoltageL1(DataLoggerType));
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -333,7 +335,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("GetVoltageL1 failed. ", 0, "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, UInt16, string, string, bool, string, int)> GetVoltageL2(string DataLoggerType)
+    public async Task<(string, UInt16, string, string, bool, string, int)> GetVoltageL2(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -347,7 +349,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetVoltageL2(DataLoggerType));
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetVoltageL2(DataLoggerType));
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -360,7 +362,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("GetVoltageL2 failed. ", 0, "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, UInt16, string, string, bool, string, int)> GetVoltageL3(string DataLoggerType)
+    public async Task<(string, UInt16, string, string, bool, string, int)> GetVoltageL3(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -374,7 +376,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetVoltageL3(DataLoggerType));
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetVoltageL3(DataLoggerType));
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -387,7 +389,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("GetVoltageL3 failed. ", 0, "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, UInt16, string, string, bool, string, int)> GetDeviceStatus(string DataLoggerType)
+    public async Task<(string, UInt16, string, string, bool, string, int)> GetDeviceStatus(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -401,7 +403,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetDeviceStatus(DataLoggerType));
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetDeviceStatus(DataLoggerType));
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -414,7 +416,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("GetDeviceStatus failed. ", 0, "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, UInt16, string, string, bool, string, int)> GetLogStatus(string DataLoggerType)
+    public async Task<(string, UInt16, string, string, bool, string, int)> GetLogStatus(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -428,7 +430,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetLogStatus(DataLoggerType));
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetLogStatus(DataLoggerType));
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -442,7 +444,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
         }
 
     }
-    public async Task<(string, UInt32, string, string, bool, string, int)> GetPowerSetPointLevel1(string DataLoggerType)
+    public async Task<(string, UInt32, string, string, bool, string, int)> GetPowerSetPointLevel1(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -456,7 +458,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetPowerSetPointLevel1(DataLoggerType));
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetPowerSetPointLevel1(DataLoggerType));
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -469,7 +471,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("GetPowerSetPointLevel1 failed. ", 0, "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, UInt32, string, string, bool, string, int)> GetPowerSetPointLevel2(string DataLoggerType)
+    public async Task<(string, UInt32, string, string, bool, string, int)> GetPowerSetPointLevel2(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -483,7 +485,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetPowerSetPointLevel2(DataLoggerType)); // There is exception handling incide
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetPowerSetPointLevel2(DataLoggerType)); // There is exception handling incide
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -497,7 +499,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("GetPowerSetPointLevel2 failed. ", 0, "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, UInt16, string, string, bool, string, int)> GetPowerSetPointLevelByPercentage(string DataLoggerType)
+    public async Task<(string, UInt16, string, string, bool, string, int)> GetPowerSetPointLevelByPercentage(DataLoggerTypeEnum DataLoggerType)
     {
         try
         {
@@ -511,7 +513,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnGetObject = await GetDatasByCommunicationTag(DataLogger.GetPowerSetPointLevelByPercentage(DataLoggerType)); // There is exception handling incide
+            var returnGetObject = await GetDatasByCommunicationTag(DataLoggerHelper.GetPowerSetPointLevelByPercentage(DataLoggerType)); // There is exception handling incide
             byte[]? GetDatas = returnGetObject.Datas;
             int GetErrorCode = returnGetObject.ErrorCode;
             string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -527,7 +529,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
     }
     // --------------------------Set--------------------------
     // Data Type of value depends on the variable we write on!!! You sould change it in SetDatasByCommunicationTag() as well!
-    public async Task<(string, string, string, bool, string, int)> SetPowerSetPointLevel1(string DataLoggerType, double value)
+    public async Task<(string, string, string, bool, string, int)> SetPowerSetPointLevel1(DataLoggerTypeEnum DataLoggerType, double value)
     {
         try
         {
@@ -541,7 +543,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnSetObject = await SetDatasByCommunicationTag(DataLogger.SetPowerSetPointLevel1(DataLoggerType), value);
+            var returnSetObject = await SetDatasByCommunicationTag(DataLoggerHelper.SetPowerSetPointLevel1(DataLoggerType), value);
             // bool SetDatas = returnSetObject.Datas;
             int SetErrorCode = returnSetObject.ErrorCode;
             string SetErrorMsg = returnSetObject.ErrorMsg;
@@ -553,7 +555,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("Active Adjustment 1 failed. ", "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, string, string, bool, string, int)> SetPowerSetPointLevel2(string DataLoggerType, double value)
+    public async Task<(string, string, string, bool, string, int)> SetPowerSetPointLevel2(DataLoggerTypeEnum DataLoggerType, double value)
     {
         try
         {
@@ -567,7 +569,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnSetObject = await SetDatasByCommunicationTag(DataLogger.SetPowerSetPointLevel2(DataLoggerType), value);
+            var returnSetObject = await SetDatasByCommunicationTag(DataLoggerHelper.SetPowerSetPointLevel2(DataLoggerType), value);
             // bool SetDatas = returnSetObject.Datas;
             int SetErrorCode = returnSetObject.ErrorCode;
             string SetErrorMsg = returnSetObject.ErrorMsg;
@@ -579,7 +581,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
             return ("Active Adjustment 2 failed. ", "", "", false, $"Unknown Exception: {ex.Message}", -100);
         }
     }
-    public async Task<(string, string, string, bool, string, int)> SetPowerSetPointLevelByPercentage(string DataLoggerType, double value)
+    public async Task<(string, string, string, bool, string, int)> SetPowerSetPointLevelByPercentage(DataLoggerTypeEnum DataLoggerType, double value)
     { //Active Power Adjustement By Percentage
         try
         {
@@ -593,7 +595,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                 getServerTime = "GetServerTime Failed. Error Message: " + ex.Message;
             }
             string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            var returnSetObject = await SetDatasByCommunicationTag(DataLogger.SetPowerSetPointLevelByPercentage(DataLoggerType), value);
+            var returnSetObject = await SetDatasByCommunicationTag(DataLoggerHelper.SetPowerSetPointLevelByPercentage(DataLoggerType), value);
             // bool SetDatas = returnSetObject.Datas;
             int SetErrorCode = returnSetObject.ErrorCode;
             string SetErrorMsg = returnSetObject.ErrorMsg;
