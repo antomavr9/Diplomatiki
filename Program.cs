@@ -1,5 +1,7 @@
-﻿using Modbus.Net; 
-using Modbus.Net.Modbus; 
+﻿using Modbus.Net;
+using Modbus.Net.Modbus;
+using System;
+using System.Threading;
 
 using ModbusExtension;
 using System.Text.Json;
@@ -34,7 +36,7 @@ class Program
         // {
         //     Console.WriteLine($"Error occurred: ErrorCode: {result.ErrorCode}, ErrorMsg: {result.ErrorMsg}");
         // }
-        
+
         // Console.WriteLine("Press anything to exit...");
         // Console.ReadKey();
 
@@ -74,7 +76,7 @@ class Program
         //     if(SetSuccessStatus)
         //     {
         //         Console.WriteLine("Set Data Status: Data Set Succesfully!");
-                
+
         //     }
         //     else
         //     {
@@ -111,19 +113,19 @@ class Program
         //     Console.ReadKey();
 
         // }
-           
-           
-            // //Loop
-            // while (!exitKeyPressed)
-            // {
-            //   //Check if a key is pressed
-            //   if (Console.KeyAvailable)
-            //   {
-            //       ConsoleKeyInfo keyInfo = Console.ReadKey(intercept: true);
-            //       exitKeyPressed = true;
-            //   }
-            //   await Task.Delay(2000); // Delay for 2 seconds before executing again
-            // }
+
+
+        // //Loop
+        // while (!exitKeyPressed)
+        // {
+        //   //Check if a key is pressed
+        //   if (Console.KeyAvailable)
+        //   {
+        //       ConsoleKeyInfo keyInfo = Console.ReadKey(intercept: true);
+        //       exitKeyPressed = true;
+        //   }
+        //   await Task.Delay(2000); // Delay for 2 seconds before executing again
+        // }
 
         #endregion
 
@@ -142,7 +144,7 @@ class Program
         //     new AddressUnit() {Id = "3", Area = "4X", Address = 3, CommunicationTag = "Add3", DataType = typeof (ushort)},
         //     new AddressUnit() {Id = "4", Area = "4X", Address = 4, CommunicationTag = "Add4", DataType = typeof (ushort)}
         // };
-        
+
         // // Connect to server through machine api
         // var machine = new ModbusMachine<string, string>("1", ModbusType.Tcp, "127.0.0.1:502", addressUnits,false, 1, 0);
         // // Console.WriteLine(machine.KeepConnect);
@@ -173,7 +175,7 @@ class Program
         // else
         // {
         //     Console.WriteLine("Connection successful!");
-            
+
         //     double Add1 = 11; 
         //     double Add2 = 22;
         //     double Add3 = 33;
@@ -190,12 +192,12 @@ class Program
         //     int SetErrorCode = returnSetObject.ErrorCode;
         //     string SetErrorMsg = returnSetObject.ErrorMsg; 
         //     bool SetSuccessStatus = returnSetObject.IsSuccess;
-            
+
         //     // Check success status
         //     if(SetSuccessStatus)
         //     {
         //         Console.WriteLine("Set Data Status: Data Set Succesfully!");
-                
+
         //     }
         //     else
         //     {
@@ -308,7 +310,7 @@ class Program
         //     {
         //         Console.WriteLine("Set Data Status: Error Code: " + SetErrorCode+ ". Error Message: " + SetErrorMsg + ".");
         //     }
-                
+
         //     // ---------------------------------- Get Data ------------------------------------------------
         //     var returnGetObject = await extendedMachine.GetDatasByCommunicationTag("Add2");
         //     // in the above line, instead of var we might use ReturnStruct<byte[]>
@@ -326,7 +328,7 @@ class Program
         //     {
         //         Console.WriteLine("Get Data Status: Error Code: " + GetErrorCode + ". Error Message: " + GetErrorMsg + ".");
         //     }
-                
+
         //     // Print Received Data
         //     Console.WriteLine("Data Received from Modbus Server:");
         //     for (int i = 1; i < GetDatas!.Length; i+=2)
@@ -339,7 +341,7 @@ class Program
         // Console.ReadKey();
 
         #endregion
-    
+
         #region Json Handler
 
         // string jsonFilePath = "JsonData/TEST.json"; // JSON file path
@@ -359,7 +361,7 @@ class Program
         // Console.WriteLine(jsonDataArraySungrow[0].Name);
 
         // var extendedMachine = new ModbusMachineExtended<string,string>("1", ModbusType.Tcp, "127.0.0.1:502", BaseAddressUnits, false, 1, 0);
-        
+
         #endregion
 
         #region ExtendedMachineJson
@@ -376,57 +378,93 @@ class Program
         {
             Console.WriteLine("Connection Successful!");
 
+            # region WriteGetDataToCsvLoop
+
+            DateTime endTime = DateTime.Now.AddHours(24); // Calculate the end time which is 24 hours from now
+            Console.WriteLine(endTime);
+            while (DateTime.Now < endTime)
+            {
+                var activePowerData = await extendedMachine.GetActivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(activePowerData, "CsvData/activePowerData.csv");
+                DataPresentation.PrintGetData(activePowerData);
+
+                var reactivePowerData = await extendedMachine.GetReactivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(reactivePowerData, "CsvData/reactivePowerData.csv");
+                DataPresentation.PrintGetData(reactivePowerData);
+
+                var voltage1Data = await extendedMachine.GetVoltageL1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(voltage1Data, "CsvData/voltage1Data.csv");
+                DataPresentation.PrintGetData(voltage1Data);
+
+                var voltage2Data = await extendedMachine.GetVoltageL2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(voltage2Data, "CsvData/voltage2Data.csv");
+                DataPresentation.PrintGetData(voltage2Data);
+
+                var voltage3Data = await extendedMachine.GetVoltageL3(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(voltage3Data, "CsvData/voltage3Data.csv");
+                DataPresentation.PrintGetData(voltage3Data);
+
+                var deviceStatusData = await extendedMachine.GetDeviceStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(deviceStatusData, "CsvData/deviceStatusData.csv");
+                DataPresentation.PrintGetData(deviceStatusData);
+
+                var logStatusData = await extendedMachine.GetLogStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(logStatusData, "CsvData/logStatusData.csv");
+                DataPresentation.PrintGetData(logStatusData);
+
+                var powerSetPointLevel1Data = await extendedMachine.GetPowerSetPointLevel1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(powerSetPointLevel1Data, "CsvData/powerSetPointLevel1Data.csv");
+                DataPresentation.PrintGetData(powerSetPointLevel1Data);
+
+                var powerSetPointLevel2Data = await extendedMachine.GetPowerSetPointLevel2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(powerSetPointLevel2Data, "CsvData/powerSetPointLevel2Data.csv");
+                DataPresentation.PrintGetData(powerSetPointLevel2Data);
+
+                var powerSetPointLevelByPercentageData = await extendedMachine.GetPowerSetPointLevelByPercentage(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+                DataPresentation.AppendToCSV(powerSetPointLevelByPercentageData, "CsvData/powerSetPointLevelByPercentageData.csv");
+                DataPresentation.PrintGetData(powerSetPointLevelByPercentageData);
+
+                // Sleep for 60 seconds
+                Thread.Sleep(5 * 1000); // Sleep for 60 seconds (60,000 milliseconds)
+            }
+
+            #endregion
+
             //----------------------Get----------------------
 
-            #region GetActivePower
-            var activePowerData = await extendedMachine.GetActivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(activePowerData);
-            # endregion
+            #region Get
 
-            #region GetReactivePower
-            var reactivePowerData = await extendedMachine.GetReactivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(reactivePowerData);
-            # endregion
+            // var activePowerData = await extendedMachine.GetActivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(activePowerData);
 
-            #region GetVoltageL1
-            var voltage1Data = await extendedMachine.GetVoltageL1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(voltage1Data);
-            # endregion
+            // var reactivePowerData = await extendedMachine.GetReactivePower(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(reactivePowerData);
 
-            #region GetVoltageL2
-            var voltage2Data = await extendedMachine.GetVoltageL2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(voltage2Data);
-            # endregion
+            // var voltage1Data = await extendedMachine.GetVoltageL1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(voltage1Data);
 
-            #region GetVoltageL3
-            var voltage3Data = await extendedMachine.GetVoltageL3(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(voltage3Data);
-            # endregion
+            // var voltage2Data = await extendedMachine.GetVoltageL2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(voltage2Data);
 
-            #region GetDeviceStatus
-            var deviceStatusData = await extendedMachine.GetDeviceStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(deviceStatusData);
-            # endregion
+            // var voltage3Data = await extendedMachine.GetVoltageL3(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(voltage3Data);
 
-            #region GetLogStatus
-            var logStatusData = await extendedMachine.GetLogStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(logStatusData);
-            # endregion
+            // var deviceStatusData = await extendedMachine.GetDeviceStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(deviceStatusData);
 
-            #region GetPowerSetPointLevel1
-            var powerSetPointLevel1Data = await extendedMachine.GetPowerSetPointLevel1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(powerSetPointLevel1Data);
-            # endregion
+            // var logStatusData = await extendedMachine.GetLogStatus(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(logStatusData);
 
-            #region GetPowerSetPointLevel2
-            var powerSetPointLevel2Data = await extendedMachine.GetPowerSetPointLevel2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(powerSetPointLevel2Data);
-            # endregion
+            // var powerSetPointLevel1Data = await extendedMachine.GetPowerSetPointLevel1(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(powerSetPointLevel1Data);
 
-            #region GetPowerSetPointLevelByPercentage
-            var powerSetPointLevelByPercentageData = await extendedMachine.GetPowerSetPointLevelByPercentage(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
-            DataPresentation.PrintGetData(powerSetPointLevelByPercentageData);
-            # endregion
+            // var powerSetPointLevel2Data = await extendedMachine.GetPowerSetPointLevel2(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(powerSetPointLevel2Data);        
+
+            // var powerSetPointLevelByPercentageData = await extendedMachine.GetPowerSetPointLevelByPercentage(jsonServersList![0].DataLoggerType!); //"192.168.1.200:502"
+            // DataPresentation.PrintGetData(powerSetPointLevelByPercentageData);
+
+            #endregion
 
             //----------------------Set----------------------
 
@@ -434,18 +472,12 @@ class Program
             // var ActiveAdjustment1Data = await extendedMachine.SetPowerSetPointLevel1(jsonServersList![0].DataLoggerType!, 4294967295); //Default: 4294967295   UInt32
             // DataPresentation.PrintSetData(ActiveAdjustment1Data);
 
-            # endregion
-
-            # region SetActiveAdjustment2
             // var ActiveAdjustment2Data = await extendedMachine.SetPowerSetPointLevel2(jsonServersList![0].DataLoggerType!, 5000); //Default: 4294967295   UInt32
             // DataPresentation.PrintSetData(ActiveAdjustment2Data);
 
-            # endregion
-
-            # region SetPowerSetPointLevelByPercentage
             // var ActiveAdjustmentByPercentageData = await extendedMachine.SetPowerSetPointLevelByPercentage(jsonServersList![0].DataLoggerType!, 90); //Default: 65535  UInt16
             // DataPresentation.PrintSetData(ActiveAdjustmentByPercentageData);
-            
+
             # endregion
 
             //----------------------Debugging----------------------
@@ -467,7 +499,7 @@ class Program
             //     Console.WriteLine("Set Data Status: Error Code: " + SetErrorCode+ ". Error Message: " + SetErrorMsg + ".");
             // }
 
-            #endregion    
+            #endregion
 
             # region IterateBaseAddressUnits
 
@@ -482,7 +514,7 @@ class Program
             //     string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             //     Console.WriteLine(BaseAddressUnits[i].CommunicationTag);
             //     var returnGetObject = await extendedMachine.GetDatasByCommunicationTag(BaseAddressUnits[i].CommunicationTag);
-                
+
             //     byte[]? GetDatas = returnGetObject.Datas;
             //     int GetErrorCode = returnGetObject.ErrorCode;
             //     string GetErrorMsg = returnGetObject.ErrorMsg;
@@ -498,7 +530,7 @@ class Program
             //         {
             //             Console.WriteLine(DataPresentation.ByteToInt32(GetDatas));
             //         }
-                    
+
             //         // string getTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             //         Console.WriteLine(getTimestamp);
 
@@ -544,7 +576,7 @@ class Program
             // {
             //     Console.WriteLine("Get Data Status: Error Code: " + GetErrorCode + ". Error Message: " + GetErrorMsg + ".");
             // }
-                
+
             // // Print Received Data
             // Console.WriteLine("Data Received from Modbus Server:");
             // if (GetSuccessStatus && GetDatas != null)

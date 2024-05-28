@@ -176,6 +176,7 @@ public class JsonHandler
         {
             "U16" => typeof(UInt16),
             "U32" => typeof(UInt32),
+            "F32" => typeof(float),
             "U64" => typeof(UInt64),
             "I16" => typeof(Int16),
             "I32" => typeof(Int32),

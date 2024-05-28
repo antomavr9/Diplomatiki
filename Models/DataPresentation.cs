@@ -143,4 +143,21 @@ public class DataPresentation
             Console.WriteLine("Set Data Status: Error Code: " + SetErrorCode + ". Error Message: " + SetErrorMsg + ".");
         }
     }
+    public static void AppendToCSV<T>((string, T, string, string, bool, string, int) data, string filePath)
+    {
+        // Create CSV file if it doesn't exist
+        if (!File.Exists(filePath))
+        {
+            using StreamWriter writer = new StreamWriter(filePath);
+            writer.WriteLine("Name,Value,Timestamp,ServerTime,SuccessStatus,ErrorMessage,ErrorCode");
+        }
+
+        // Append data to the CSV file
+        using (StreamWriter writer = new StreamWriter(filePath, true))
+        {
+            writer.WriteLine($"{data.Item1},{data.Item2},{data.Item3},{data.Item4},{data.Item5},{data.Item6},{data.Item7}");
+        }
+
+        Console.WriteLine("Data appended to CSV file successfully.");
+    }
 }

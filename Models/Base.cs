@@ -16,7 +16,7 @@ public class Base
         get => _dataType;
         set => _dataType = value switch
         {
-            "U16" or "U32" or "U64" or "I16" or "I32" or "I64" or "STR" or "MLD" or "N/A" => value,
+            "U16" or "U32" or "F32" or "U64" or "I16" or "I32" or "I64" or "STR" or "MLD" or "N/A" => value,
             _ => throw new ArgumentException("Invalid value for DataType property.")
         };
     }
