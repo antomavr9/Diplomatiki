@@ -2,7 +2,7 @@ namespace ModbusExtension.Models.Enumerations;
 
 public enum DataTypeEnum
 {
-    U16,
+    U16 = 1,
     U32,
     F32,
     U64,

@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Modbus.Net;
 using ModbusExtension.Models;
 using ModbusExtension.Models.Enumerations;
@@ -15,7 +16,10 @@ public class JsonHandlerService
             string json = File.ReadAllText(jsonFilePath);
 
             // Deserialize the JSON string to a JsonHandler array
-            List<Base>? jsonListBase = JsonSerializer.Deserialize<List<Base>>(json);
+            List<Base>? jsonListBase = JsonSerializer.Deserialize<List<Base>>(json, new JsonSerializerOptions
+            {
+                Converters = { new JsonStringEnumConverter() }
+            });
             return jsonListBase;
         }
         catch (FileNotFoundException)
@@ -90,7 +94,8 @@ public class JsonHandlerService
         try
         {
             // Deserialize the JSON string to a JsonHandler array
-            List<DataLogger>? jsonServersList = JsonSerializer.Deserialize<List<DataLogger>>(File.ReadAllText(jsonFilePath));
+            List<DataLogger>? jsonServersList = JsonSerializer.Deserialize<List<DataLogger>>(File.ReadAllText(jsonFilePath),
+                options: new JsonSerializerOptions { Converters = { new JsonStringEnumConverter() } });
             return jsonServersList;
         }
         catch (FileNotFoundException)
