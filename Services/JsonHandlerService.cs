@@ -89,6 +89,31 @@ public class JsonHandlerService
         return null;
     }
 
+    public static List<AiStratis>? LoadFromFilejsonListAiStratis(string jsonFilePath)
+    {
+        try
+        {
+            // Deserialize the JSON string to a JsonHandler array
+            List<AiStratis>? jsonListAiStratis = JsonSerializer.Deserialize<List<AiStratis>>(File.ReadAllText(jsonFilePath), 
+                options: new JsonSerializerOptions { Converters = { new JsonStringEnumConverter() } });
+            
+            return jsonListAiStratis;
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine("File not found. Please provide a valid JSON file path.");
+        }
+        catch (JsonException)
+        {
+            Console.WriteLine("Invalid JSON format. Please check your JSON file.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+        return null;
+    }
+
     public static List<DataLogger>? LoadFromFileDataLogger(string jsonFilePath)
     {
         try
