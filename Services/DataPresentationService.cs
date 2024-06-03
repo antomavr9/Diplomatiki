@@ -80,6 +80,25 @@ public class DataPresentationService
         return intResult; // Convert binary string result to Int32
     }
 
+    public static float ByteToFloat(byte[]? byteData)
+    {
+        string result = ""; //result is a binary string
+        var byteList = new List<string>();
+        for (int i = 0; i < byteData!.Length; i += 1)
+        {
+            string binaryString = Convert.ToString(byteData[i], 2); // Convert byteData(int) to binary string
+    
+            // Pad zeros on the left if the binary representation is less than 8 bits
+            int paddingLength = 8 - binaryString.Length;
+            string paddedBinary = new string('0', paddingLength) + binaryString;
+            byteList.Add(paddedBinary);
+            result += byteList[i];
+        }
+        // Console.WriteLine(result);
+        int intResult = Convert.ToInt32(result, 2); // Convert binary string result to Int32
+        return BitConverter.Int32BitsToSingle(intResult); // Convert Int32 to float
+    }
+
     public static string ByteToStringUTF(byte[]? byteData)
     {
         string result = ""; //result is a binary string
