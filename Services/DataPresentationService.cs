@@ -87,7 +87,7 @@ public class DataPresentationService
         for (int i = 0; i < byteData!.Length; i += 1)
         {
             string binaryString = Convert.ToString(byteData[i], 2); // Convert byteData(int) to binary string
-    
+
             // Pad zeros on the left if the binary representation is less than 8 bits
             int paddingLength = 8 - binaryString.Length;
             string paddedBinary = new string('0', paddingLength) + binaryString;
@@ -179,5 +179,36 @@ public class DataPresentationService
         }
 
         Console.WriteLine("Data appended to CSV file successfully.");
+    }
+
+    public static float CalculateAverageAngle(List<float> anglesInDegrees)
+    {
+        float sumSin = 0.0f;
+        float sumCos = 0.0f;
+
+        foreach (var angle in anglesInDegrees)
+        {
+            float angleInRadians = angle * (float)Math.PI / 180.0f;
+            sumSin += (float)Math.Sin(angleInRadians);
+            sumCos += (float)Math.Cos(angleInRadians);
+        }
+
+        float averageAngleInRadians = (float)Math.Atan2(sumSin / anglesInDegrees.Count, sumCos / anglesInDegrees.Count);
+        float averageAngleInDegrees = averageAngleInRadians * 180.0f / (float)Math.PI;
+
+        // Normalize the angle to be within [0, 360)
+        averageAngleInDegrees = (averageAngleInDegrees + 360) % 360;
+
+        return averageAngleInDegrees;
+    }
+
+    public static bool CalculateLastValue(List<bool> values)
+    {
+        return values.Last();
+    }
+
+    public static float CalculateAverage(List<float> values)
+    {
+        return values.Average();
     }
 }
