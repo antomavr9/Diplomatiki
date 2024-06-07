@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Logging;
 using Modbus.Net;
 using Modbus.Net.Modbus;
 using ModbusExtension.Helpers;
@@ -13,6 +14,7 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
     where TAddressKey : IEquatable<TAddressKey>
     where TSubAddressKey : IEquatable<TSubAddressKey>
 {
+    private readonly ILogger<ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddressKey>> logger;
     // Constructor 1
     public ModbusMachineExtendedService(TKey id,
                                  ModbusType connectionType,
@@ -36,6 +38,34 @@ public class ModbusMachineExtendedService<TKey, TUnitKey, TAddressKey, TSubAddre
                                  Endian endian)
     : this(id, connectionType, connectionString, getAddresses, true, slaveAddress, masterAddress, endian)
     {
+    }
+
+    public async Task CheckConnection(CancellationToken token)
+    {
+        var second = DateTime.UtcNow;
+        if (!IsConnected)
+        {
+            var connectionTask = ConnectAsync();
+            var delayTask = Task.Delay(TimeSpan.FromMilliseconds(400), token);
+
+            var completedTask = await Task.WhenAny(connectionTask, delayTask);
+            if (completedTask == delayTask)
+            {
+                logger.LogError("[UTC " + second.ToLongTimeString() + "]: Connection Failed!");
+                return;
+            }
+
+            if (!connectionTask.Result)
+            {
+                logger.LogError("[UTC " + second.ToLongTimeString() + "]: Connection Failed!");
+                // throw new Exception("[UTC " + second.ToLongTimeString() + "]: Connection Failed!");
+                return;
+            }
+            else
+            {
+                logger.LogInformation("[UTC " + second.ToLongTimeString() + "]: Connection Successful!");
+            }
+        }
     }
 
     // Mask Function
