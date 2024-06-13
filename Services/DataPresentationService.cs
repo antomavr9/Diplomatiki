@@ -211,4 +211,16 @@ public class DataPresentationService
     {
         return values.Average();
     }
+
+    public static string CheckIfFolderExists(string folderName)
+    {
+        // Check if the directory exists and create it if it doesn't
+        var directoryPath = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+        if (!Directory.Exists(directoryPath))
+        {
+            Directory.CreateDirectory(directoryPath);
+        }
+
+        return directoryPath;
+    }
 }
